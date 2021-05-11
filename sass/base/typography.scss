@@ -1,0 +1,58 @@
+//Colors
+
+//Nav Menu
+.navFont {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 2rem;
+    letter-spacing: .04em;
+    color: var(--color-text-grey);
+    text-decoration: underline solid 1px #CDCDCD;
+    
+    transition: all ease-in-out .45s;
+}
+
+.navFont:hover {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+//Headings
+.indexXlrgHeading {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4rem;
+    letter-spacing: .01em;
+    color: var(--color-text-white);
+}
+
+.indexLrgHeading {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.4rem;
+    letter-spacing: .01em;
+    color: var(--color-text-white);
+}
+
+//Index Font
+.indexDescriptionFont {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.8rem;
+    letter-spacing: .08em;
+    line-height: 26px;
+    color: var(--color-text-grey);
+}
+
+.indexContactFont {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.8rem;
+    letter-spacing: .04em;
+    color: var(--color-text-grey);
+}

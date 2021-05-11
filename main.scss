@@ -1,0 +1,20 @@
+
+//ABSTRACTS
+@import "sass/abstracts/variables.scss";
+@import "sass/abstracts/utilities.scss";
+@import "sass/abstracts/components.scss";
+
+//BASE
+@import "sass/base/reset.scss";
+@import "sass/base/typography.scss";
+
+//NAVIGATION
+@import "sass/layout/navigation.scss";
+
+//MEDIAQUERIES
+
+//PAGES
+@import "sass/pages/index.scss";
+@import "sass/pages/skills.scss";
+@import "sass/pages/about.scss";
+@import "sass/pages/contact.scss";
