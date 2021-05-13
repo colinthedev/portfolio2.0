@@ -27,7 +27,21 @@
     flex-direction: row;
     align-items: center;
     grid-row: 2 / 3;
-    grid-column: 14 / -1;
+    grid-column: 13 / -1;
+
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    overscroll-behavior: contain;
+}
+
+.projectsContainer > .projectsWrapper img {
+    touch-action: pan-down;
+}
+
+.projectsContainer::-webkit-scrollbar { 
+    display: none; 
 }
 
 .botRowContainer {

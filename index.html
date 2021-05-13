@@ -52,9 +52,29 @@
              </div>   
         </div>
 
-        <div class="projectsContainer">
-            <img src="assets/desktop/photosnap-desktop.png" alt="photosnap project" class="photosnap">
-            <img src="assets/desktop/dine-desktop.png" alt="dine project" class="dine marginLeft5rem">
+        <div id="horizontalScroll" class="projectsContainer">
+            <div id="photosnap" class="projectsWrapper">
+                <span class="hoverTitleFont projectTitle"></span>
+                <div class="hoverLine"></div>
+                <img src="assets/desktop/photosnap-desktop.png" alt="photosnap project" class="photosnap">
+                <div class="flexWrapperRow">
+                    <div class="flexWrapperCol margin5rem">
+                        <a target="_blank" href="https://colinthedev.github.io/Photography_Challenge/">
+                            <img src="assets/shared/view-live.svg" alt="Live site">
+                        </a>
+                        <span class="hoverIconFont">View Live</span>
+                    </div>
+                    <div class="flexWrapperCol">
+                        <a target="_blank" href="https://github.com/colinthedev/Photography_Challenge">
+                            <img src="assets/shared/github.svg" alt="View code">
+                        </a>
+                        <span class="hoverIconFont">View Code</span>
+                    </div>
+                </div>
+            </div>
+            <div class="projectsWrapper">
+                <img src="assets/desktop/dine-desktop.png" alt="dine project" class="dine">
+            </div>
         </div>
 
         <div class="botRowContainer">
@@ -62,5 +82,7 @@
         </div>
 
         <script src="main.js"></script>
+        <link rel='stylesheet' href='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.css' />
+        <script src='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js'></script>
     </body>
 </html>

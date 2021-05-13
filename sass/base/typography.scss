@@ -56,3 +56,22 @@
     letter-spacing: .04em;
     color: var(--color-text-grey);
 }
+
+//Projects Hover Title
+.hoverTitleFont {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 6rem;
+    letter-spacing: .04em;
+    color: var(--color-text-white);
+}
+
+.hoverIconFont {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.5rem;
+    letter-spacing: .04em;
+    color: var(--color-text-white);
+}
