@@ -18,33 +18,23 @@
     }
 })();
 
-// Change background color + add text of projects wrapper on hover
-
-// add event listener for images 
-
-// * photosnap.active dine.active nike.active display show to disable images 
-
-// add active class to project wrapper
-// add corresponding image on event listener 
-// add project title on event listener 
-// add links on event listener 
-
+//Photosnap Project #1----------------------------------------------------------
 
 // Content in project on hover 
-let projectTitle = document.querySelector('.projectTitle');
-let projectLine = document.querySelector('.hoverLine');
-let projectRowWrap = document.querySelector('.flexWrapperRow');
-let projectColWrap = document.querySelectorAll('.flexWrapperCol');
+let projectTitle = document.querySelector('.projectTitlePhotosnap');
+let projectLine = document.querySelector('.hoverLinePhotosnap');
+let projectRowWrap = document.querySelector('.flexWrapperRowPhotosnap');
+let projectColWrap = document.querySelectorAll('.flexWrapperColPhotosnap');
 
 // Background color + image
-let backgroundColor = document.getElementById('photosnap');
-let photosnap = document.querySelector('.photosnap');
+let photosnapBackground = document.querySelector('.photosnapBackground');
+let photosnapImg = document.querySelector('.photosnap');
 
-backgroundColor.addEventListener('mouseenter', function() {
-    backgroundColor.classList.add('active');
-    photosnap.classList.add('active');
-
+photosnapBackground.addEventListener('mouseenter', function() {
+    photosnapBackground.classList.add('active');
+    photosnapImg.classList.add('active');
     projectTitle.textContent = 'Photosnap';
+
     projectTitle.classList.add('active');
     projectLine.classList.add('active');
     projectRowWrap.classList.add('active');
@@ -53,14 +43,54 @@ backgroundColor.addEventListener('mouseenter', function() {
     projectColWrap[i].classList.add('active');
 });
 
-backgroundColor.addEventListener('mouseleave', function() {
-    backgroundColor.classList.remove('active');
-    photosnap.classList.remove('active');
+photosnapBackground.addEventListener('mouseleave', function() {
+    photosnapBackground.classList.remove('active');
+    photosnapImg.classList.remove('active');
+
+    dineBackground.classList.remove('active');
+    dineImg.classList.remove('active');
 
     projectTitle.textContent = '';
     projectTitle.classList.remove('active');
     projectLine.classList.remove('active');
     projectRowWrap.classList.remove('active');
+});
+
+//Dine Project #2----------------------------------------------------------------
+
+// Content in project on hover 
+let projectTitleDine = document.querySelector('.projectTitleDine');
+let projectLineDine = document.querySelector('.hoverLineDine');
+let projectRowWrapDine = document.querySelector('.flexWrapperRowDine');
+let projectColWrapDine = document.querySelectorAll('.flexWrapperColDine');
+
+let dineBackground = document.querySelector('.dineBackground');
+let dineImg = document.querySelector('.dine');
+
+// Mouse In
+dineBackground.addEventListener('mouseenter', function() {
+    dineBackground.classList.add('active');
+    dineImg.classList.add('active');
+    projectTitleDine.textContent = 'Dine';
+
+    projectTitleDine.classList.add('active');
+    projectLineDine.classList.add('active');
+    projectRowWrapDine.classList.add('active');
+    
+    for( i = 0; i < projectColWrapDine.length; i++)
+    projectColWrapDine[i].classList.add('active');
+
+});
+
+// Mouse Out
+dineBackground.addEventListener('mouseleave', function() {
+    dineBackground.classList.remove('active');
+    dineImg.classList.remove('active');
+
+    projectTitleDine.textContent = '';
+    projectTitleDine.classList.remove('active');
+    projectLineDine.classList.remove('active');
+    projectRowWrapDine.classList.remove('active');
 });
 
 
@@ -92,3 +122,28 @@ backgroundColor.addEventListener('mouseleave', function() {
 
 
 
+
+
+
+// function projectsActive() {
+//     projectTitle.classList.add('active');
+//     projectLine.classList.add('active');
+//     projectRowWrap.classList.add('active');
+    
+//     for( i = 0; i < projectColWrap.length; i++)
+//     projectColWrap[i].classList.add('active');
+// };
+
+
+// function projectsInactive() {
+//     photosnapBackground.classList.remove('active');
+//     photosnapImg.classList.remove('active');
+
+//     dineBackground.classList.remove('active');
+//     dineImg.classList.remove('active');
+
+//     projectTitle.textContent = '';
+//     projectTitle.classList.remove('active');
+//     projectLine.classList.remove('active');
+//     projectRowWrap.classList.remove('active');
+// }
