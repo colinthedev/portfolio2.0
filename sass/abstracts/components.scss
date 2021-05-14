@@ -9,8 +9,21 @@
         display: block;
         height: 19.5rem;
         margin-bottom: 6.5rem;
-        border: 1px solid rgba(255, 255, 255, 0.5);
+        border: 1.9px solid rgba(255, 255, 255, 0.5);
     }
+}
+
+.githubLink {
+    cursor: pointer;
+}
+
+.linked-inLink {
+    cursor: pointer;
+    min-height: 32px;    
+}
+
+.emailRe-direct {
+    cursor: pointer;
 }
 
 .projectsWrapper {
@@ -24,17 +37,18 @@
     z-index: 100;
 }
 
-.projectsWrapper:nth-child(1) {
-    margin-left: 6rem;
+.projectsWrapper:nth-child(2) {
+    margin-left: 4rem;
     margin-right: 4rem;
 }
 
-.dine {
+.projectsWrapper > img {
     margin-right: 4rem;
 }
 
 .dine,
-.photosnap {
+.photosnap,
+.nike {
     filter: saturate(135%);
     max-height: 450px;
     max-width: 585px;
@@ -57,12 +71,19 @@
 //Photosnap
 
 .photosnapBackground.active {
-    background: linear-gradient(
-        rgba(238, 41, 110, 0.89),
-        rgba(44, 18, 71, 1.0)
-      ),
-      url("../assets/desktop/photosnap-desktop.png");
-      transition: all ease-in-out .75s;
+    background: rgba(238, 41, 110, 0.89),
+    url("../assets/desktop/photosnap-desktop.png");
+
+    background: linear-gradient(rgba(238, 41, 110, 0.89),rgba(44, 18, 71, 1.0)),
+    url("../assets/desktop/photosnap-desktop.png");
+
+    background: -webkit-linear-gradient(rgba(238, 41, 110, 0.89),rgba(44, 18, 71, 1.0)),
+    url("../assets/desktop/photosnap-desktop.png");
+
+    background: -moz-linear-gradient(rgba(238, 41, 110, 0.89),rgba(44, 18, 71, 1.0)),
+    url("../assets/desktop/photosnap-desktop.png");
+
+    transition: all ease-in-out .75s;
 }
 
 .projectTitlePhotosnap.active {
@@ -85,12 +106,19 @@
 //Dine 
 
 .dineBackground.active {
-    background: linear-gradient(
-        rgba(206, 108, 78, 0.89),
-        rgba(215, 154, 110, 1.0)
-      ),
-      url("../assets/desktop/dine-desktop.png");
-      transition: all ease-in-out .75s;
+    background: rgba(42, 131, 156, 0.89),
+    url("../assets/desktop/dine-desktop.png");
+
+    background: linear-gradient(rgba(42, 131, 156, 0.89),rgba(178, 23, 150, 1.0)),
+    url("../assets/desktop/dine-desktop.png");
+    
+    background: -webkit-linear-gradient(rgba(42, 131, 156, 0.89), rgba(178, 23, 150, 1.0)),
+    url("../assets/desktop/dine-desktop.png");
+
+    background: -moz-linear-gradient(rgba(42, 131, 156, 0.89), rgba(178, 23, 150, 1.0)),
+    url("../assets/desktop/dine-desktop.png");
+
+    transition: all ease-in-out .75s;
 }
 
 .projectTitleDine.active {
@@ -110,5 +138,43 @@
     @include projectsWrapperCol();
 }
 
+// Nike
+
+.nikeBackground.active {
+    background: rgba(5, 68, 131, 0.89),
+    url("../assets/desktop/nike-desktop.png");
+
+    background: linear-gradient(rgba(5, 68, 131, 0.89)rgba(211, 93, 184, 1.0)),
+    url("../assets/desktop/nike-desktop.png");
+    
+    background: -webkit-linear-gradient(rgba(5, 68, 131, 0.89), rgba(211, 93, 184, 1.0)),
+    url("../assets/desktop/nike-desktop.png");
+
+    background: -moz-linear-gradient(rgba(5, 68, 131, 0.89), rgba(211, 93, 184, 1.0)),
+    url("../assets/desktop/nike-desktop.png");
+
+    transition: all ease-in-out .75s;
+}
+
+.projectTitleNike.active {
+    @include projectsHoverTitle();
+    right: 8rem;
+}
+
+.hoverLineNike.active {
+    @include projectsHoverLine();
+}
+
+.flexWrapperRowNike.active {
+    @include projectsWrapperRow();
+}
+
+.flexWrapperColNike.active {
+    @include projectsWrapperCol();
+}
+
+.flexWrapperColNike.active:nth-child(1) {
+    margin-right: 4rem;
+}
 
 

@@ -44,6 +44,11 @@
     display: none; 
 }
 
+.projectsContainer {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 .botRowContainer {
     display: flex;
     align-items: center;

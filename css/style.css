@@ -25,7 +25,17 @@
     display: block;
     height: 19.5rem;
     margin-bottom: 6.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.5); }
+    border: 1.9px solid rgba(255, 255, 255, 0.5); }
+
+.githubLink {
+  cursor: pointer; }
+
+.linked-inLink {
+  cursor: pointer;
+  min-height: 32px; }
+
+.emailRe-direct {
+  cursor: pointer; }
 
 .projectsWrapper {
   min-height: 450px;
@@ -36,15 +46,16 @@
   transform: scale(1.2);
   z-index: 100; }
 
-.projectsWrapper:nth-child(1) {
-  margin-left: 6rem;
+.projectsWrapper:nth-child(2) {
+  margin-left: 4rem;
   margin-right: 4rem; }
 
-.dine {
+.projectsWrapper > img {
   margin-right: 4rem; }
 
 .dine,
-.photosnap {
+.photosnap,
+.nike {
   filter: saturate(135%);
   max-height: 450px;
   max-width: 585px; }
@@ -60,7 +71,10 @@
   display: none; }
 
 .photosnapBackground.active {
+  background: rgba(238, 41, 110, 0.89), url("../assets/desktop/photosnap-desktop.png");
   background: linear-gradient(rgba(238, 41, 110, 0.89), #2c1247), url("../assets/desktop/photosnap-desktop.png");
+  background: -webkit-linear-gradient(rgba(238, 41, 110, 0.89), #2c1247), url("../assets/desktop/photosnap-desktop.png");
+  background: -moz-linear-gradient(rgba(238, 41, 110, 0.89), #2c1247), url("../assets/desktop/photosnap-desktop.png");
   transition: all ease-in-out .75s; }
 
 .projectTitlePhotosnap.active {
@@ -93,7 +107,10 @@
   z-index: 500; }
 
 .dineBackground.active {
-  background: linear-gradient(rgba(206, 108, 78, 0.89), #d79a6e), url("../assets/desktop/dine-desktop.png");
+  background: rgba(42, 131, 156, 0.89), url("../assets/desktop/dine-desktop.png");
+  background: linear-gradient(rgba(42, 131, 156, 0.89), #b21796), url("../assets/desktop/dine-desktop.png");
+  background: -webkit-linear-gradient(rgba(42, 131, 156, 0.89), #b21796), url("../assets/desktop/dine-desktop.png");
+  background: -moz-linear-gradient(rgba(42, 131, 156, 0.89), #b21796), url("../assets/desktop/dine-desktop.png");
   transition: all ease-in-out .75s; }
 
 .projectTitleDine.active {
@@ -124,6 +141,45 @@
   flex-direction: column;
   align-items: center;
   z-index: 500; }
+
+.nikeBackground.active {
+  background: rgba(5, 68, 131, 0.89), url("../assets/desktop/nike-desktop.png");
+  background: linear-gradient(rgba(5, 68, 131, 0.89) #d35db8), url("../assets/desktop/nike-desktop.png");
+  background: -webkit-linear-gradient(rgba(5, 68, 131, 0.89), #d35db8), url("../assets/desktop/nike-desktop.png");
+  background: -moz-linear-gradient(rgba(5, 68, 131, 0.89), #d35db8), url("../assets/desktop/nike-desktop.png");
+  transition: all ease-in-out .75s; }
+
+.projectTitleNike.active {
+  position: absolute;
+  top: 20rem;
+  z-index: 500;
+  right: 8rem; }
+
+.hoverLineNike.active {
+  display: block;
+  height: .75rem;
+  width: 25rem;
+  background-color: #ffffff;
+  z-index: 500;
+  position: absolute;
+  top: 27rem;
+  right: -2rem; }
+
+.flexWrapperRowNike.active {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 500;
+  margin-top: 35rem; }
+
+.flexWrapperColNike.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 500; }
+
+.flexWrapperColNike.active:nth-child(1) {
+  margin-right: 4rem; }
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -587,6 +643,12 @@ template {
 
 .projectsContainer::-webkit-scrollbar {
   display: none; }
+
+.projectsContainer {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
 
 .botRowContainer {
   display: flex;

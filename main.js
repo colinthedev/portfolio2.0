@@ -1,3 +1,20 @@
+// Random color for line 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+};
+
+function changeColor(){
+    let line = document.querySelector(".lineContainer__line");
+
+    line.style.backgroundColor= getRandomColor();
+}; 
+setInterval(changeColor,1000);
+
 
 // Projects container horizontal scrolling 
 (function() {
@@ -93,6 +110,42 @@ dineBackground.addEventListener('mouseleave', function() {
     projectRowWrapDine.classList.remove('active');
 });
 
+//Nike Project #3----------------------------------------------------------------
+
+// Content in project on hover 
+let projectTitleNike = document.querySelector('.projectTitleNike');
+let projectLineNike = document.querySelector('.hoverLineNike');
+let projectRowWrapNike = document.querySelector('.flexWrapperRowNike');
+let projectColWrapNike = document.querySelectorAll('.flexWrapperColNike');
+
+let nikeBackground = document.querySelector('.nikeBackground');
+let nikeImg = document.querySelector('.nike');
+
+// Mouse In
+nikeBackground.addEventListener('mouseenter', function() {
+    nikeBackground.classList.add('active');
+    nikeImg.classList.add('active');
+    projectTitleNike.textContent = 'Nike';
+
+    projectTitleNike.classList.add('active');
+    projectLineNike.classList.add('active');
+    projectRowWrapNike.classList.add('active');
+    
+    for( i = 0; i < projectColWrapNike.length; i++)
+    projectColWrapNike[i].classList.add('active');
+
+});
+
+// Mouse Out
+nikeBackground.addEventListener('mouseleave', function() {
+    nikeBackground.classList.remove('active');
+    nikeImg.classList.remove('active');
+
+    projectTitleNike.textContent = '';
+    projectTitleNike.classList.remove('active');
+    projectLineNike.classList.remove('active');
+    projectRowWrapNike.classList.remove('active');
+});
 
 
 
