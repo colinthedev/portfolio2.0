@@ -1,0 +1,60 @@
+
+.skillsContainer {
+    display: grid;
+    background: var(--color-background-black);
+    grid-template-rows: minmax(auto, 10vh) minmax(auto, 50vh) minmax(auto, 40vh);
+    grid-template-columns: [full-start] repeat(9, [col-start] 1fr [col-end]) [full-end];
+}
+
+.mainContainer {
+    grid-row: 2 / 3;
+    grid-column: 2 / 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.headingWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rowWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 11rem;
+}
+
+.footerContainer {
+    grid-row:  3 / 4;
+    grid-column: full-strat / full-end;
+}
+
+// Skills Page
+.skillsCircle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    background: #fdfdfd;
+
+}
+
+.skillsCurvedLine {
+    display: block;
+    margin-top: .5rem;
+}
+
+.squiggle {
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: 0;
+}

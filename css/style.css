@@ -71,10 +71,10 @@
   display: none; }
 
 .photosnapBackground.active {
-  background: rgba(238, 41, 110, 0.89), url("../assets/desktop/photosnap-desktop.png");
-  background: linear-gradient(rgba(238, 41, 110, 0.89), #2c1247), url("../assets/desktop/photosnap-desktop.png");
-  background: -webkit-linear-gradient(rgba(238, 41, 110, 0.89), #2c1247), url("../assets/desktop/photosnap-desktop.png");
-  background: -moz-linear-gradient(rgba(238, 41, 110, 0.89), #2c1247), url("../assets/desktop/photosnap-desktop.png");
+  background: rgba(245, 4, 4, 0.85), url("../assets/desktop/photosnap-desktop.png");
+  background: linear-gradient(rgba(245, 4, 4, 0.85), #ff0202), url("../assets/desktop/photosnap-desktop.png");
+  background: -webkit-linear-gradient(rgba(245, 4, 4, 0.85), #ff0202), url("../assets/desktop/photosnap-desktop.png");
+  background: -moz-linear-gradient(rgba(245, 4, 4, 0.85), #ff0202), url("../assets/desktop/photosnap-desktop.png");
   transition: all ease-in-out .75s; }
 
 .projectTitlePhotosnap.active {
@@ -85,12 +85,12 @@
 
 .hoverLinePhotosnap.active {
   display: block;
-  height: .75rem;
+  height: .15rem;
   width: 25rem;
   background-color: #ffffff;
   z-index: 500;
   position: absolute;
-  top: 27rem;
+  top: 28rem;
   right: -2rem; }
 
 .flexWrapperRowPhotosnap.active {
@@ -107,10 +107,10 @@
   z-index: 500; }
 
 .dineBackground.active {
-  background: rgba(42, 131, 156, 0.89), url("../assets/desktop/dine-desktop.png");
-  background: linear-gradient(rgba(42, 131, 156, 0.89), #b21796), url("../assets/desktop/dine-desktop.png");
-  background: -webkit-linear-gradient(rgba(42, 131, 156, 0.89), #b21796), url("../assets/desktop/dine-desktop.png");
-  background: -moz-linear-gradient(rgba(42, 131, 156, 0.89), #b21796), url("../assets/desktop/dine-desktop.png");
+  background: rgba(4, 0, 255, 0.85), url("../assets/desktop/dine-desktop.png");
+  background: linear-gradient(rgba(4, 0, 255, 0.85), #0400ff), url("../assets/desktop/dine-desktop.png");
+  background: -webkit-linear-gradient(rgba(4, 0, 255, 0.85), #0400ff), url("../assets/desktop/dine-desktop.png");
+  background: -moz-linear-gradient(rgba(4, 0, 255, 0.85), #0400ff), url("../assets/desktop/dine-desktop.png");
   transition: all ease-in-out .75s; }
 
 .projectTitleDine.active {
@@ -121,12 +121,12 @@
 
 .hoverLineDine.active {
   display: block;
-  height: .75rem;
+  height: .15rem;
   width: 25rem;
   background-color: #ffffff;
   z-index: 500;
   position: absolute;
-  top: 27rem;
+  top: 28rem;
   right: -2rem; }
 
 .flexWrapperRowDine.active {
@@ -143,10 +143,10 @@
   z-index: 500; }
 
 .nikeBackground.active {
-  background: rgba(5, 68, 131, 0.89), url("../assets/desktop/nike-desktop.png");
-  background: linear-gradient(rgba(5, 68, 131, 0.89) #d35db8), url("../assets/desktop/nike-desktop.png");
-  background: -webkit-linear-gradient(rgba(5, 68, 131, 0.89), #d35db8), url("../assets/desktop/nike-desktop.png");
-  background: -moz-linear-gradient(rgba(5, 68, 131, 0.89), #d35db8), url("../assets/desktop/nike-desktop.png");
+  background: rgba(226, 4, 255, 0.85), url("../assets/desktop/nike-desktop.png");
+  background: linear-gradient(rgba(226, 4, 255, 0.85), #e204ff), url("../assets/desktop/nike-desktop.png");
+  background: -webkit-linear-gradient(rgba(226, 4, 255, 0.85), #e204ff), url("../assets/desktop/nike-desktop.png");
+  background: -moz-linear-gradient(rgba(226, 4, 255, 0.85), #e204ff), url("../assets/desktop/nike-desktop.png");
   transition: all ease-in-out .75s; }
 
 .projectTitleNike.active {
@@ -157,12 +157,12 @@
 
 .hoverLineNike.active {
   display: block;
-  height: .75rem;
+  height: .15rem;
   width: 25rem;
   background-color: #ffffff;
   z-index: 500;
   position: absolute;
-  top: 27rem;
+  top: 28rem;
   right: -2rem; }
 
 .flexWrapperRowNike.active {
@@ -525,16 +525,13 @@ template {
 .navFont {
   font-family: 'Jost', sans-serif;
   font-style: normal;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 2rem;
   letter-spacing: .04em;
-  color: var(--color-text-grey);
-  text-decoration: underline solid 1px #CDCDCD;
   transition: all ease-in-out .45s; }
 
 .navFont:hover {
-  font-weight: 400;
-  text-decoration: none; }
+  width: 8rem; }
 
 .indexXlrgHeading {
   font-family: 'Jost', sans-serif;
@@ -551,6 +548,23 @@ template {
   font-size: 2.4rem;
   letter-spacing: .01em;
   color: var(--color-text-white); }
+
+.skillsLrgHeading {
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 7.2rem;
+  letter-spacing: .01em;
+  color: var(--color-text-white); }
+
+.skillsSubHeading {
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: .5rem;
+  font-size: 1.65rem;
+  letter-spacing: .04em;
+  color: #070707; }
 
 .indexDescriptionFont {
   font-family: 'Jost', sans-serif;
@@ -592,15 +606,34 @@ template {
   grid-column: 2 / 7; }
 
 .navigation__listWrapper {
+  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 25rem; }
+  justify-content: space-between; }
+  .navigation__listWrapper-nav {
+    display: flex;
+    justify-content: center;
+    margin-right: 1.75rem;
+    background: #FDFDFD;
+    border-radius: 1.5px;
+    color: black;
+    width: 7.5rem;
+    z-index: 100; }
+
+.navigation__listWrapper > a::after {
+  position: absolute;
+  top: .36rem;
+  content: '';
+  background: linear-gradient(rgba(5, 68, 131, 0.89), #d35db8);
+  height: 2.40rem;
+  width: 8.15rem;
+  z-index: -1; }
 
 .navigation__listWrapper-nav:hover {
   background: #fdfdfd;
   color: #000000;
-  transform: scale(1.05); }
+  transform: scale(1.5);
+  transform: translateX(0.1rem) translateY(0.5rem); }
 
 .navigation__listWrapper-nav:active {
   transform: scale(0.95); }
@@ -655,5 +688,55 @@ template {
   align-items: center;
   grid-row: 3 / 4;
   grid-column: 2 / 11; }
+
+.skillsContainer {
+  display: grid;
+  background: var(--color-background-black);
+  grid-template-rows: minmax(auto, 10vh) minmax(auto, 50vh) minmax(auto, 40vh);
+  grid-template-columns: [full-start] repeat(9, [col-start] 1fr [col-end]) [full-end]; }
+
+.mainContainer {
+  grid-row: 2 / 3;
+  grid-column: 2 / 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem; }
+
+.headingWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.rowWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 11rem; }
+
+.footerContainer {
+  grid-row: 3 / 4;
+  grid-column: full-strat / full-end; }
+
+.skillsCircle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  background: #fdfdfd; }
+
+.skillsCurvedLine {
+  display: block;
+  margin-top: .5rem; }
+
+.squiggle {
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */

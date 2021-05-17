@@ -7,12 +7,12 @@
 
 @mixin projectsHoverLine {
     display: block;
-    height: .75rem;
+    height: .15rem;
     width: 25rem;
     background-color: #ffffff;
     z-index: 500;
     position: absolute;
-    top: 27rem;
+    top: 28rem;
     right: -2rem;
 }
 

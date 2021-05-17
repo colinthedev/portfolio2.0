@@ -8,21 +8,39 @@
 .navigation {
     
     &__listWrapper {
+        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 25rem;
 
         &-nav {
-    
+            display: flex;
+            justify-content: center;
+            margin-right: 1.75rem;
+            background: #FDFDFD;
+            border-radius: 1.5px;
+            color: black;
+            width: 7.5rem;
+            z-index: 100;
         }
     }
+}
+
+.navigation__listWrapper > a::after {
+    position: absolute;
+    top: .36rem;
+    content: '';
+    background: linear-gradient(rgba(5, 68, 131, 0.89),rgba(211, 93, 184, 1.0));
+    height: 2.40rem;
+    width: 8.15rem;
+    z-index: -1;
 }
 
 .navigation__listWrapper-nav:hover {
     background: #fdfdfd;
     color: #000000;
-    transform: scale(1.05);
+    transform: scale(1.5);
+    transform: translateX(.10rem) translateY(.5rem);
 } 
 
 .navigation__listWrapper-nav:active {

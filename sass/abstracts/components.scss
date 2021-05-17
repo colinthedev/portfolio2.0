@@ -71,16 +71,16 @@
 //Photosnap
 
 .photosnapBackground.active {
-    background: rgba(238, 41, 110, 0.89),
+    background: rgba(245, 4, 4, 0.85),
     url("../assets/desktop/photosnap-desktop.png");
 
-    background: linear-gradient(rgba(238, 41, 110, 0.89),rgba(44, 18, 71, 1.0)),
+    background: linear-gradient(rgba(245, 4, 4, 0.85),rgb(255, 2, 2)),
     url("../assets/desktop/photosnap-desktop.png");
 
-    background: -webkit-linear-gradient(rgba(238, 41, 110, 0.89),rgba(44, 18, 71, 1.0)),
+    background: -webkit-linear-gradient(rgba(245, 4, 4, 0.85),rgb(255, 2, 2)),
     url("../assets/desktop/photosnap-desktop.png");
 
-    background: -moz-linear-gradient(rgba(238, 41, 110, 0.89),rgba(44, 18, 71, 1.0)),
+    background: -moz-linear-gradient(rgba(245, 4, 4, 0.85),rgb(255, 2, 2)),
     url("../assets/desktop/photosnap-desktop.png");
 
     transition: all ease-in-out .75s;
@@ -106,16 +106,16 @@
 //Dine 
 
 .dineBackground.active {
-    background: rgba(42, 131, 156, 0.89),
+    background: rgba(4, 0, 255, 0.85),
     url("../assets/desktop/dine-desktop.png");
 
-    background: linear-gradient(rgba(42, 131, 156, 0.89),rgba(178, 23, 150, 1.0)),
+    background: linear-gradient(rgba(4, 0, 255, 0.85), rgb(4, 0, 255)),
     url("../assets/desktop/dine-desktop.png");
     
-    background: -webkit-linear-gradient(rgba(42, 131, 156, 0.89), rgba(178, 23, 150, 1.0)),
+    background: -webkit-linear-gradient(rgba(4, 0, 255, 0.85), rgb(4, 0, 255)),
     url("../assets/desktop/dine-desktop.png");
 
-    background: -moz-linear-gradient(rgba(42, 131, 156, 0.89), rgba(178, 23, 150, 1.0)),
+    background: -moz-linear-gradient(rgba(4, 0, 255, 0.85), rgb(4, 0, 255)),
     url("../assets/desktop/dine-desktop.png");
 
     transition: all ease-in-out .75s;
@@ -138,19 +138,19 @@
     @include projectsWrapperCol();
 }
 
-// Nike
+//Nike
 
 .nikeBackground.active {
-    background: rgba(5, 68, 131, 0.89),
+    background: rgba(226, 4, 255, 0.85),
     url("../assets/desktop/nike-desktop.png");
 
-    background: linear-gradient(rgba(5, 68, 131, 0.89)rgba(211, 93, 184, 1.0)),
+    background: linear-gradient(rgba(226, 4, 255, 0.85), rgba(226, 4, 255, 1.0)),
     url("../assets/desktop/nike-desktop.png");
     
-    background: -webkit-linear-gradient(rgba(5, 68, 131, 0.89), rgba(211, 93, 184, 1.0)),
+    background: -webkit-linear-gradient(rgba(226, 4, 255, 0.85), rgba(226, 4, 255, 1.0)),
     url("../assets/desktop/nike-desktop.png");
 
-    background: -moz-linear-gradient(rgba(5, 68, 131, 0.89), rgba(211, 93, 184, 1.0)),
+    background: -moz-linear-gradient(rgba(226, 4, 255, 0.85), rgba(226, 4, 255, 1.0)),
     url("../assets/desktop/nike-desktop.png");
 
     transition: all ease-in-out .75s;
@@ -176,5 +176,6 @@
 .flexWrapperColNike.active:nth-child(1) {
     margin-right: 4rem;
 }
+
 
 
