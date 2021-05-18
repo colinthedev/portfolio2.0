@@ -1,7 +1,9 @@
 
 .skillsContainer {
+    display: flex;
+    flex-direction: row;
     position: relative;
-    grid-row: 4 / 6;
+    grid-row: 5 / 6;
     grid-column: full-start / full-end;
     background: var(--color-background-white);
     // grid-template-columns: [full-start] repeat(9, [col-start] 1fr [col-end]) [full-end];
@@ -23,22 +25,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: var(--color-background-pink);
     height: 100%;
+    width: 60%;
 }
 
 .headingWrapper {
     display: flex;
-    margin: 0 40rem 5rem 0;
     flex-direction: column;
     align-items: center;
+    margin-left: -10rem;
 }
 
 .cardRowWrapper { //RowWrapper  CARD
     display: flex;
     flex-direction: row;
-    width: 80%;
     justify-content: space-evenly;
-    margin-top: 5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 45rem;
+    height: 35rem;
     perspective: 800px;
     z-index: 100;
 }
@@ -51,7 +57,7 @@
     height: 12rem;
     width: 12rem;
     border-radius: 50%;
-    background: var(--color-background-black);
+    background: var(--color-background-white);
     transition: transform 1s;
     transform-style: preserve-3d;
     position: relative;
@@ -59,7 +65,7 @@
 
 .card__inner.is-flipped {
     transform: rotateY(180deg);
-    background: #F20D89;
+    background: #090909;
 }
 
 .card__face {

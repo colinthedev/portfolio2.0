@@ -114,11 +114,6 @@
         <!-- Skills section -->
         <div class="skillsContainer">
             <div class="cardContainer">
-                <div class="headingWrapper">
-                    <h1 class="skillsLrgHeading">My current skillset</h1>
-                    <img src="/assets/desktop/skills-heading-underline.svg" alt="curved line under heading" class="skillsCurvedLine">
-                </div>
-
                 <div class="cardRowWrapper">
                     <div class="card__inner">
                         <div class="card__face card__face--front">
@@ -176,9 +171,15 @@
                 </div>
             </div>
 
-            <div class="flamingoContainer">
-                <img class="flamingoContainer__flamingo" src="/assets/shared/flamingo.svg" alt="flamingo outline">
-                <!-- <img src="/assets/desktop/skills-squig.svg" alt="" class="squiggleContainer__squiggle"> -->
+            <div class="contentWrapperRight">
+                <div class="headingWrapper">
+                    <h1 id="colorFont" class="skillsLrgHeading"></h1>
+                </div>
+
+                <div class="flamingoContainer">
+                    <img class="flamingoContainer__flamingo" src="/assets/shared/flamingo.svg" alt="flamingo outline">
+                    <!-- <img src="/assets/desktop/skills-squig.svg" alt="" class="squiggleContainer__squiggle"> -->
+                </div>
             </div>
         </div>
         <!-- About Section -->
@@ -196,8 +197,22 @@
                 </div>
             </div>
 
-            <div class="form">
-
+            <div class="formWrapper">
+                <div class="inputWrapperTop">
+                    <label for="name"></label>
+                    <input class="inputWrapperTop__name formFont" type="text" placeholder="Full Name" name="name" required>
+                        <div class="underline inputWrapperTop__name-underline"></div>
+                    <label for="email"></label>
+                    <input class="inputWrapperTop__email formFont" type="text" placeholder="Email" name="email" required>
+                        <div class="underline inputWrapperTop__email-underline"></div>
+                </div>
+                <div class="inputWrapperMsg">
+                    <label for="message formFont"></label>
+                    <textarea class="inputWrapperMsg__msg formFont" type="text" placeholder="Message" name="message" id="" cols="30" rows="10" required></textarea>
+                </div>
+                <div class="btnWrapper">
+                    <button class="btnWrapper__btn" type="submit">Submit</button>
+                </div>
             </div>
         </div>  
 

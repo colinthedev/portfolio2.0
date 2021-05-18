@@ -135,8 +135,10 @@ nikeBackground.addEventListener('mouseleave', function() {
     projectRowWrapNike.classList.remove('active');
 });
 
+//Change font "My current skillset"
+let newString = document.getElementById('colorFont').innerHTML = 'My current skillset'.replace('My', '<span style="color: #fff;">My</span>');
 
-
+//Card component
 let cardContainer = document.querySelector('.cardRowWrapper');
 let cards = document.querySelectorAll('.card__inner');
 
