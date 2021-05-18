@@ -1,0 +1,25 @@
+.contactContainer {
+    background: var(--color-background-black);
+    grid-row: 7 / 8;
+    grid-column: 3 / 12;
+    // grid-template-rows: minmax(auto, 10vh) minmax(auto, 80vh) minmax(auto, 10vh);
+    // grid-template-columns: [full-start] repeat(9, [col-start] 1fr [col-end]) [full-end];
+}
+
+.leftContent {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    &__innerBottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 6.5rem;
+    }
+}
+
+.contactArrow {
+    display: block;
+}

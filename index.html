@@ -8,12 +8,14 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
+    <!-- font-family: 'Roboto', sans-serif;     -->
     <!-- font-family: 'Jost', sans-serif; -->
     
     <title>colinthedevportfolio</title>
 </head>
-    <body class="indexContainer">
+    <body class="gridContainer">
 
         <header class="headerContainer">
             <div class="navigation">
@@ -41,10 +43,10 @@
             <div class="lineContainer__line"></div>
         </div>
 
-        <div class="mainRowContainer">
+        <div class="leftColContainer">
             <h1 class="indexXlrgHeading margin2rem">Hello,<br/></h1>
             <h2 class="indexLrgHeading margin2rem">My name is Colin Peters<br/></h2>
-                <p class="indexDescriptionFont">I’m a developer who enjoys creating fun and clear user interfaces and engaging experiences, all while of course producing proudly made clean code.
+                <p class="indexDescriptionFont">I’m a developer who strives on creating fun and clear user interfaces and engaging experiences, all while of course producing proudly made clean code.
                 </p>
              <div class="linksContainer">
                 <a target="_blank" href="https://github.com/colinthedev">
@@ -60,20 +62,14 @@
             <div class="projectsWrapper photosnapBackground">
                 <span class="hoverTitleFont projectTitlePhotosnap"></span>
                 <div class="hoverLine hoverLinePhotosnap"></div>
-                <img src="assets/desktop/photosnap-desktop.png" alt="photosnap project" class="photosnap">
+                <img src="assets/desktop/photosnap-desktop.jpg" alt="photosnap project" class="photosnap">
                 <div class="flexWrapperRow flexWrapperRowPhotosnap">
-                    <div class="flexWrapperCol flexWrapperColPhotosnap margin5rem">
-                        <a target="_blank" href="https://colinthedev.github.io/Photography_Challenge/">
-                            <img src="assets/shared/view-live.svg" alt="Live site">
-                        </a>
+                    <a target="_blank" href="https://colinthedev.github.io/Photography_Challenge/">
                         <span class="hoverIconFont">View Live</span>
-                    </div>
-                    <div class="flexWrapperCol flexWrapperColPhotosnap">
-                        <a target="_blank" href="https://github.com/colinthedev/Photography_Challenge">
-                            <img src="assets/shared/github.svg" alt="View code">
-                        </a>
+                    </a>
+                    <a target="_blank" href="https://github.com/colinthedev/Photography_Challenge">
                         <span class="hoverIconFont">View Code</span>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -82,18 +78,12 @@
                 <div class="hoverLine hoverLineDine"></div>
                 <img src="assets/desktop/dine-desktop.png" alt="dine project" class="dine">
                 <div class="flexWrapperRow flexWrapperRowDine">
-                    <div class="flexWrapperCol flexWrapperColDine margin5rem">
-                        <a target="_blank" href="https://colinthedev.github.io/sleek-rest-website/">
-                            <img src="assets/shared/view-live.svg" alt="Live site">
-                        </a>
+                    <a target="_blank" href="https://colinthedev.github.io/sleek-rest-website/">
                         <span class="hoverIconFont">View Live</span>
-                    </div>
-                    <div class="flexWrapperCol flexWrapperColDine">
-                        <a target="_blank" href="https://github.com/colinthedev/sleek-rest-website">
-                            <img src="assets/shared/github.svg" alt="View code">
-                        </a>
+                    </a>
+                    <a target="_blank" href="https://github.com/colinthedev/sleek-rest-website">
                         <span class="hoverIconFont">View Code</span>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -102,20 +92,17 @@
                 <div class="hoverLine hoverLineNike"></div>
                 <img src="assets/desktop/nike-desktop.png" alt="nike project" class="nike">
                 <div class="flexWrapperRow flexWrapperRowNike">
-                    <div class="flexWrapperCol flexWrapperColNike">
-                        <a target="_blank" href="https://colinthedev.github.io/nike-page/">
-                            <img src="assets/shared/view-live.svg" alt="Live site">
-                        </a>
+                    <a target="_blank" href="https://colinthedev.github.io/nike-page/">
                         <span class="hoverIconFont">View Live</span>
-                    </div>
-                    <div class="flexWrapperCol flexWrapperColNike">
-                        <a target="_blank" href="https://github.com/colinthedev/nike-page">
-                            <img src="assets/shared/github.svg" alt="View code">
-                        </a>
+                    </a>
+                    <a target="_blank" href="https://github.com/colinthedev/nike-page">
                         <span class="hoverIconFont">View Code</span>
-                    </div>
+                    </a>
                 </div>
             </div>
+
+
+
         </div>
 
         <div class="botRowContainer">
@@ -124,7 +111,101 @@
             </a>
         </div>
 
+        <!-- Skills section -->
+        <div class="skillsContainer">
+            <div class="cardContainer">
+                <div class="headingWrapper">
+                    <h1 class="skillsLrgHeading">My current skillset</h1>
+                    <img src="/assets/desktop/skills-heading-underline.svg" alt="curved line under heading" class="skillsCurvedLine">
+                </div>
+
+                <div class="cardRowWrapper">
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <img  src="/assets/shared/html-5.svg" alt="HTML-5">
+                        </div>
+                        <div class="card__face card__face--back">
+                            <span class="card__content skillsSubHeading">Html-5</span>
+                        </div>
+                    </div>
+
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <img  src="/assets/shared/css-3.svg" alt="HTML-5">
+                        </div>
+                        <div class="card__face card__face--back">
+                            <span class="card__content skillsSubHeading">Css-3</span>
+                        </div>
+                    </div>
+
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <img  src="/assets/shared/Sass.svg" alt="HTML-5">
+                        </div>
+                        <div class="card__face card__face--back">
+                            <span class="card__content skillsSubHeading">Scss</span>
+                        </div>
+                    </div>
+
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <img  src="/assets/shared/javascript.svg" alt="HTML-5">
+                        </div>
+                        <div class="card__face card__face--back">
+                            <span class="card__content skillsSubHeading">Javascript</span>
+                        </div>
+                    </div>
+
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <img  src="/assets/shared/git.svg" alt="HTML-5">
+                        </div>
+                        <div class="card__face card__face--back">
+                            <span class="card__content skillsSubHeading">Git</span>
+                        </div>
+                    </div>
+
+                    <div class="card__inner">
+                        <div class="card__face card__face--front">
+                            <img  src="/assets/shared/figma.svg" alt="HTML-5">
+                        </div>
+                        <div class="card__face card__face--back">
+                            <span class="card__content skillsSubHeading">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flamingoContainer">
+                <img class="flamingoContainer__flamingo" src="/assets/shared/flamingo.svg" alt="flamingo outline">
+                <!-- <img src="/assets/desktop/skills-squig.svg" alt="" class="squiggleContainer__squiggle"> -->
+            </div>
+        </div>
+        <!-- About Section -->
+
+        <!-- Contact Section -->
+        <div class="contactContainer">
+            <div class="leftContent">
+                <div class="leftcontent__innerTop">
+                    <h1 class="contactHeading">You can contact me here</h1>
+                    <img src="/assets/desktop/contact-arrow.svg" alt="Arrow pointing to contact form" class="contactArrow">
+                </div>
+                <div class="leftContent__innerBottom">
+                    <span class="contactFontSml">colinthedev@gmail.com<br></span>
+                    <span class="contactFontSml">(585) 831-1692</span>
+                </div>
+            </div>
+
+            <div class="form">
+
+            </div>
+        </div>  
+
         <script src="main.js"></script>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="js/jquery.ripples.js"></script>
+
         <link rel='stylesheet' href='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.css' />
         <script src='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js'></script>
     </body>

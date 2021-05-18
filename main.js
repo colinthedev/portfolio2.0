@@ -43,7 +43,6 @@ setInterval(changeColor,1000);
 let projectTitle = document.querySelector('.projectTitlePhotosnap');
 let projectLine = document.querySelector('.hoverLinePhotosnap');
 let projectRowWrap = document.querySelector('.flexWrapperRowPhotosnap');
-let projectColWrap = document.querySelectorAll('.flexWrapperColPhotosnap');
 
 // Background color + image
 let photosnapBackground = document.querySelector('.photosnapBackground');
@@ -57,9 +56,6 @@ photosnapBackground.addEventListener('mouseenter', function() {
     projectTitle.classList.add('active');
     projectLine.classList.add('active');
     projectRowWrap.classList.add('active');
-    
-    for( i = 0; i < projectColWrap.length; i++)
-    projectColWrap[i].classList.add('active');
 });
 
 photosnapBackground.addEventListener('mouseleave', function() {
@@ -81,7 +77,6 @@ photosnapBackground.addEventListener('mouseleave', function() {
 let projectTitleDine = document.querySelector('.projectTitleDine');
 let projectLineDine = document.querySelector('.hoverLineDine');
 let projectRowWrapDine = document.querySelector('.flexWrapperRowDine');
-let projectColWrapDine = document.querySelectorAll('.flexWrapperColDine');
 
 let dineBackground = document.querySelector('.dineBackground');
 let dineImg = document.querySelector('.dine');
@@ -95,10 +90,6 @@ dineBackground.addEventListener('mouseenter', function() {
     projectTitleDine.classList.add('active');
     projectLineDine.classList.add('active');
     projectRowWrapDine.classList.add('active');
-    
-    for( i = 0; i < projectColWrapDine.length; i++)
-    projectColWrapDine[i].classList.add('active');
-
 });
 
 // Mouse Out
@@ -118,7 +109,6 @@ dineBackground.addEventListener('mouseleave', function() {
 let projectTitleNike = document.querySelector('.projectTitleNike');
 let projectLineNike = document.querySelector('.hoverLineNike');
 let projectRowWrapNike = document.querySelector('.flexWrapperRowNike');
-let projectColWrapNike = document.querySelectorAll('.flexWrapperColNike');
 
 let nikeBackground = document.querySelector('.nikeBackground');
 let nikeImg = document.querySelector('.nike');
@@ -132,10 +122,6 @@ nikeBackground.addEventListener('mouseenter', function() {
     projectTitleNike.classList.add('active');
     projectLineNike.classList.add('active');
     projectRowWrapNike.classList.add('active');
-    
-    for( i = 0; i < projectColWrapNike.length; i++)
-    projectColWrapNike[i].classList.add('active');
-
 });
 
 // Mouse Out
@@ -151,7 +137,21 @@ nikeBackground.addEventListener('mouseleave', function() {
 
 
 
+let cardContainer = document.querySelector('.cardRowWrapper');
+let cards = document.querySelectorAll('.card__inner');
 
+cards.forEach(el => {
+    el.addEventListener('mouseenter', function() {
+        cards.forEach(el => el.classList.remove('is-flipped'));
+        el.classList.add('is-flipped');
+    });
+});
+
+cards.forEach(el => {
+    el.addEventListener('mouseleave', function() {
+        cards.forEach(el => el.classList.remove('is-flipped'));
+    });
+});
 
 
 
