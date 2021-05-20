@@ -24,6 +24,37 @@
 
 .contactArrow {
     display: block;
+    position: absolute;
+    left: 13rem;
+}
+
+.showArrow {
+    animation-name:arrow;
+    animation-duration:1.5s;
+    animation-timing-function:ease-in-out;
+    animation-delay:.25s;
+    animation-iteration-count:infinite;
+    animation-direction:normal;
+    animation-play-state:running;
+    -webkit-animation-name:arrow;
+    -webkit-animation-duration:1.5s;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-delay:.25s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:normal;
+    -webkit-animation-play-state:running;
+}
+
+@keyframes arrow {
+    100% {
+        transform: translateX(-20px)
+    }
+}
+
+@-webkit-keyframes arrow {
+    100% {
+        transform: translate(-10px, -10px)
+    }
 }
 
 .formWrapper {
