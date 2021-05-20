@@ -158,7 +158,7 @@ cards.forEach(el => {
 });
 
 //Skills section background animation
-let withinViewport = (function() {
+let withinViewport = function() {
     if (window.requestAnimationFrame) {  
       // Throttle
       let throttle = function(func, wait, options) {
@@ -308,7 +308,7 @@ let withinViewport = (function() {
         _requestAnimationFrame(toggleElement);
   
         // For demo purposes only
-        fullscreenIntro();
+        // fullscreenIntro();
       }, 300);
   
       scrollHandler();
@@ -326,19 +326,19 @@ let withinViewport = (function() {
       }
     }
   
-    // FOR DEMO PURPOSES ONLY
-    // Makes fullscreen intro on any device so user is forced to scroll
-    let fullscreenIntro = function() {
-        let fullscreen = document.querySelectorAll('.fullscreen');
-      for (let i = 0; i < fullscreen.length; i++) {
-        fullscreen[i].style.height = getViewportSize().height + 1 + 'px';
-      }
-    };
-    fullscreenIntro();
+    // // FOR DEMO PURPOSES ONLY
+    // // Makes fullscreen intro on any device so user is forced to scroll
+    // let fullscreenIntro = function() {
+    //     let fullscreen = document.querySelectorAll('.fullscreen');
+    //   for (let i = 0; i < fullscreen.length; i++) {
+    //     fullscreen[i].style.height = getViewportSize().height + 1 + 'px';
+    //   }
+    // };
+    // fullscreenIntro();
   
-    return withinViewport;
+    // return withinViewport;
   
-}());
+}();
 
 
 

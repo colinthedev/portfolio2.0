@@ -7,12 +7,12 @@
     font-weight: 300;
     font-size: 2rem;
     letter-spacing: .04em;
-    
-    transition: all ease-in-out .45s;
+    color: var(--color-text-white);
+
 }
 
 .navFont:hover {
-    width: 8rem;
+    color: #000;
 }
 
 //Button

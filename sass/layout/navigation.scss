@@ -2,49 +2,52 @@
     display: flex;
     align-items: center;
     grid-row: 1 / 2;
-    grid-column: 2 / 7;
+    grid-column: 2 / 8;
 }
 
 .navigation {
     
     &__listWrapper {
+        position: relative;
         display: flex;
-        width: 25rem;
         flex-direction: row;
         justify-content: space-between;
 
         &-nav {
+            display: inline;
+            overflow: hidden;
+            cursor: pointer;
             position: relative;
-            max-width: 5.25rem;
+            margin-right: 3rem;
+            padding: .27rem;
+
+            background: linear-gradient(to right, #090909 50%, #FDFDFD 50%);    background-size: 200% 100%;
+            background-position: left bottom;
+            transition: all ease-in-out .45s;
+        }
+
+        &-nav:hover {
+            background-position: right bottom;
         }
     }
 }
 
-.navigation__listWrapper-nav:after {
+.navigation__listWrapper > li:after{
     content: "";
     position: absolute;
     left: 0;
     right: 100%;
-    bottom: -2px;
+    bottom: -1px;
     background: #fdfdfd;
     height: 1.75px;
-    width: inherit;
+    width: 7rem;
     transition-property: left right;
     transition-duration: .75s;
     transition-timing-function: ease-in-out;
     z-index: 100;
 }
 
-.navigation__listWrapper > a {
-    color: #fdfdfd;
-    z-index: 100;
-    width: inherit;
-}
-
-.navigation__listWrapper-nav:hover {
-    right: 0;
-} 
-
+.navigation__listWrapper-nav:focus,
 .navigation__listWrapper-nav:active {
     transform: scale(.95);
 }
