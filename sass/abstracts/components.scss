@@ -55,7 +55,7 @@
     right: 100%;
     bottom: -2px;
     background: #fdfdfd;
-    height: 2.5px;
+    height: 1.75px;
     transition-property: left right;
     transition-duration: .75s;
     transition-timing-function: ease-in-out;
@@ -196,4 +196,40 @@
 
 
 
+.btnWrapper {
+    position: relative;
+    width: 11rem;
+    margin: 0 auto 0 auto;
+    margin-top: 5rem;
+    z-index: 1;
 
+    &__btn {
+        cursor: pointer;
+        display: block;
+        height: 3.5rem;
+        width: 11rem;
+        background: #090909;
+        z-index: 1;
+    }
+}
+
+.btnWrapper__btn:after {
+    display: block;
+    position: absolute;
+    top: .36rem;
+    left: .5rem;
+    content: '';
+    background: #1688f1;
+    height: 3.5rem;
+    width: 11rem;
+    z-index: -1;
+}
+
+.btnWrapper__btn:hover {
+    transform: scale(.95);
+}
+
+.btnWrapper__btn:active,
+.btnWrapper__btn:focus {
+    transform: scale(.90);
+}

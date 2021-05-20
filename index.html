@@ -112,8 +112,11 @@
         </div>
 
         <!-- Skills section -->
-        <div class="skillsContainer">
+        <div class="skillsContainer hidden">
             <div class="cardContainer">
+                <div class="headingWrapper">
+                    <h1 id="colorFont" class="skillsLrgHeading"></h1>
+                </div>
                 <div class="cardRowWrapper">
                     <div class="card__inner">
                         <div class="card__face card__face--front">
@@ -172,10 +175,6 @@
             </div>
 
             <div class="contentWrapperRight">
-                <div class="headingWrapper">
-                    <h1 id="colorFont" class="skillsLrgHeading"></h1>
-                </div>
-
                 <div class="flamingoContainer">
                     <img class="flamingoContainer__flamingo" src="/assets/shared/flamingo.svg" alt="flamingo outline">
                     <!-- <img src="/assets/desktop/skills-squig.svg" alt="" class="squiggleContainer__squiggle"> -->
@@ -192,12 +191,14 @@
                     <img src="/assets/desktop/contact-arrow.svg" alt="Arrow pointing to contact form" class="contactArrow">
                 </div>
                 <div class="leftContent__innerBottom">
-                    <span class="contactFontSml">colinthedev@gmail.com<br></span>
+                    <a href="mailto:colinthedev@gmail.com">
+                        <span class="contactFontSml emailRe-direct">colinthedev@gmail.com<br></span>
+                    </a>
                     <span class="contactFontSml">(585) 831-1692</span>
                 </div>
             </div>
 
-            <div class="formWrapper">
+            <form action="/action_page.php" method="get" id="form" class="formWrapper">
                 <div class="inputWrapperTop">
                     <label for="name"></label>
                     <input class="inputWrapperTop__name formFont" type="text" placeholder="Full Name" name="name" required>
@@ -211,17 +212,15 @@
                     <textarea class="inputWrapperMsg__msg formFont" type="text" placeholder="Message" name="message" id="" cols="30" rows="10" required></textarea>
                 </div>
                 <div class="btnWrapper">
-                    <button class="btnWrapper__btn" type="submit">Submit</button>
+                    <button type="submit" form="form" value="Submit" class="btnTxt btnWrapper__btn">Submit</button>
                 </div>
-            </div>
+            </form>
         </div>  
 
         <script src="main.js"></script>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        <script src="js/jquery.ripples.js"></script>
-
-        <link rel='stylesheet' href='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.css' />
-        <script src='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js'></script>
     </body>
 </html>
+
+    <!-- <link rel='stylesheet' href='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.css' />
+    <script src='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js'></script> -->

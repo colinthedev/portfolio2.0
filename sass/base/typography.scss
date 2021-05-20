@@ -15,6 +15,16 @@
     width: 8rem;
 }
 
+//Button
+.btnTxt {
+    font-family: 'Roboto', sans-serif; 
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.8rem;
+    letter-spacing: .04em;
+    color: var(--color-text-white);
+}
+
 //Headings
 .indexXlrgHeading {
     font-family: 'Jost', sans-serif;
@@ -55,18 +65,20 @@
     font-size: 7.2rem;
     letter-spacing: .04em;
     color: #fdfdfd
+
 }
 
 .contactFontSml {
     font-family: 'Roboto', sans-serif; 
     font-weight: 300;
-    font-size: 1.8rem;
+    font-size: 1.65rem;
     letter-spacing: .06em;
     color: #fdfdfd;
 }
 
 .formFont {
     font-family: 'Roboto', sans-serif; 
+    text-transform: uppercase;
     font-weight: 400;
     font-size: 1.8rem;
     letter-spacing: .02em;
@@ -114,4 +126,8 @@
     font-size: 1.5rem;
     letter-spacing: .04em;
     color: var(--color-text-white);
+}
+
+.hoverIconFont:hover {
+    text-decoration: underline solid 1.5px #fdfdfd;
 }
