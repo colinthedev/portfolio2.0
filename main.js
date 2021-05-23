@@ -175,7 +175,6 @@ let sceneBackground = new ScrollMagic.Scene({
 // sceneBackground.addIndicators();
 
 // SceneFade toggle opacity on main skill container --------------------------
-
 let sceneFade = new ScrollMagic.Scene({
     triggerElement: '.skillsContainer',
     offset: -200, // start this scene -180px from top of container
@@ -186,11 +185,29 @@ let sceneFade = new ScrollMagic.Scene({
 .addTo(controller);
 // sceneFade.addIndicators();
 
-// SceneContact slide in text from left-------------------------------------
+// SceneBulb swinging light-bulb about section-------------------------------
+let sceneFadeBulb = new ScrollMagic.Scene({
+    triggerElement: '.bulbWrapper',
+    offset: 300,
+    reverse: false
+})
+.setClassToggle('.bulbWrapper', 'show-bulb')
+sceneFadeBulb.addIndicators()
+.addTo(controller);
 
+let sceneBulb =  new ScrollMagic.Scene({
+    triggerElement: '.bulbWrapper',
+    offset: 300,
+    reverse: false
+})
+.setClassToggle('.bulbWrapper', 'swing')
+sceneBulb.addIndicators()
+.addTo(controller);
+
+// SceneContact slide in text from left--------------------------------------
 let sceneContact = new ScrollMagic.Scene({
     triggerElement: '.slide-right',
-    offset: -250, // start this scene -180px from top of container
+    offset: -340, // start this scene -180px from top of container
     reverse: false
 })
 .setClassToggle('.slide-right', 'textReveal')
@@ -199,7 +216,6 @@ let sceneContact = new ScrollMagic.Scene({
 
 
 // SceneArrow add pointing animation ---------------------------------------
-
 let sceneArrow = new ScrollMagic.Scene({
     triggerElement: '.contactArrow',
     offset: -80, // start this scene -180px from top of container

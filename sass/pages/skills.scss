@@ -7,6 +7,7 @@
   grid-column: full-start / full-end;
   background: var(--color-background-white);
   transition: opacity ease-in-out 1s;
+  z-index: 09;
   
   opacity: 0;
   // grid-template-columns: [full-start] repeat(9, [col-start] 1fr [col-end]) [full-end];
@@ -36,6 +37,7 @@
   background: var(--color-background-pink);
   height: 100%;
   width: 60%;
+  z-index: 10;
 }
 
 .headingWrapper {
@@ -84,15 +86,20 @@
   overflow: hidden;
 }
 
-.card__face--front { // Card front 
+.card__face-front { // Card front 
   display: flex;
   backface-visibility: hidden;
   align-items: center;
   justify-content: center;
   transform: rotateY(0deg);
+
+  &--img {
+    display: block !important;
+    z-index: 100;
+  }
 }
 
-.card__face--back { // Card back 
+.card__face-back { // Card back 
   display: block;
   transform: rotateY(180deg);
 }
