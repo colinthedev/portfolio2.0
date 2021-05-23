@@ -1,0 +1,76 @@
+
+.aboutContainer { // About Container 
+    display: flex;
+    flex-direction: column;
+    color: var(--color-text-white);
+    grid-row: 7 / 8;
+    grid-column: full-start / full-end;
+}
+
+.bulbWrapper { // Lightbulb wrap
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    &__blur {
+        position: absolute;
+        top: 7.5rem;
+        display: inline-block;
+        height: 55rem;
+        width: 75rem;
+        border-radius: 50%;
+        background: #fce626d0;
+        filter:blur(80px); // Safari
+            -o-filter:blur(100px);
+                -ms-filter:blur(100px);
+                    -moz-filter:blur(100px);
+                        -webkit-filter:blur(80px); // Safari
+        z-index: -1;
+    }
+
+    &__bulb {
+        position: absolute;
+        top: 0;
+        left: 45%;
+        display: inline-block;
+        z-index: 100;
+    }
+}
+
+.about-headingWrapper { // Heading wrap
+    position: relative;
+    writing-mode: vertical-rl;
+
+    &__heading {
+        position: absolute;
+        left: 0;
+        top: 35rem;
+    }
+}
+
+.contentWrapper { // Main content wrap
+    display: flex;
+    flex-direction: column;
+
+    &__about {
+        display: block;
+        margin: 37.5rem 15rem 2.5rem 15rem;
+    }
+
+    &__fullWidthLine {
+        display: block;
+        height: 2px;
+        width: 100%;
+        margin-left: 10rem;
+        background: white;
+    }
+
+    &__contactRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin: 2.5rem 15rem 0 15rem;
+    }
+}

@@ -59,6 +59,33 @@
     color: var(--color-text-white);
 }
 
+.aboutHeading {
+    font-family: 'Roboto', sans-serif; 
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7.2rem;
+    letter-spacing: .04em;
+    color: var(--color-text-white);
+}
+
+.aboutContent {
+    font-family: 'Roboto', sans-serif; 
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.2rem;
+    letter-spacing: .02em;
+    color: var(--color-text-white);
+}
+
+.aboutLinks {
+    font-family: 'Roboto', sans-serif; 
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.2rem;
+    letter-spacing: .02em;
+    color: var(--color-text-white);
+}
+
 .contactHeading {
     font-family: 'Roboto', sans-serif; 
     font-weight: 700;

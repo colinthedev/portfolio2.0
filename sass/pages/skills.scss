@@ -1,137 +1,143 @@
 
 .skillsContainer {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    grid-row: 5 / 6;
-    grid-column: full-start / full-end;
-    background: var(--color-background-white);
-    transition: opacity ease-in-out 1s;
-    
-    opacity: 0;
-    // grid-template-columns: [full-start] repeat(9, [col-start] 1fr [col-end]) [full-end];
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  grid-row: 5 / 6;
+  grid-column: full-start / full-end;
+  background: var(--color-background-white);
+  transition: opacity ease-in-out 1s;
+  
+  opacity: 0;
+  // grid-template-columns: [full-start] repeat(9, [col-start] 1fr [col-end]) [full-end];
 }
 
-.show {
-    opacity: 1;
+.show { // Skills container fade in 
+  opacity: 1;
 }
 
-.flamingoContainer {
-    position: absolute;
-    right: 2rem;
-    bottom: -.25rem;
+.flamingoContainer { // Flamingo Wrap
+  position: absolute;
+  right: 2rem;
+  bottom: -.25rem;
 
-    &__flamingo {
-        display: block;
-        z-index: 1;
-    }
+  &__flamingo { // Flamingo
+      display: block;
+      z-index: 1;
+  }
 }
 
-.cardContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-background-pink);
-    height: 100%;
-    width: 60%;
+.cardContainer { // Left section of skills
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-background-pink);
+  height: 100%;
+  width: 60%;
 }
 
 .headingWrapper {
-    position: absolute;
-    top: .5rem;
-    right: 12.5rem;
+  position: absolute;
+  top: .5rem;
+  right: -45.5rem;
 }
 
-.cardRowWrapper { //RowWrapper  CARD
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 45rem;
-    height: 35rem;
-    perspective: 800px;
-    z-index: 100;
+.cardRowWrapper { // Card component wrapper
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 45rem;
+  height: 35rem;
+  perspective: 800px;
+  z-index: 100;
 }
 
-.card__inner { //Skills circle
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 12rem;
-    width: 12rem;
-    border-radius: 50%;
-    background: var(--color-background-white);
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    position: relative;
+.card__inner { // Card component circle
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  background: var(--color-background-white);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+  position: relative;
 }
 
-.card__inner.is-flipped {
-    transform: rotateY(180deg);
-    background: #090909;
-}
-
-.card__face {
-    position: absolute;
+.card__face { // Card component
+  position: absolute;
+  backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    overflow: hidden;
+      -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+          -o-backface-visibility: hidden;
+  overflow: hidden;
 }
 
-.card__face--front {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.card__face--front { // Card front 
+  display: flex;
+  backface-visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(0deg);
 }
 
-.card__face--back {
-    transform: rotateY(180deg);
+.card__face--back { // Card back 
+  display: block;
+  transform: rotateY(180deg);
 }
 
-.skillsCurvedLine {
-    display: block;
-    margin-top: .5rem;
+.card__inner.is-flipped { // Card rotate
+  transform: rotateY(180deg);
+  background: #090909;
 }
 
-.revealed {
-    -webkit-animation-name: wipe-in-bottom-right;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: 1;    
-    -webkit-animation-play-state: running;
-    
-    animation-name: wipe-in-bottom-right;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;    
-    animation-play-state: running;
+.revealed { // Left section animation
+  -webkit-animation-name: wipe-in-bottom-right;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;    
+  -webkit-animation-play-state: running;
+  
+  animation-name: wipe-in-bottom-right;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;    
+  animation-play-state: running;
 }
 
 @keyframes wipe-in-bottom-right {
-    from {
-      clip-path: polygon(0 0, 0 0, 0 0, 0 50%);
-    }
-    to {
-      clip-path: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
-    }
+  from {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 50%);
   }
-  
-  [transition-style="in:wipe:bottom-right"] {
-    animation: 3s cubic-bezier(.25, 1, .30, 1) wipe-in-bottom-right both;
+  to {
+    clip-path: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
   }
+}
+
+[transition-style="in:wipe:bottom-right"] {
+  animation: 3s cubic-bezier(.25, 1, .30, 1) wipe-in-bottom-right both;
+}
 
 @-webkit-keyframes wipe-in-bottom-right {
-    from {
-      clip-path: polygon(0 0, 0 0, 0 0, 0 50%);
-    }
-    to {
-      clip-path: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
-    }
+  from {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 50%);
   }
+  to {
+    clip-path: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
+  }
+}
   
-  [transition-style="in:wipe:bottom-right"] {
-    animation: 3s cubic-bezier(.25, 1, .30, 1) wipe-in-bottom-right both;
-  }
+[transition-style="in:wipe:bottom-right"] {
+  animation: 3s cubic-bezier(.25, 1, .30, 1) wipe-in-bottom-right both;
+}

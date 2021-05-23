@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: row;
     background: var(--color-background-black);
-    grid-row: 7 / 8;
+    grid-row: 9 / 10;
     grid-column: 3 / -1;
 }
 
-.leftContent {
+.leftContent { // Left side of contact section
     display: flex;
     height: 100%;
     width: 45rem;
@@ -22,43 +22,72 @@
     }
 }
 
-.contactArrow {
+.slide-right { // Contact text slide in 
+    width: 100%;
+    overflow: hidden;
+    transform: translateX(-120%);
+  }
+
+
+.textReveal {
+    animation: 1.5s slide-right 1.5s forwards;
+}
+
+@keyframes slide-right {
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.contactArrow { // Arrow
     display: block;
     position: absolute;
     left: 13rem;
 }
 
-.showArrow {
+.showArrow { // Arrow animation
     animation-name:arrow;
     animation-duration:1.5s;
-    animation-timing-function:ease-in-out;
+    animation-timing-function:ease-out;
     animation-delay:.25s;
     animation-iteration-count:infinite;
     animation-direction:normal;
     animation-play-state:running;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+
     -webkit-animation-name:arrow;
-    -webkit-animation-duration:1.5s;
-    -webkit-animation-timing-function:ease-in-out;
-    -webkit-animation-delay:.25s;
-    -webkit-animation-iteration-count:infinite;
-    -webkit-animation-direction:normal;
-    -webkit-animation-play-state:running;
+        -webkit-animation-duration:1.5s;
+            -webkit-animation-timing-function:ease-out;
+                -webkit-animation-delay:.25s;
+                    -webkit-animation-iteration-count:infinite;
+                        -webkit-animation-direction:normal;
+                            -webkit-animation-play-state:running;
+                                -webkit-transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
 
 @keyframes arrow {
+    0% {
+        transform: translateX(0px);
+    }
+
     100% {
-        transform: translateX(-20px)
+        transform: translateX(-15px);
     }
 }
 
 @-webkit-keyframes arrow {
+    0% {
+        transform: translateX(0px);
+    }
+
     100% {
-        transform: translate(-10px, -10px)
+        transform: translateX(-15px);
     }
 }
 
-.formWrapper {
+.formWrapper { // Form 
     display: flex;
+    align-items: center;
     flex-direction: column;
     background: var(--color-background-white);
     height: 100%;
@@ -81,7 +110,7 @@
     }
 
     &__email {
-        margin-left: 6rem;
+        margin-left: 10rem;
 
         &-underline {
             width: 37%;
@@ -91,7 +120,7 @@
 }
 
 .inputWrapperTop > input {
-    width: 80%;
+    width: 27rem;
 }
 
 .underline {
@@ -114,4 +143,3 @@
         height: inherit;
     }
 }
-

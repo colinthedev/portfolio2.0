@@ -1,11 +1,13 @@
-.gridContainer {
+.gridContainer { // Main grid 
     display: grid;
     background: var(--color-background-black);
-    grid-template-rows: minmax(auto, 10vh) minmax(auto, 80vh) minmax(auto, 10vh) minmax(auto, 20vh) minmax(auto, 62rem) minmax(auto, 20vh) minmax(auto, 74rem);
+    grid-template-rows: minmax(auto, 10vh) minmax(auto, 80vh) minmax(auto, 10vh) minmax(auto, 20vh) minmax(auto, 62rem) minmax(auto, 20vh) minmax(auto, 74rem) minmax(auto, 20vh) minmax(auto, 74rem);
     grid-template-columns: [full-start] repeat(28, [col-start] 1fr [col-end]) [full-end];
 }
 
-.leftColContainer {
+// Landing page -------------------------------------------------
+
+.leftColContainer { // Left col container
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +15,7 @@
     grid-column: 2 / 11;
 }
 
-.linksContainer {
+.linksContainer { // Left col wrap > links
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -22,7 +24,7 @@
     width: 8rem;
 }
 
-.projectsContainer {
+.projectsContainer { // Right col container 
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -49,7 +51,7 @@
     scrollbar-width: none;  /* Firefox */
 }
 
-.botRowContainer {
+.botRowContainer { // Email wrap
     display: flex;
     align-items: center;
     grid-row: 3 / 4;

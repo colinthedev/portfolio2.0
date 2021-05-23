@@ -186,6 +186,17 @@ let sceneFade = new ScrollMagic.Scene({
 .addTo(controller);
 // sceneFade.addIndicators();
 
+// SceneContact slide in text from left-------------------------------------
+
+let sceneContact = new ScrollMagic.Scene({
+    triggerElement: '.slide-right',
+    offset: -250, // start this scene -180px from top of container
+    reverse: false
+})
+.setClassToggle('.slide-right', 'textReveal')
+.addTo(controller);
+// sceneContact.addIndicators()
+
 
 // SceneArrow add pointing animation ---------------------------------------
 
@@ -198,7 +209,6 @@ let sceneArrow = new ScrollMagic.Scene({
 .setClassToggle('.contactArrow', 'showArrow')
 .addTo(controller);
 // sceneArrow.addIndicators();
-
 
 
 

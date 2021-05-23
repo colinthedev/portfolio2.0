@@ -1,11 +1,11 @@
-.headerContainer {
+.headerContainer { // Header container 
     display: flex;
     align-items: center;
     grid-row: 1 / 2;
     grid-column: 2 / 8;
 }
 
-.navigation {
+.navigation { // Nav wrap
     
     &__listWrapper {
         position: relative;
@@ -19,7 +19,7 @@
             cursor: pointer;
             position: relative;
             margin-right: 3rem;
-            padding: .27rem;
+            padding: .15rem; // Too much padding creates weird line on about
 
             background: linear-gradient(to right, #090909 50%, #FDFDFD 50%);    background-size: 200% 100%;
             background-position: left bottom;
@@ -32,7 +32,7 @@
     }
 }
 
-.navigation__listWrapper > li:after{
+.navigation__listWrapper > li:after{ // Nav animation 
     content: "";
     position: absolute;
     left: 0;

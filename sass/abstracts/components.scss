@@ -1,4 +1,4 @@
-.lineContainer {
+.lineContainer { // Landing page RGB random color line
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,16 +13,16 @@
     }
 }
 
-.githubLink {
+.githubLink { // Github
     cursor: pointer;
 }
 
-.linked-inLink {
+.linked-inLink { // Linked-in
     cursor: pointer;
     min-height: 32px;    
 }
 
-.linked-inLink,
+.linked-inLink, // Links trans
 .githubLink {
     transition: transform .25s ease-out;
 }
@@ -41,14 +41,14 @@
     transform: rotate(-360deg);
 }
 
-.emailRe-direct {
+.emailRe-direct { // Email
     display: inline;
     position: relative;
     cursor: pointer;
     overflow: hidden;
 }
 
-.emailRe-direct:after {
+.emailRe-direct:after { // Email animation
     content: "";
     position: absolute;
     left: 0;
@@ -68,7 +68,7 @@
     right: 0;
 }
 
-.projectsWrapper {
+.projectsWrapper { // Landing page right col projects wrap
     min-height: 450px;
     min-width: 585px;
     transition: all ease-in-out .75s;
@@ -90,7 +90,7 @@
 
 .dine,
 .photosnap,
-.nike {
+.nike { // projects
     filter: saturate(135%);
     max-height: 450px;
     max-width: 585px;
@@ -105,7 +105,7 @@
 //Hover on projects
 
 .hoverLine,
-.flexWrapperRow {
+.flexWrapperRow { // Projects links
     display: none;
 }
 
@@ -196,40 +196,40 @@
 
 
 
-.btnWrapper {
-    position: relative;
-    width: 11rem;
-    margin: 0 auto 0 auto;
-    margin-top: 5rem;
-    z-index: 1;
+// .btnWrapper { // THIS IS OLD???????
+//     position: relative;
+//     width: 11rem;
+//     margin: 0 auto 0 auto;
+//     margin-top: 5rem;
+//     z-index: 1;
 
-    &__btn {
-        cursor: pointer;
-        display: block;
-        height: 3.5rem;
-        width: 11rem;
-        background: #090909;
-        z-index: 1;
-    }
-}
+//     &__btn {
+//         cursor: pointer;
+//         display: block;
+//         height: 3.5rem;
+//         width: 11rem;
+//         background: #090909;
+//         z-index: 1;
+//     }
+// }
 
-.btnWrapper__btn:after {
-    display: block;
-    position: absolute;
-    top: .36rem;
-    left: .5rem;
-    content: '';
-    background: #1688f1;
-    height: 3.5rem;
-    width: 11rem;
-    z-index: -1;
-}
+// .btnWrapper__btn:after {
+//     display: block;
+//     position: absolute;
+//     top: .36rem;
+//     left: .5rem;
+//     content: '';
+//     background: #1688f1;
+//     height: 3.5rem;
+//     width: 11rem;
+//     z-index: -1;
+// }
 
-.btnWrapper__btn:hover {
-    transform: scale(.95);
-}
+// .btnWrapper__btn:hover {
+//     transform: scale(.95);
+// }
 
-.btnWrapper__btn:active,
-.btnWrapper__btn:focus {
-    transform: scale(.90);
-}
+// .btnWrapper__btn:active,
+// .btnWrapper__btn:focus {
+//     transform: scale(.90);
+// }
