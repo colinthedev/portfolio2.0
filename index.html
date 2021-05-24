@@ -13,7 +13,7 @@
     <!-- font-family: 'Roboto', sans-serif;     -->
     <!-- font-family: 'Jost', sans-serif; -->
     
-    <title>colinthedevportfolio</title>
+    <title>colinthedev</title>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
@@ -24,9 +24,9 @@
         <header class="headerContainer">
             <div class="navigation">
                 <ul class="navigation__listWrapper">
-                    <li class="navigation__listWrapper-nav revealed"><a class="navFont" href="skills.html">Skills</a></li>
-                    <li class="navigation__listWrapper-nav revealed"><a class="navFont" href="about.html">About</a></li>
-                    <li class="navigation__listWrapper-nav revealed"><a class="navFont" href="contact.html">Contact</a></li>
+                    <li class="navigation__listWrapper-nav revealed"><a class="navFont nav__link" href="#section--1">Skills</a></li>
+                    <li class="navigation__listWrapper-nav revealed"><a class="navFont nav__link" href="#section--2">About</a></li>
+                    <li class="navigation__listWrapper-nav revealed"><a class="navFont nav__link" href="#section--3">Contact</a></li>
                 </ul>
             </div>
         </header>
@@ -92,19 +92,16 @@
                     </a>
                 </div>
             </div>
-
-
-
         </div>
 
         <div class="botRowContainer">
-            <a href="mailto:colinthedev@gmail.com">
-                <span class="indexContactFont emailRe-direct">colinthedev@gmail.com</span>
+            <a class="active" href="mailto:colinthedev@gmail.com">
+                <span class="contactFont emailRe-direct">colinthedev@gmail.com</span>
             </a>
         </div>
 
         <!-- Skills section -->
-        <div class="skillsContainer">
+        <div id="section--1" class="skillsContainer">
             <div class="cardContainer">
                 <div class="headingWrapper">
                     <h1 id="colorFont" class="skillsLrgHeading"></h1>
@@ -174,7 +171,8 @@
             </div>
         </div>
         <!-- About Section -->
-        <div class="aboutContainer">
+
+        <div id="section--2" class="aboutContainer">
             <div class="bulbWrapper">
                 <div class="bulbWrapper__blur"></div>
                 <img class="bulbWrapper__bulb" src="assets/desktop/lightbulb.svg" alt="light bulb image">
@@ -183,19 +181,23 @@
                 <span class="about-headingWrapper__heading aboutHeading">About</span>
             </div>
             <div class="contentWrapper">
-                <p class="contentWrapper__about aboutContent">
+                <p class="contentWrapper__paragraph aboutContent">
                     I’m a front-end developer transitioning from a role in the electrical field. Aside from coding i also enjoy designing things, such as this website. Born and raised in Rochester, NY currently located in Auroa, CO.
                 </p>
-                <div class="contentWrapper__fullWidthLine"></div>
+                <div class="contentWrapper__aboutLine"></div>
                 <div class="contentWrapper__contactRow">
-                    <span class="aboutLinks emailRe-direct">colinthedev@gmail.com</span>
-                    <span class="aboutLinks">View my linked-in</span>
+                    <a class="active" href="mailto:colinthedev@gmail.com">
+                        <span class="aboutLinks emailRe-direct color">colinthedev@gmail.com</span>
+                    </a>
+                    <a class="active" target="_blank" href="https://www.linkedin.com/in/colin-p-946842201/">
+                        <span class="contentWrapper__contactRow-linked-in aboutLinks">View my linked-in</span>
+                    </a>
                     <span class="aboutLinks">(585) 831-1692</span>
                 </div>
             </div>
         </div>
         <!-- Contact Section -->
-        <div class="contactContainer">
+        <div id="section--3" class="contactContainer">
             <div class="leftContent">
                 <div class="leftcontent__innerTop">
                     <div class="slide-right">
@@ -204,7 +206,7 @@
                     <img src="assets/desktop/contact-arrow.svg" alt="Arrow pointing to contact form" class="contactArrow">
                 </div>
                 <div class="leftContent__innerBottom">
-                    <a href="mailto:colinthedev@gmail.com">
+                    <a class="active" href="mailto:colinthedev@gmail.com">
                         <span class="contactFontSml emailRe-direct">colinthedev@gmail.com<br></span>
                     </a>
                     <span class="contactFontSml">(585) 831-1692</span>
@@ -229,11 +231,12 @@
                 </div>
             </form>
         </div>  
-
+        <!-- Footer Section -->
+        <div class="footerContainer">
+            <div class="footerLine"></div>
+            <span class="copyright">&copy; Colin Peters - 2021</span>
+        </div>
+        <!-- Javascript script tag -->
         <script src="main.js"></script>
-
     </body>
 </html>
-
-    <!-- <link rel='stylesheet' href='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.css' />
-    <script src='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js'></script> -->

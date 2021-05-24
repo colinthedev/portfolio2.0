@@ -1,5 +1,22 @@
 'use strict';
 
+// Smooth scrolling
+  // 1. Add event listener to common parent element 
+  // 2. Determine what element originated the event
+  document.querySelector('.navigation__listWrapper').addEventListener('click', function(e) {
+    // console.log(e.target);
+    e.preventDefault();
+  
+    //Matching strategy
+    if(e.target.classList.contains('nav__link')) {
+      // console.log('LINK');
+  
+      const id = e.target.getAttribute('href');
+      document.querySelector(id).scrollIntoView({behavior:'smooth'});
+      // console.log(id);
+    };
+  });
+
 // Generates a random color for line landing page 
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -188,26 +205,26 @@ let sceneFade = new ScrollMagic.Scene({
 // SceneBulb swinging light-bulb about section-------------------------------
 let sceneFadeBulb = new ScrollMagic.Scene({
     triggerElement: '.bulbWrapper',
-    offset: 300,
+    offset: 350,
     reverse: false
 })
 .setClassToggle('.bulbWrapper', 'show-bulb')
-sceneFadeBulb.addIndicators()
 .addTo(controller);
+// sceneFadeBulb.addIndicators()
 
 let sceneBulb =  new ScrollMagic.Scene({
     triggerElement: '.bulbWrapper',
-    offset: 300,
+    offset: 350,
     reverse: false
 })
 .setClassToggle('.bulbWrapper', 'swing')
-sceneBulb.addIndicators()
 .addTo(controller);
+// sceneBulb.addIndicators()
 
 // SceneContact slide in text from left--------------------------------------
 let sceneContact = new ScrollMagic.Scene({
     triggerElement: '.slide-right',
-    offset: -340, // start this scene -180px from top of container
+    offset: -370, // start this scene -180px from top of container
     reverse: false
 })
 .setClassToggle('.slide-right', 'textReveal')

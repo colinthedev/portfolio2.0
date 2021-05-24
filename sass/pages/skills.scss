@@ -109,18 +109,18 @@
   background: #090909;
 }
 
-.revealed { // Left section animation
-  -webkit-animation-name: wipe-in-bottom-right;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: 1;    
-  -webkit-animation-play-state: running;
-  
+.revealed { // Left section animation  
   animation-name: wipe-in-bottom-right;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;    
   animation-play-state: running;
+
+  -webkit-animation-name: wipe-in-bottom-right;
+    -webkit-animation-duration: 3s;
+      -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: 1;    
+          -webkit-animation-play-state: running;
 }
 
 @keyframes wipe-in-bottom-right {

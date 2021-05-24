@@ -1,3 +1,11 @@
+.active {
+    transition: transform .15s ease-out;
+}
+
+.active:active {
+    transform: scale(.95);
+}
+
 .lineContainer { // Landing page RGB random color line
     display: flex;
     justify-content: center;
@@ -94,6 +102,11 @@
     filter: saturate(135%);
     max-height: 450px;
     max-width: 585px;
+
+    // filter: saturate(110%);
+    // max-height: 450px;
+    // min-width: 585px;
+    display: block;
 }
 
 .photosnap.active,

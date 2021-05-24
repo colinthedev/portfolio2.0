@@ -1,0 +1,27 @@
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    grid-row: 10 / 11;
+    grid-column: full-start / full-end;
+}
+
+.footerLine {
+    display: block;
+    margin-top: .75rem;
+    height: 1.5px;
+    opacity: 50%;
+    width: 100%;
+    background: white;
+}
+
+.copyright {
+    font-family: 'Roboto', sans-serif; 
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.65rem;
+    letter-spacing: .02em;
+    color: var(--color-text-white);
+    margin-top: 1.5rem;
+}
