@@ -207,42 +207,41 @@
     @include projectsWrapperRow();
 }
 
+// Contact section submit button
+.btnWrapper {
+    position: relative;
+    width: 11rem;
+    margin: 0 auto 0 auto;
+    margin-top: 5rem;
+    z-index: 1;
 
+    &__btn {
+        cursor: pointer;
+        display: block;
+        height: 3.5rem;
+        width: 11rem;
+        background: #090909;
+        z-index: 1;
+    }
+}
 
-// .btnWrapper { // THIS IS OLD???????
-//     position: relative;
-//     width: 11rem;
-//     margin: 0 auto 0 auto;
-//     margin-top: 5rem;
-//     z-index: 1;
+.btnWrapper__btn:after {
+    display: block;
+    position: absolute;
+    top: .36rem;
+    left: .5rem;
+    content: '';
+    background: #1688f1;
+    height: 3.5rem;
+    width: 11rem;
+    z-index: -1;
+}
 
-//     &__btn {
-//         cursor: pointer;
-//         display: block;
-//         height: 3.5rem;
-//         width: 11rem;
-//         background: #090909;
-//         z-index: 1;
-//     }
-// }
+.btnWrapper__btn:hover {
+    transform: scale(.95);
+}
 
-// .btnWrapper__btn:after {
-//     display: block;
-//     position: absolute;
-//     top: .36rem;
-//     left: .5rem;
-//     content: '';
-//     background: #1688f1;
-//     height: 3.5rem;
-//     width: 11rem;
-//     z-index: -1;
-// }
-
-// .btnWrapper__btn:hover {
-//     transform: scale(.95);
-// }
-
-// .btnWrapper__btn:active,
-// .btnWrapper__btn:focus {
-//     transform: scale(.90);
-// }
+.btnWrapper__btn:active,
+.btnWrapper__btn:focus {
+    transform: scale(.90);
+} 
