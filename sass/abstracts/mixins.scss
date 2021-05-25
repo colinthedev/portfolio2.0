@@ -23,3 +23,84 @@
     z-index: 500;
     margin-top: 35rem;
 }
+
+@mixin for-tablet-landscape-up {
+    @media (max-width: 1140px) { @content; }
+  }
+
+@mixin tablet-media-query {
+    .gridContainer { // Main grid 
+        grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 52rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 10vh) minmax(auto, 40vh) minmax(auto, 74rem) minmax(auto, 40vh) minmax(auto, 74rem) minmax(auto, 7rem);
+        grid-template-columns: auto [full-start] repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) [full-end] auto;
+        // grid-template-columns: [full-start] minmax(2rem, auto) repeat(8, [col-start] minmax(min-content, 5rem) [col-end]) minmax(2rem, auto) [full-end];
+    }
+
+    .headerContainer {
+        grid-column: 13 / -1;
+    }
+
+    .leftColContainer {
+        flex-direction: column;
+        grid-row: 2 / 4;
+        grid-column: 3 / 12;
+    }
+
+    .lineContainer {
+        grid-row: 4 / 5;
+        grid-column: full-start / full-end;
+        margin: 0;
+
+        &__line {
+            height: .75rem;
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    .botRowContainer {
+        grid-row: 3 / 4;
+        grid-column: 13 / -1;
+        margin-top: 10.5rem;
+    }
+
+    .projectsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        grid-row: 5 / 8;
+        grid-column: 6 / 16;
+        overflow-x: unset;
+    }
+
+    .projectsWrapper {
+        min-height: 450px;
+        min-width: 585px;
+    }
+
+    .projectsWrapper:nth-child(2) {
+        margin: 0;
+    }
+
+    .projectsWrapper > img {
+        height: 450px;
+        width: 585px;
+        touch-action: pan-y;
+        margin: 0;
+    }
+
+    .skillsContainer {
+        grid-row: 9 / 10;
+    }
+
+    .aboutContainer {
+        grid-row: 12 / 13;
+    }
+
+    .contactContainer {
+        grid-row: 14 / 15;
+    }
+
+    .footerContainer {
+        grid-row: 15 / 16;
+    }
+}

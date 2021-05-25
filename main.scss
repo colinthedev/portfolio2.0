@@ -12,11 +12,15 @@
 //NAVIGATION
 @import "sass/layout/navigation.scss";
 
-//MEDIAQUERIES
-
 //PAGES
 @import "sass/pages/index.scss";
 @import "sass/pages/skills.scss";
 @import "sass/pages/about.scss";
 @import "sass/pages/contact.scss";
 @import "sass/pages/footer.scss";
+
+//MEDIAQUERIES
+@import "sass/mediaQueries/aboutMediaQueries.scss";
+@import "sass/mediaQueries/contactMediaQueries.scss";
+@import "sass/mediaQueries/indexMediaQueries.scss";
+@import "sass/mediaQueries/skillsMediaQueries.scss";

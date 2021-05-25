@@ -39,10 +39,14 @@
     }
 }
 
+.contactArrowTablet {
+    display: none;
+}
+
 .contactArrow { // Arrow
     display: block;
     position: absolute;
-    left: 13rem;
+    left: 8%;
 }
 
 .showArrow { // Arrow animation
@@ -99,7 +103,8 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    width: 70rem;
+    width: 90%;
+    max-width: 70rem;
     margin: 16.5rem 0 15rem 8rem;
 
     &__name {
@@ -125,7 +130,7 @@
 
 .underline {
     position: absolute;
-    height: 1.5px;
+    height: 1px;
     bottom: -1.5rem;
     background: #000;
 }
@@ -134,7 +139,8 @@
     display: block;
     margin: 0 auto 0 auto;
     height: 26rem;
-    width: 67rem;
+    width: 90%;
+    max-width: 67rem;
     border: solid 1.75px #000;
 
     &__msg {

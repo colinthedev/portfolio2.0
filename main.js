@@ -245,34 +245,6 @@ let sceneArrow = new ScrollMagic.Scene({
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // function projectsActive() {
 //     projectTitle.classList.add('active');
 //     projectLine.classList.add('active');
