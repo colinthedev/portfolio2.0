@@ -22,6 +22,10 @@
   right: 2rem;
   bottom: -.25rem;
 
+  &__flamingo-mobile {
+    display: none;
+  }
+
   &__flamingo { // Flamingo
       display: block;
       z-index: 1;
@@ -101,7 +105,7 @@
 
 .card__face-back { // Card back 
   display: block;
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 
 .card__inner.is-flipped { // Card rotate

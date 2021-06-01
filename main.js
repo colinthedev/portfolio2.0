@@ -199,8 +199,8 @@ let sceneFade = new ScrollMagic.Scene({
     reverse: true
 })
 .setClassToggle('.skillsContainer', 'show')
+sceneFade.addIndicators()
 .addTo(controller);
-// sceneFade.addIndicators();
 
 // SceneBulb swinging light-bulb about section-------------------------------
 let sceneFadeBulb = new ScrollMagic.Scene({

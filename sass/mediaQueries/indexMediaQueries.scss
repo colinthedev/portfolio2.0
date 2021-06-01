@@ -1,3 +1,4 @@
+// Tablet
 @media screen and (max-width: 1300px) {
     .contactArrow {
         display: none;
@@ -19,14 +20,14 @@
     }
 
     .gridContainer { // Main grid 
-        // grid-template-rows: minmax(auto, 9rem) minmax(auto, 45.7rem) minmax(auto, 9rem) minmax(auto, 62rem) minmax(auto, 10vh) minmax(auto, 74rem) minmax(auto, 10vh) minmax(auto, 74rem) minmax(auto, 7rem);
-        grid-template-rows: minmax(auto, 10vh) minmax(auto, 53rem) minmax(auto, 10vh) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 40vh) minmax(auto, 74rem) minmax(auto, 40vh) minmax(auto, 74rem) minmax(auto, 7rem);
-        grid-template-columns: auto [full-start] repeat(auto, [col-start] minmax(1fr, max-content)[col-end]) [full-end] auto;
-        // grid-template-columns: [full-start] auto [center-start] repeat(12, [col-start] minmax(min-content, 5rem)[col-end]) [center-end] auto [full-end];
+        grid-template-rows: minmax(auto, 10vh) minmax(auto, 53rem) minmax(auto, 10vh) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 7rem);
+        grid-template-columns: [full-start] auto repeat(auto, [col-start] minmax(1fr, max-content)[col-end]) auto [full-end];
     }
 
+    // Landing Page
+
     .headerContainer {
-        grid-column: 2 / 7;
+        grid-column: 2 / 8;
         margin-left: 2rem;
     }
 
@@ -38,6 +39,8 @@
     .lineContainer {
         margin-left: 1rem;
     }
+
+    // Projects
 
     .projectsContainer {
         grid-column: 14 / -1;
@@ -57,9 +60,49 @@
         transform: scale(1.05);
     }
 
+    .projectTitlePhotosnap.active {
+        right: 1rem;
+    }
+
+    .projectTitlePhotosnap.active,
+    .projectTitleDine.active,
+    .projectTitleNike.active {
+        top: 15rem;
+    }
+
+    .hoverLinePhotosnap.active,
+    .hoverLineDine.active,
+    .hoverLineNike.active{
+        top: 22rem;
+    }
+    
+    .flexWrapperRowPhotosnap.active,
+    .flexWrapperRowDine.active,
+    .flexWrapperRowNike.active {
+        margin-top: 28rem;
+    }
+
     .botRowContainer {
         margin-left: 2rem;
     }
+
+    // Projects Mobile
+
+    .projectsColWrapMobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flexWrapperRowMobile {
+        margin-top: 2.5rem;
+    }
+
+    .flexWrapperRowMobile > a:nth-child(1) {
+        margin-right: 2rem;
+    }
+
+    // Contact
 
     .contactContainer {
         grid-column: 1 / -1;
@@ -69,7 +112,7 @@
         margin-left: 2.5rem;
     }
 
-    //Skills
+    // Skills
     .headingWrapper {
         right: -36.5rem;
     }
@@ -95,6 +138,15 @@
         left: 3%;
     }
 
+    .inputWrapperTop {
+        margin: 16.5rem 8rem 10rem 8rem;
+    }
+
+    .inputWrapperTop__email {
+        margin-left: auto;
+        margin-right: 9rem;
+    }
+
     //Typography
     .skillsLrgHeading {
         font-size: 5.8rem;
@@ -105,12 +157,16 @@
     }
 
     .aboutLinks {
-        font-size: 1.5rem;
+        font-size: 1.65rem;
         letter-spacing: .04em;
     }
 
     .contactHeading {
         font-size: 6.8rem;
+    }
+
+    .formFont {
+        font-size: 1.4rem;
     }
 
 }
@@ -127,8 +183,270 @@
 
 @media screen and (max-width: 1023px) {
     @include tablet-media-query();
+
+    .cardRowWrapper {
+        width: 35rem;
+        height: 45rem;
+    }
 }
 
-@media screen and (max-width: 875px) {
+// Phones 799px 854px
+@media screen and (max-width: 854px) {
+    body {
+        overflow-x: hidden;
+    }
 
+    .gridContainer { // Main grid 
+        grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 60rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 10vh) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 7rem);
+        grid-template-columns:[full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end];
+    }
+
+    .skillsLrgHeading {
+        font-size: 5.2rem;
+    }
+
+    .about-headingWrapper__heading {
+        top: 38rem;
+    }
+
+    .aboutHeading {
+        font-size: 6.5rem;
+    }
+    
+    .aboutContent {
+        font-size: 1.80rem;
+    }
+
+    .aboutLinks {
+        font-size: 1.65rem;
+    }
+
+    .cardRowWrapper {
+        width: 25rem;
+        height: 40rem;
+    }
+
+    .card__inner {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .bulbWrapper__blur {
+        top: 6.85rem;
+        height: 45rem;
+        width: 55rem;
+    }
+
+    .headingWrapper {
+        right: -32.5rem;
+    }
+
+    .about-headingWrapper__heading {
+        left: .25rem;
+        margin-left: 0;
+    }
+
+    .contentWrapper__paragraph {
+        margin: 38.5rem 5% 2.25rem 14%;
+    }
+
+    .contentWrapper__aboutLine {
+        height: 1.25px;
+        width: 87%;
+    }
+
+    .inputWrapperTop__email {
+        margin-left: 4rem;
+        margin-right: 9rem;
+    }
+
+    // Landing page
+
+    .headerContainer {
+        display: none;
+    }
+
+    .leftColContainer {
+        grid-column: 2 / 18;
+        margin-left: 1rem;
+    }
+
+    .linksContainer {
+        // justify-content: space-around;
+        align-items: center;
+        margin-top: 3.5rem;
+        margin-left: -.25rem;
+        width: fit-content;
+    }
+
+    .linksContainer > a {
+        margin-right: 1rem;
+    }
+
+    .botRowContainer {
+        display: none;
+    }
+
+    .emailWrapperMobile {
+        display: inline-block;
+    }
+
+    .lineContainer__line {
+        margin-bottom: 3rem;
+    }
+
+    .headingWrapper {
+        text-align: right;
+        right: -16.5rem;
+        width: 40rem;
+    }
+
+    // Projects
+
+    .projectsWrapper {
+        height: 350px;
+        width: 350px;
+    }
+
+    .projectsWrapper > img {
+        height: 350px;
+        width: 350px;
+    }
+
+    // Skills section
+
+    .cardContainer {
+        width: 52.5%;
+    }
+
+    .cardRowWrapper {
+        width: 20rem;
+    }
+
+    .card__inner {
+        height: 7.5rem;
+        width: 7.5rem;
+    }
+
+    // About section 
+
+    .bulbWrapper__bulb {
+        left: auto; 
+    }
+
+    .about-headingWrapper {
+        display: none;
+        position: relative;
+        writing-mode: vertical-rl;
+    }
+
+    .contentWrapper__paragraph {
+        text-indent: 0px;
+        margin: 38.5rem 2% 2.25rem 2%;
+        text-align: left;
+    }
+
+    .aboutContent {
+        font-size: 1.85rem;
+    }
+
+    .contentWrapper__aboutLine {
+        height: 1.25px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .contentWrapper__contactRow {
+        display: none;
+    }
+
+    .formFont {
+        font-size: 1rem;
+    }
 }
+
+@media only screen 
+  and (max-width: 854px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .leftColContainer {
+        grid-column: 2 / 17;
+    }
+
+    .contentWrapper__paragraph {
+        text-indent: 0px;
+        // margin: 38.5rem .5rem 2rem .5rem;
+        text-align: center;
+    }
+
+    // Projects
+
+    .projectsWrapper {
+        height: 400px;
+        width: 400px;
+    }
+
+    .projectsWrapper > img {
+        height: 400px;
+        width: 400px;
+    }
+
+    .headingWrapper {
+        right: -17.75rem;
+    }
+
+    .skillsLrgHeading {
+        font-size: 5.75rem;
+    }
+
+    .cardRowWrapper {
+        width: 27rem;
+    }
+
+    .card__inner {
+        height: 10rem;
+        width: 10rem;
+    }
+}
+
+
+
+// and (-webkit-min-device-pixel-ratio: 1.5) 799px
+@media only screen 
+  and (max-width: 767px)
+  and (orientation: portrait) {
+
+    .cardRowWrapper {
+        width: 17rem;
+    }
+
+    .flamingoContainer { // Flamingo Wrap
+        right: 1rem;
+        bottom: -.15rem;
+      
+        &__flamingo { // Flamingo desktop
+            display: none;
+        }
+
+        &__flamingo-mobile { // Flamingo mobile
+            display: block;
+            z-index: 1;
+        }
+      }
+
+    .headingWrapper { // portrait
+        right: -15rem;
+        width: auto;
+    }
+
+    .skillsLrgHeading {
+        font-size: 4.9rem;
+    }
+
+    .contentWrapper__paragraph {
+        text-indent: 15px;
+        margin: 38.5rem .75rem 2rem .75rem;
+        text-align: left; 
+    }
+}
+

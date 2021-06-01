@@ -103,36 +103,49 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     width: 90%;
     max-width: 70rem;
-    margin: 16.5rem 0 15rem 8rem;
+    margin: 16.5rem 8rem 15rem 8rem;
+}
+
+.flexWrapperName {
+    position: relative;
+    display: flex;
+    width: 41%;
+    height: 2rem;
+
 
     &__name {
-
-        &-underline {
-            width: 37%;
-        }
+        width: 100%;
+        margin-bottom: .35rem;
     }
+}
+
+.flexWrapperEmail {
+    position: relative;
+    display: flex;
+    width: 41%;
+    height: 2rem;
+
 
     &__email {
-        margin-left: 10rem;
-
-        &-underline {
-            width: 37%;
-            right: 7rem;
-        }
+        width: 100%;
+        margin-bottom: .35rem;
     }
 }
 
-.inputWrapperTop > input {
-    width: 27rem;
-}
-
-.underline {
+.flexWrapperName:after,
+.flexWrapperEmail:after {
+    content: "";
     position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 2px;
+    background: #090909;
     height: 1px;
-    bottom: -1.5rem;
-    background: #000;
+    width: 100%;
+    z-index: 100;
 }
 
 .inputWrapperMsg {
@@ -147,6 +160,8 @@
         padding: 1rem;
         width: inherit;
         height: inherit;
+        resize: none;
     }
 }
+
 

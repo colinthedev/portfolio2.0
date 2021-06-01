@@ -49,6 +49,10 @@
     transform: rotate(-360deg);
 }
 
+.emailWrapperMobile {
+    display: none;
+}
+
 .emailRe-direct { // Email
     display: inline;
     position: relative;
@@ -89,7 +93,7 @@
 
 .projectsWrapper:nth-child(2) {
     margin-left: 4rem;
-    margin-right: 4rem;
+    margin-right: 4rem; 
 }
 
 .projectsWrapper > img {
