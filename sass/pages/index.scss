@@ -8,8 +8,6 @@
 
 // Landing page -------------------------------------------------
 
-
-
 .leftColContainer { // Left col container
     display: flex;
     flex-direction: column;
@@ -29,16 +27,8 @@
 
 // Projects Mobile
 
-.flexWrapperRowMobile {
-    // position: relative;
-    opacity: 0;
-}
-
-.projectsTitleMobile {
-    position: relative;
-    top: -25rem;
-    right: -20rem;
-    opacity: 0;
+.projectsContainerMobile {
+    display: none;
 }
 
 // Projects Desktop

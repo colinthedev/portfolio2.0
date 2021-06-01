@@ -776,14 +776,8 @@ template {
   margin-top: 3.7rem;
   width: 8rem; }
 
-.flexWrapperRowMobile {
-  opacity: 0; }
-
-.projectsTitleMobile {
-  position: relative;
-  top: -25rem;
-  right: -20rem;
-  opacity: 0; }
+.projectsContainerMobile {
+  display: none; }
 
 .projectsContainer {
   display: flex;
@@ -1242,9 +1236,6 @@ template {
   .lineContainer {
     margin-left: 1rem; }
 
-  .projectsContainer {
-    grid-column: 14 / -1; }
-
   .projectsWrapper {
     min-height: 350px;
     min-width: 350px; }
@@ -1254,36 +1245,45 @@ template {
     width: 350px; }
 
   .projectsWrapper:hover {
-    transform: scale(1.05); }
-
-  .projectTitlePhotosnap.active {
-    right: 1rem; }
-
-  .projectTitlePhotosnap.active,
-  .projectTitleDine.active,
-  .projectTitleNike.active {
-    top: 15rem; }
-
-  .hoverLinePhotosnap.active,
-  .hoverLineDine.active,
-  .hoverLineNike.active {
-    top: 22rem; }
-
-  .flexWrapperRowPhotosnap.active,
-  .flexWrapperRowDine.active,
-  .flexWrapperRowNike.active {
-    margin-top: 28rem; }
+    transform: scale(1.15); }
 
   .botRowContainer {
     margin-left: 2rem; }
 
-  .projectsColWrapMobile {
+  .projectsContainer {
+    display: none; }
+
+  .projectsContainerMobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-row: 2 / 3;
+    grid-column: 14 / -1;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    overscroll-behavior: contain; }
+
+  .projectsContainerMobile > .projectsWrapper img {
+    touch-action: pan-down; }
+
+  .projectsContainerMobile::-webkit-scrollbar {
+    display: none; }
+
+  .projectsContainerMobile {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */ }
+
+  .projectsWrapperMobile {
     display: flex;
     flex-direction: column;
     align-items: center; }
 
   .flexWrapperRowMobile {
-    margin-top: 2.5rem; }
+    margin-top: 1.5rem; }
 
   .flexWrapperRowMobile > a:nth-child(1) {
     margin-right: 2rem; }
@@ -1382,16 +1382,16 @@ template {
     touch-action: pan-down;
     margin: 0; }
 
-  .projectsColWrapMobile {
+  .projectsContainer {
+    display: none; }
+
+  .projectsContainerMobile {
     display: flex;
     flex-direction: column;
-    align-items: center; }
-
-  .flexWrapperRowMobile {
-    margin-top: 2.5rem; }
-
-  .flexWrapperRowMobile:nth-child(1) {
-    margin-right: 2rem; }
+    justify-content: space-around;
+    grid-row: 5 / 8;
+    grid-column: 6 / 16;
+    overflow-x: unset; }
 
   .skillsContainer {
     grid-row: 9 / 10; }
@@ -1452,16 +1452,16 @@ template {
     touch-action: pan-down;
     margin: 0; }
 
-  .projectsColWrapMobile {
+  .projectsContainer {
+    display: none; }
+
+  .projectsContainerMobile {
     display: flex;
     flex-direction: column;
-    align-items: center; }
-
-  .flexWrapperRowMobile {
-    margin-top: 2.5rem; }
-
-  .flexWrapperRowMobile:nth-child(1) {
-    margin-right: 2rem; }
+    justify-content: space-around;
+    grid-row: 5 / 8;
+    grid-column: 6 / 16;
+    overflow-x: unset; }
 
   .skillsContainer {
     grid-row: 9 / 10; }
@@ -1483,7 +1483,7 @@ template {
     overflow-x: hidden; }
 
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 60rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 10vh) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 7rem);
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 50rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 10vh) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 7rem);
     grid-template-columns: [full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end]; }
 
   .skillsLrgHeading {
@@ -1607,6 +1607,10 @@ template {
   .formFont {
     font-size: 1rem; } }
 @media only screen and (max-width: 854px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .gridContainer {
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 50rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 10vh) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 45rem) minmax(auto, 7rem);
+    grid-template-columns: [full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end]; }
+
   .leftColContainer {
     grid-column: 2 / 17; }
 
@@ -1633,8 +1637,50 @@ template {
 
   .card__inner {
     height: 10rem;
-    width: 10rem; } }
+    width: 10rem; }
+
+  .leftContent {
+    margin-left: 1rem; }
+
+  .contactArrowTablet {
+    position: none;
+    left: 0; }
+
+  .formWrapper {
+    align-items: flex-start;
+    width: 69%; }
+
+  .inputWrapperTop {
+    flex-direction: column;
+    margin: 1.5rem auto 1.5rem auto; }
+
+  .flexWrapperName {
+    width: inherit;
+    margin-bottom: 2rem; }
+
+  .flexWrapperEmail {
+    width: inherit;
+    margin-bottom: 2rem; }
+
+  .flexWrapperEmail__email {
+    width: 100%;
+    margin-bottom: .35rem; }
+
+  .inputWrapperMsg {
+    height: 20rem;
+    max-width: inherit; }
+
+  .inputWrapperMsg__msg {
+    width: 100%;
+    height: inherit; }
+
+  .btnWrapper {
+    margin: 4.5rem auto 0 auto; } }
 @media only screen and (max-width: 767px) and (orientation: portrait) {
+  .gridContainer {
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 50rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 10vh) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 55rem) minmax(auto, 7rem);
+    grid-template-columns: [full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end]; }
+
   .cardRowWrapper {
     width: 17rem; }
 
@@ -1657,6 +1703,50 @@ template {
   .contentWrapper__paragraph {
     text-indent: 15px;
     margin: 38.5rem .75rem 2rem .75rem;
-    text-align: left; } }
+    text-align: left; }
+
+  .contactContainer {
+    display: flex;
+    flex-direction: column; }
+
+  .leftContent {
+    margin-left: .5rem;
+    width: inherit; }
+
+  .leftContent__innerBottom {
+    display: none; }
+
+  .contactHeading {
+    font-size: 5.5rem; }
+
+  .contactArrowTablet {
+    display: none; }
+
+  .formWrapper {
+    height: 100%;
+    width: inherit;
+    margin-left: 0; }
+
+  .inputWrapperTop {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: inherit;
+    margin: 1.5rem auto 1.5rem auto; }
+
+  .flexWrapperName {
+    width: 100%;
+    margin-bottom: 1.5rem; }
+
+  .flexWrapperEmail {
+    width: 100%;
+    margin-bottom: 1.5rem; }
+
+  .inputWrapperMsg {
+    height: 15rem;
+    max-width: inherit; }
+
+  .btnWrapper {
+    margin: 1.5rem auto 1.5rem auto; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -91,20 +91,19 @@
         margin: 0;
     }
 
+    .projectsContainer {
+        display: none;
+    }
+
     // Projects Mobile
 
-    .projectsColWrapMobile {
+    .projectsContainerMobile {
         display: flex;
         flex-direction: column;
-        align-items: center;
-    }
-
-    .flexWrapperRowMobile {
-        margin-top: 2.5rem;
-    }
-
-    .flexWrapperRowMobile:nth-child(1) {
-        margin-right: 2rem;
+        justify-content: space-around;
+        grid-row: 5 / 8;
+        grid-column: 6 / 16;
+        overflow-x: unset;
     }
 
     // Skills

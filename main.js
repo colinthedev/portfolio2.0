@@ -35,12 +35,12 @@ function changeColor(){ // Select the line and add getRandomColor function to it
 setInterval(changeColor,1000);// Change color every 1 second
 
 
-// Projects container horizontal scrolling 
+// Projects container horizontal scrolling DESKTOP
 (function() {
     function scrollHorizontally(e) {
         e = window.event || e;
-        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-        document.getElementById('horizontalScroll').scrollLeft -= (delta * 40); // Multiplied by 40
+        let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        document.getElementById('horizontalScroll').scrollLeft -= (delta * 40);
         e.preventDefault();
     }
     if (document.getElementById('horizontalScroll').addEventListener) {
@@ -53,6 +53,26 @@ setInterval(changeColor,1000);// Change color every 1 second
         document.getElementById('horizontalScroll').attachEvent('onmousewheel', scrollHorizontally);
     }
 })();
+
+// Projects container horizontal scrolling MOBILE
+(function() {
+    function scrollHorizontallyMobile(e) {
+        e = window.event || e;
+        let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        document.getElementById('horizontalScrollMobile').scrollLeft -= (delta * 40);
+        e.preventDefault();
+    }
+    if (document.getElementById('horizontalScrollMobile').addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        document.getElementById('horizontalScrollMobile').addEventListener('mousewheel', scrollHorizontallyMobile, false);
+        // Firefox
+        document.getElementById('horizontalScrollMobile').addEventListener('DOMMouseScroll', scrollHorizontallyMobile, false);
+    } else {
+        // IE 6/7/8
+        document.getElementById('horizontalScrollMobile').attachEvent('onmousewheel', scrollHorizontallyMobile);
+    }
+})();
+
 
 //Photosnap Project #1 ---------------------------------------------------------
 
