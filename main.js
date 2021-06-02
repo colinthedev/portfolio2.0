@@ -196,9 +196,10 @@ cards.forEach(el => {
     });
 });
 
-// Animation scenes with ScrollMagic ---------------------------------------
+                        //  ---------- Scroll Magic ----------        
 
-// SceneBackground add swipe animation to card container 
+// Skills section scenes --------------------------------------------------
+// Swipe animation
 let controller = new ScrollMagic.Controller(); // controller for scene + scene2
     
 let sceneBackground = new ScrollMagic.Scene({
@@ -211,7 +212,7 @@ let sceneBackground = new ScrollMagic.Scene({
 .addTo(controller);
 // sceneBackground.addIndicators();
 
-// SceneFade toggle opacity on main skill container --------------------------
+// Opacity
 let sceneFade = new ScrollMagic.Scene({
     triggerElement: '.skillsContainer',
     offset: -200, // start this scene -180px from top of container
@@ -219,29 +220,61 @@ let sceneFade = new ScrollMagic.Scene({
     reverse: true
 })
 .setClassToggle('.skillsContainer', 'show')
-sceneFade.addIndicators()
 .addTo(controller);
+// sceneFade.addIndicators()
 
-// SceneBulb swinging light-bulb about section-------------------------------
+
+// Lightbulb section scenes --------------------------------------------------
+// Fade
 let sceneFadeBulb = new ScrollMagic.Scene({
     triggerElement: '.bulbWrapper',
-    offset: 350,
+    offset: 750,
     reverse: false
 })
 .setClassToggle('.bulbWrapper', 'show-bulb')
 .addTo(controller);
 // sceneFadeBulb.addIndicators()
 
+// Swing
 let sceneBulb =  new ScrollMagic.Scene({
     triggerElement: '.bulbWrapper',
-    offset: 350,
+    offset: 750,
     reverse: false
 })
 .setClassToggle('.bulbWrapper', 'swing')
 .addTo(controller);
 // sceneBulb.addIndicators()
 
-// SceneContact slide in text from left--------------------------------------
+
+// About section scenes -----------------------------------------------------
+// Text slide left
+let revealElements = document.getElementsByClassName("slide-left");
+for (let i=0; i<revealElements.length; i++) { // create a scene for each element
+    new ScrollMagic.Scene({
+                        triggerElement: revealElements[i],
+                        offset: 35,
+                        reverse: false,
+                        triggerHook: 0.9, // start a little later
+                    })
+                    .setClassToggle(revealElements[i], "visible") // add class toggle
+                    .addTo(controller);
+                    // .addIndicators({name: "digit " + (i+1) })
+}
+
+// Content fade in
+new ScrollMagic.Scene({
+    triggerElement: "#trigger1",
+    offset: -75, 
+    reverse: false,
+    triggerHook: 0.7 // start a little later
+})
+.setClassToggle("#reveal1", "visible") // add class to reveal
+.addTo(controller);
+// .addIndicators()
+
+
+// Contact section scenes ----------------------------------------------------
+// Text slide right
 let sceneContact = new ScrollMagic.Scene({
     triggerElement: '.slide-right',
     offset: -370, // start this scene -180px from top of container
@@ -251,8 +284,7 @@ let sceneContact = new ScrollMagic.Scene({
 .addTo(controller);
 // sceneContact.addIndicators()
 
-
-// SceneArrow add pointing animation ---------------------------------------
+// Pointing animation 
 let sceneArrow = new ScrollMagic.Scene({
     triggerElement: '.contactArrow',
     offset: -80, // start this scene -180px from top of container

@@ -1,0 +1,75 @@
+// Lightbulb
+
+.bulbContainer {
+    grid-row: 6 / 7;
+    grid-column: full-start / full-end;
+}
+
+.bulbWrapper { // Lightbulb wrap
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    transform: translateX(50%);
+    transform: rotate(91deg);
+    transition: opacity ease-in 1.5s;
+    opacity: 0;
+    animation-duration: 25s; 
+    animation-fill-mode: both; 
+    -webkit-animation-duration: 25s; 
+        -webkit-animation-fill-mode: both; 
+
+    &__bulb { // Lightbulb
+        position: absolute;
+        top: 0;
+        left: 45%;
+        display: inline-block;
+        z-index: 100;
+    }
+
+    &__blur { // Lightbulb background
+        position: absolute;
+        top: 7.5rem;
+        display: inline-block;
+        height: 55rem;
+        width: 75rem;
+        border-radius: 50%;
+        background: #fce626d0;
+        filter:blur(80px); // Safari
+            -o-filter:blur(100px);
+                -ms-filter:blur(100px);
+                    -moz-filter:blur(100px);
+                        -webkit-filter:blur(80px); // Safari
+        z-index: -1;
+    }
+}
+
+.show-bulb { // Skills container fade in 
+    opacity: 1;
+}
+
+.swing { // Lightbulb swinging animation
+    animation-name: swing; 
+        -webkit-animation-name: swing; 
+}
+
+@keyframes swing { // Lightbulb
+    2% { transform: rotate(90deg); } 
+   20% { transform: rotate(-70deg); } 
+   40% { transform: rotate(65deg); } 
+   60% { transform: rotate(-35deg); } 
+   80% { transform: rotate(10deg); }
+   100%{ transform: rotate(0deg); } 
+}
+
+@-webkit-keyframes swing { // Lightbulb
+    2%  { -webkit-transform: rotate(90deg); }
+    20% { -webkit-transform: rotate(-70deg); } 
+    40% { -webkit-transform: rotate(65deg); } 
+    60% { -webkit-transform: rotate(-35deg); } 
+    80% { -webkit-transform: rotate(10deg); } 
+    100%{ -webkit-transform: rotate(0deg); } 
+}
+
+
