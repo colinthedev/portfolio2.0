@@ -10,8 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <!-- font-family: 'Roboto', sans-serif;     -->
+    <!-- font-family: 'Roboto', sans-serif; -->
     <!-- font-family: 'Jost', sans-serif; -->
+
+    <link rel="success" href="success.html">
     
     <title>colinthedev</title>
 
@@ -20,7 +22,6 @@
 
 </head>
     <body class="gridContainer">
-
         <header class="headerContainer">
             <div class="navigation">
                 <ul class="navigation__listWrapper">
@@ -30,11 +31,9 @@
                 </ul>
             </div>
         </header>
-
         <div class="lineContainer">
             <div class="lineContainer__line"></div>
         </div>
-
         <div class="leftColContainer">
             <h1 class="indexXlrgHeading margin2rem">Hello,<br/></h1>
             <h2 class="indexLrgHeading margin2rem">My name is Colin Peters<br/></h2>
@@ -55,7 +54,6 @@
                 </div>
             </div>   
         </div>
-
         <!-- Projects desktop -->
         <div id="horizontalScroll" class="horizontalScroll projectsContainer">
             <!-- Photosnap -->
@@ -73,7 +71,6 @@
                 </div>
             </div>
             <!-- Photosnap end -->
-
             <!-- Dine -->
             <div class="projectsWrapper dineBackground">
                 <span class="hoverTitleFont projectTitleDine"></span>
@@ -107,8 +104,6 @@
             <!-- Nike end -->
         </div>
         <!-- Projects desktop end -->
-
-
         <!-- Projects mobile -->
         <div id="horizontalScrollMobile" class="horizontalScroll projectsContainerMobile">
             <!-- Photosnap -->
@@ -125,7 +120,6 @@
                 </div>
             </div>
             <!-- Photosnap end -->
-
             <!-- Dine -->
             <div class="projectsWrapper projectsWrapperMobile">
                 <span class="hoverTitleFont projectsTitleMobile">Dine</span>
@@ -140,7 +134,6 @@
                 </div>
             </div>
             <!-- Dine end -->
-
             <!-- Nike -->
             <div class="projectsWrapper projectsWrapperMobile">
                 <span class="hoverTitleFont projectsTitleMobile">Nike</span>
@@ -157,13 +150,11 @@
             <!-- Nike end -->
         </div>
         <!-- Projects mobile end -->
-
         <div class="botRowContainer">
             <a class="active" href="mailto:colinthedev@gmail.com">
                 <span class="contactFont emailRe-direct">colinthedev@gmail.com</span>
             </a>
         </div>
-
         <!-- Skills section -->
         <div id="section--1" class="skillsContainer">
             <div class="cardContainer">
@@ -236,7 +227,6 @@
             </div>
         </div>
         <!-- About Section -->
-
         <div id="section--2" class="aboutContainer">
             <div class="bulbWrapper">
                 <div class="bulbWrapper__blur"></div>
@@ -278,8 +268,7 @@
                     <span class="contactFontSml">(585) 831-1692</span>
                 </div>
             </div>
-
-            <form action="/action_page.php" method="get" id="form" class="formWrapper">
+            <form action="success.html" method="POST" data-netlify="true" id="form" class="formWrapper">
                 <div class="inputWrapperTop">
                     <div class="flexWrapperName">
                         <label for="name"></label>
@@ -295,7 +284,9 @@
                     <textarea class="inputWrapperMsg__msg formFont" type="text" placeholder="Message" name="message" id="" cols="30" rows="10" required></textarea>
                 </div>
                 <div class="btnWrapper">
-                    <button type="submit" form="form" value="Submit" class="btnTxt btnWrapper__btn">Submit</button>
+                    <a href="/success.html">
+                        <button type="submit" form="form" value="submit" class="btnTxt btnWrapper__btn">Submit</button>
+                    </a>
                 </div>
             </form>
         </div>  
@@ -304,7 +295,6 @@
             <div class="footerLine"></div>
             <span class="copyright">&copy; Colin Peters - 2021</span>
         </div>
-        <!-- Javascript script tag -->
         <script src="main.js"></script>
     </body>
 </html>

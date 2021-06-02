@@ -712,6 +712,28 @@ template {
   letter-spacing: .04em;
   color: var(--color-text-white); }
 
+.successFont {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 4.5rem;
+  letter-spacing: .04em;
+  color: var(--color-text-black); }
+
+.thanksFont {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: .04em;
+  opacity: .80;
+  color: var(--color-text-black); }
+
+.homeBtnFont {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 1.75rem;
+  letter-spacing: .04em;
+  color: var(--color-text-white); }
+
 .headerContainer {
   display: flex;
   align-items: center;
@@ -1209,6 +1231,36 @@ template {
   color: var(--color-text-white);
   margin-top: 1.5rem; }
 
+.successGridContainer {
+  display: grid; }
+
+.octopus {
+  position: relative;
+  z-index: 10;
+  height: 60rem;
+  width: 60rem;
+  margin: auto; }
+
+.successTextWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 20rem;
+  text-align: center;
+  position: absolute;
+  z-index: 100;
+  top: 70%;
+  left: 28%; }
+
+.homeBtn {
+  display: block;
+  cursor: pointer;
+  background: #DD255C;
+  width: 15rem;
+  height: 3.5rem;
+  border-radius: 10px; }
+
 @media screen and (max-width: 1300px) {
   .contactArrow {
     display: none; }
@@ -1597,9 +1649,9 @@ template {
     font-size: 1.85rem; }
 
   .contentWrapper__aboutLine {
-    height: 1.25px;
-    width: 100%;
-    margin: 0; }
+    height: 1.05px;
+    width: 95%;
+    margin: 0 auto 0 auto; }
 
   .contentWrapper__contactRow {
     display: none; }
@@ -1608,7 +1660,7 @@ template {
     font-size: 1rem; } }
 @media only screen and (max-width: 854px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 50rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 10vh) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 45rem) minmax(auto, 7rem);
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 60rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 10vh) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 45rem) minmax(auto, 7rem);
     grid-template-columns: [full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end]; }
 
   .leftColContainer {
@@ -1644,7 +1696,7 @@ template {
 
   .contactArrowTablet {
     position: none;
-    left: 0; }
+    left: -2rem; }
 
   .formWrapper {
     align-items: flex-start;
@@ -1652,7 +1704,7 @@ template {
 
   .inputWrapperTop {
     flex-direction: column;
-    margin: 1.5rem auto 1.5rem auto; }
+    margin: 2.5rem auto 1.5rem auto; }
 
   .flexWrapperName {
     width: inherit;
@@ -1678,7 +1730,7 @@ template {
     margin: 4.5rem auto 0 auto; } }
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 50rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 10vh) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 55rem) minmax(auto, 7rem);
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 55rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 10vh) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 55rem) minmax(auto, 7rem);
     grid-template-columns: [full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end]; }
 
   .cardRowWrapper {

@@ -1,0 +1,34 @@
+
+.successGridContainer {
+    display: grid;
+}
+
+.octopus {
+    position: relative;
+    z-index: 10;
+    height: 60rem;
+    width: 60rem;
+    margin: auto;
+}
+
+.successTextWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 20rem;
+    text-align: center;
+    position: absolute;
+    z-index: 100;
+    top: 70%;
+    left: 28%;
+}
+
+.homeBtn {
+    display: block;
+    cursor: pointer;
+    background: #DD255C;
+    width: 15rem;
+    height: 3.5rem;
+    border-radius: 10px;
+}

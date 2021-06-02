@@ -152,3 +152,28 @@
     color: var(--color-text-white);
 }
 
+// Success page
+.successFont {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 4.5rem;
+    letter-spacing: .04em;
+    color: var(--color-text-black);
+}
+
+.thanksFont {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: .04em;
+    opacity: .80;
+    color: var(--color-text-black);
+}
+
+.homeBtnFont {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 1.75rem;
+    letter-spacing: .04em;
+    color: var(--color-text-white);
+}
