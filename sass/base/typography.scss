@@ -42,15 +42,6 @@
     color: var(--color-text-white);
 }
 
-// .aboutContent { OLD
-//     font-family: 'Roboto', sans-serif; 
-//     font-style: normal;
-//     font-weight: 300;
-//     font-size: 2.2rem;
-//     letter-spacing: .03em;
-//     color: var(--color-text-white);
-// }
-
 .aboutContent {
     font-family: 'Jost', sans-serif;
     font-style: normal;
@@ -64,7 +55,7 @@
 .aboutLinks {
     font-family: 'Roboto', sans-serif; 
     font-style: normal;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 1.8rem;
     letter-spacing: .02em;
     color: var(--color-text-white);
@@ -186,4 +177,68 @@
     font-size: 1.75rem;
     letter-spacing: .04em;
     color: var(--color-text-white);
+}
+
+// -- Media Queries --
+
+@media screen and (max-width: 1366px) {
+    .skillsLrgHeading {
+        font-size: 5.8rem;
+    }
+
+    .contactHeading {
+        font-size: 6.8rem;
+    }
+
+    .formFont {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 854px) {
+    .skillsLrgHeading {
+        font-size: 5.2rem;
+    }
+
+    .aboutContent {
+        font-size: 1.85rem;
+    }
+
+    .formFont {
+        font-size: 1rem;
+    }
+}
+
+@media only screen 
+  and (max-width: 854px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .skillsLrgHeading {
+        font-size: 5.75rem;
+    }
+}
+
+@media only screen 
+  and (max-width: 767px)
+  and (orientation: portrait) {
+    .hoverTitleFont {
+        font-size: 5.5rem;
+    }
+
+    .skillsLrgHeading {
+        font-size: 4.5rem;
+    }
+
+    .contactHeading {
+        margin-left: .5rem;
+    }
+}
+
+@media only screen 
+    and (max-width: 280px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 1.5) {
+        .skillsLrgHeading {
+            font-size: 4rem;
+        }
 }

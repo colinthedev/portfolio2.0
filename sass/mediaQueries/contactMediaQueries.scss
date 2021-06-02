@@ -1,0 +1,163 @@
+// Tablet
+@media screen and (max-width: 1300px) {
+    .contactArrow {
+        display: none;
+    }
+
+    .contactArrowTablet {
+        display: block;
+        position: absolute;
+        left: 6.5%;
+    }
+}
+
+// 1140px
+@media screen and (max-width: 1366px) {
+    .contactContainer {
+        grid-column: 1 / -1;
+    }
+
+    .leftContent {
+        margin-left: 2.5rem;
+    }
+
+    .contactArrow {
+        left: 3.5%;
+    }
+
+    .contactArrowTablet {
+        left: 2.5%;
+    }
+
+    .inputWrapperTop {
+        margin: 16.5rem 8rem 10rem 8rem;
+    }
+
+    .inputWrapperTop__email {
+        margin-left: auto;
+        margin-right: 9rem;
+    }
+}
+
+// Phones 799px 854px
+@media screen and (max-width: 854px) {
+    .inputWrapperTop__email {
+        margin-left: 4rem;
+        margin-right: 9rem;
+    }
+}
+
+@media only screen 
+  and (max-width: 854px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .leftContent {
+        margin-left: 1rem;
+    }
+    
+    .contactArrowTablet {
+        position: none;
+        left: -2rem;
+    }
+    
+    .formWrapper {
+        align-items: flex-start;
+        width: 69%;
+    }
+    
+    .inputWrapperTop {
+        flex-direction: column;
+        margin: 2.5rem auto 1.5rem auto;
+    }
+    
+    .flexWrapperName {
+        width: inherit;
+        margin-bottom: 2rem;
+    }
+    
+    .flexWrapperEmail {
+        width: inherit;
+        margin-bottom: 2rem;
+    }
+    
+    .flexWrapperEmail__email {
+        width: 100%;
+        margin-bottom: .35rem;
+    }
+    
+    .inputWrapperMsg {
+        height: 20rem;
+        max-width: inherit;
+    }
+    
+    .inputWrapperMsg__msg {
+        width: 100%;
+        height: inherit;
+    }
+    
+    .btnWrapper {
+        margin: 4.5rem auto 0 auto;
+    }
+  }
+
+  // and (-webkit-min-device-pixel-ratio: 1.5) 799px
+@media only screen 
+and (max-width: 767px)
+and (orientation: portrait) {
+
+    .contactContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .leftContent {
+        margin-left: 0;
+        width: inherit;
+        background: var(--color-background-blue);
+    }
+
+    .leftContent__innerBottom {
+        display: none;
+    }
+
+    .contactHeading {
+        font-size: 5.5rem;
+    }
+
+    .contactArrowTablet {
+        display: none;
+    }
+
+    .formWrapper {
+        height: 100%;
+        width: inherit;
+        margin-left: 0;
+    }
+
+    .inputWrapperTop {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        max-width: inherit;
+        margin: 1.5rem auto 1.5rem auto;
+    }
+
+    .flexWrapperName {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .flexWrapperEmail {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .inputWrapperMsg {
+        height: 15rem;
+        max-width: inherit;
+    }
+
+    .btnWrapper {
+        margin: 1.5rem auto 1.5rem auto;
+    }
+}

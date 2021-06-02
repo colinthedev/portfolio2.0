@@ -1,0 +1,101 @@
+// 1140px
+@media screen and (max-width: 1366px) {
+    .headingWrapper {
+        right: -36.5rem;
+    }
+
+    .cardContainer {
+        width: 50%;
+    }
+}
+
+// Phones 799px 854px
+@media screen and (max-width: 854px) {
+    .headingWrapper {
+        text-align: right;
+        right: -16.5rem;
+        width: 40rem;
+    }
+
+    .cardContainer {
+        width: 52.5%;
+    }
+
+    .cardRowWrapper {
+        height: 40rem;
+        width: 20rem;
+    }
+
+    .card__inner {
+        height: 7.5rem;
+        width: 7.5rem;
+    }
+}
+
+@media only screen 
+  and (max-width: 854px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .headingWrapper {
+        right: -17.75rem;
+    }
+    
+    .cardRowWrapper {
+        width: 27rem;
+    }
+
+    .card__inner {
+        height: 10rem;
+        width: 10rem;
+    }
+  }
+
+@media only screen 
+  and (max-width: 767px)
+  and (orientation: portrait) {
+
+    .cardRowWrapper {
+        width: 17rem;
+    }
+
+    .flamingoContainer { // Flamingo Wrap
+        right: 1rem;
+        bottom: -.15rem;
+        
+        &__flamingo { // Flamingo desktop
+            display: none;
+        }
+
+        &__flamingo-mobile { // Flamingo mobile
+            display: block;
+            z-index: 1;
+        }
+    }
+
+    .headingWrapper { // portrait
+        right: -14rem;
+        width: auto;
+    }
+}
+
+@media only screen 
+    and (max-width: 280px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 1.5) {
+        .headingWrapper {
+            right: -12.5rem;
+        }
+
+        .cardRowWrapper {
+            width: 15rem;
+        }
+
+        .card__inner {
+            height: 6.75rem;
+            width: 6.75rem;
+        }
+
+        .flamingoContainer {
+            right: -1.5rem;
+        }
+}

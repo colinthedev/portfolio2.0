@@ -114,8 +114,35 @@
 
     // About
 
-    .aboutContainer {
+    .leftWrapper {
         grid-row: 12 / 13;
+        grid-column: 3 / 11;
+    }
+
+    .aboutContent {
+        display: block;
+        margin: 5rem 10rem auto 0;
+    }
+
+    .aboutLinksWrap {
+        margin: 41% 40% 0 auto;
+    }
+
+    .rightWrapper {
+        grid-row: 12 / 13;
+        grid-column: 11 / -1;
+    }
+
+    .traitsWrapper__dev {
+        margin-left: 5%;
+    }
+
+    .traitsWrapper__create {
+        margin-left: 30%;
+    }
+
+    .traitsWrapper__innovate {
+        margin-left: 55%;
     }
 
     // Contact
