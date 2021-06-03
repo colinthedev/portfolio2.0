@@ -264,7 +264,7 @@ for (let i=0; i<revealElements.length; i++) { // create a scene for each element
 // Content fade in
 new ScrollMagic.Scene({
     triggerElement: "#trigger1",
-    offset: -100, 
+    offset: -105, 
     reverse: false,
     triggerHook: 0.7 // start a little later
 })
