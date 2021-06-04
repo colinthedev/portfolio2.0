@@ -1,3 +1,14 @@
+// Large desktop
+@media screen and (min-width: 2100px) {
+    .contactArrow {
+        position: relative;
+    }
+
+    .slide-right {
+        transform: translateX(-400%);
+    }
+}
+
 // Tablet
 @media screen and (max-width: 1300px) {
     .contactArrow {

@@ -842,7 +842,9 @@ template {
   display: grid;
   background: var(--color-background-black);
   grid-template-rows: minmax(auto, 10vh) minmax(auto, 80vh) minmax(auto, 10vh) minmax(auto, 20vh) minmax(auto, 62rem) minmax(auto, 100vh) minmax(auto, 74rem) minmax(auto, 50vh) minmax(auto, 74rem) minmax(auto, 7rem);
-  grid-template-columns: [full-start] repeat(28, [col-start] 1fr [col-end]) [full-end]; }
+  grid-template-columns: [full-start] repeat(28, [col-start] 1fr [col-end]) [full-end];
+  max-width: 2000px;
+  margin: auto; }
 
 .leftColContainer {
   display: flex;
@@ -1222,7 +1224,7 @@ template {
   transform: translateX(-120%); }
 
 .textReveal {
-  animation: 1.05s slide-right 1.05s forwards; }
+  animation: 1s slide-right 1s forwards; }
 
 @keyframes slide-right {
   to {
@@ -1419,6 +1421,12 @@ template {
 @media screen and (max-width: 1366px) {
   .bulbContainer {
     display: none; } }
+@media screen and (min-width: 2100px) {
+  .contactArrow {
+    position: relative; }
+
+  .slide-right {
+    transform: translateX(-400%); } }
 @media screen and (max-width: 1300px) {
   .contactArrow {
     display: none; }
