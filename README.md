@@ -67,6 +67,3 @@ A few key features implemented include:
   - About
     - Contact
 
-###### Copyright
-
-***Copyright Colin Peters - 2021***
