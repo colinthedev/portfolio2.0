@@ -170,7 +170,7 @@
 
 .projectTitlePhotosnap.active {
     @include projectsHoverTitle();
-    right: 5rem;
+    right: 6rem;
 }
 
 .hoverLinePhotosnap.active {
@@ -197,7 +197,7 @@
 
 .projectTitleDine.active {
     @include projectsHoverTitle();
-    right: 8rem;
+    right: 16rem;
 }
 
 .hoverLineDine.active {
@@ -224,7 +224,7 @@
 
 .projectTitleNike.active {
     @include projectsHoverTitle();
-    right: 8rem;
+    right: 16rem;
 }
 
 .hoverLineNike.active {

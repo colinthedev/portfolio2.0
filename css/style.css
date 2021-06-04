@@ -157,7 +157,7 @@
   position: absolute;
   top: 20rem;
   z-index: 500;
-  right: 5rem; }
+  right: 6rem; }
 
 .hoverLinePhotosnap.active {
   display: block;
@@ -166,7 +166,7 @@
   background-color: #ffffff;
   z-index: 500;
   position: absolute;
-  top: 28rem;
+  top: 24.15rem;
   right: -2rem; }
 
 .flexWrapperRowPhotosnap.active {
@@ -187,7 +187,7 @@
   position: absolute;
   top: 20rem;
   z-index: 500;
-  right: 8rem; }
+  right: 16rem; }
 
 .hoverLineDine.active {
   display: block;
@@ -196,7 +196,7 @@
   background-color: #ffffff;
   z-index: 500;
   position: absolute;
-  top: 28rem;
+  top: 24.15rem;
   right: -2rem; }
 
 .flexWrapperRowDine.active {
@@ -217,7 +217,7 @@
   position: absolute;
   top: 20rem;
   z-index: 500;
-  right: 8rem; }
+  right: 16rem; }
 
 .hoverLineNike.active {
   display: block;
@@ -226,7 +226,7 @@
   background-color: #ffffff;
   z-index: 500;
   position: absolute;
-  top: 28rem;
+  top: 24.15rem;
   right: -2rem; }
 
 .flexWrapperRowNike.active {
@@ -704,9 +704,10 @@ template {
 .hoverTitleFont {
   font-family: 'Jost', sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-size: 6rem;
+  font-weight: 400;
+  font-size: 4rem;
   letter-spacing: .04em;
+  margin-bottom: 1rem;
   color: var(--color-text-white); }
 
 .hoverIconFont {
@@ -784,7 +785,7 @@ template {
     font-size: 5.75rem; } }
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   .hoverTitleFont {
-    font-size: 5.5rem; }
+    margin-bottom: 1rem; }
 
   .skillsLrgHeading {
     font-size: 4.5rem; }
