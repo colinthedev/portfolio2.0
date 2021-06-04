@@ -32,10 +32,10 @@
         position: absolute;
         top: 7.5rem;
         display: inline-block;
-        height: 55rem;
-        width: 75rem;
+        height: 35rem;
+        width: 45rem;
         border-radius: 50%;
-        background: #fce626d0;
+        background: var(--color-background-pink);
         filter:blur(80px); // Safari
             -o-filter:blur(100px);
                 -ms-filter:blur(100px);

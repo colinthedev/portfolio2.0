@@ -1044,10 +1044,10 @@ template {
     position: absolute;
     top: 7.5rem;
     display: inline-block;
-    height: 55rem;
-    width: 75rem;
+    height: 35rem;
+    width: 45rem;
     border-radius: 50%;
-    background: #fce626d0;
+    background: var(--color-background-pink);
     filter: blur(80px);
     -o-filter: blur(100px);
     -ms-filter: blur(100px);
@@ -1093,7 +1093,8 @@ template {
   font-weight: 400;
   font-size: 4rem;
   letter-spacing: .02em;
-  color: var(--color-text-white); }
+  color: var(--color-text-white);
+  color: #000; }
 
 .aboutHeading {
   font-family: 'Roboto', sans-serif;
@@ -1108,11 +1109,11 @@ template {
   .rightWrapper__pink {
     height: 100%;
     width: 100%;
-    background: #f20d89; }
+    background: var(--color-background-blue); }
   .rightWrapper__blue {
-    height: 98%;
-    width: 95%;
-    background: #1688f1; }
+    height: 99%;
+    width: 97.65%;
+    background: #fdfdfd; }
 
 .traitsWrapper {
   display: flex;

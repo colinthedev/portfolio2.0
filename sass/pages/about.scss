@@ -5,6 +5,7 @@
     font-size: 4rem;
     letter-spacing: .02em;
     color: var(--color-text-white);
+    color: #000;
 }
 
 .aboutHeading {
@@ -23,13 +24,13 @@
     &__pink {
         height: 100%;
         width: 100%;
-        background: rgba(242, 13, 137, 1);
+        background: var(--color-background-blue);
     }
 
     &__blue {
-        height: 98%;
-        width: 95%;
-        background: rgba(22, 136, 241, 1);
+        height: 99%;
+        width: 97.65%;
+        background: #fdfdfd;
     }
 }
 
