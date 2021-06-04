@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-# Personal Portfolio
-=======
-# Personal Portfolio :partying_face:
->>>>>>> b8059d19f814fea63976a692e16df1db3253aa08
+![](assets/readme/README-img.png)
 
-**Version 2.0**
+# Personal Portfolio :partying_face:
+
+**Version 2.0** <br>
 
 ## About :point_down:
 
@@ -69,6 +67,3 @@ A few key features implemented include:
   - About
     - Contact
 
-###### Copyright
-
-***Copyright Colin Peters - 2021***
