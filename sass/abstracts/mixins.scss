@@ -24,101 +24,27 @@
     margin-top: 35rem;
 }
 
-@mixin tablet-media-query {
-    .gridContainer { // Main grid 
-        // grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 5vh) minmax(auto, 20vh) minmax(auto, 60rem) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 7rem);
-        // grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(auto, 20vh) minmax(auto, 60rem) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 7rem);
-        grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(20vh, 15rem) minmax(auto, 60rem) minmax(auto, 20vh) minmax(auto, 74rem) minmax(auto, 7rem);
-        grid-template-columns: auto [full-start] repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) [full-end] auto;
+@mixin TabletMobileProjects {
+    .projectsWrapperMobileOne {
+        grid-row: 5 / 6;
     }
 
-    // Landing page
-
-    .headerContainer {
-        grid-column: 13 / -1;
+    .projectsWrapperMobileTwo {
+        grid-row: 6 / 7;
     }
 
-    .leftColContainer {
-        flex-direction: column;
-        grid-row: 2 / 4;
-        grid-column: 3 / 12;
+    .projectsWrapperMobileThree {
+        grid-row: 7 / 8;
     }
 
-    .lineContainer {
-        grid-row: 4 / 5;
-        grid-column: full-start / full-end;
-        margin: 0;
-
-        &__line {
-            height: .75rem;
-            width: 100%;
-            margin: 0;
-        }
-    }
-
-    .botRowContainer {
-        grid-row: 3 / 4;
-        grid-column: 13 / -1;
-        margin-top: 10rem;
-    }
-
-    // Projects Desktop
-
-    .projectsContainer {
+    .projectsWrapperMobile {
+        grid-column: 2 / -1;
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
-        justify-content: space-around;
-        grid-row: 5 / 8;
-        grid-column: 6 / 16;
-        overflow-x: unset;
-    }
-
-    .projectsWrapper {
-        height: 450px; 
-        width: 585px; 
-    }
-
-    .projectsWrapper:nth-child(2) {
-        margin: 0;
-    }
-
-    .projectsWrapper > img {
-        height: 450px;
-        width: 585px;
-        touch-action: pan-down;
-        margin: 0;
-    }
-
-    .projectsContainer {
-        display: none;
-    }
-
-    // Projects Mobile
-
-    .projectsContainerMobile {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        grid-row: 5 / 8;
-        grid-column: 6 / 16;
-        overflow-x: unset;
-    }
-
-    // Skills
-
-    .skillsContainer {
-        grid-row: 9 / 10;
-    }
-
-    // Contact
-
-    .contactContainer {
-        grid-row: 14 / 15;
-    }
-
-    // Footer
-
-    .footerContainer {
-        grid-row: 15 / 16;
+        background: #111111;
+        width: 90%;
+        margin: auto;
     }
 }

@@ -72,4 +72,9 @@
     100%{ -webkit-transform: rotate(0deg); } 
 }
 
+@media screen and (max-width: 1366px) {
+    .bulbWrapper {
+        display: none;
+    }
+}
 

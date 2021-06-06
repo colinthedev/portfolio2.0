@@ -2,7 +2,6 @@
     display: grid;
     background: var(--color-background-black);
     grid-template-rows: minmax(auto, 10vh) minmax(auto, 80vh) minmax(auto, 10vh) minmax(auto, 20vh) minmax(auto, 62rem) minmax(auto, 100vh) minmax(auto, 74rem) minmax(auto, 50vh) minmax(auto, 74rem) minmax(auto, 7rem);
-    // grid-template-rows: minmax(auto, 10vh) minmax(60rem, 70vh) minmax(auto, 20vh) minmax(auto, 62rem) minmax(auto, 50vh) minmax(auto, 74rem) minmax(auto, 50vh) minmax(auto, 74rem) minmax(auto, 7rem);
     grid-template-columns: [full-start] repeat(28, [col-start] 1fr [col-end]) [full-end];
     max-width: 2000px;
     margin: auto;
@@ -29,7 +28,13 @@
 
 // Projects Mobile
 
-.projectsContainerMobile {
+.projectsContainerTablet {
+    display: none;
+}
+
+.projectsWrapperMobileOne,
+.projectsWrapperMobileTwo,
+.projectsWrapperMobileThree {
     display: none;
 }
 

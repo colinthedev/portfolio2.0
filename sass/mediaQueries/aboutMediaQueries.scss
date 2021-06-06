@@ -1,36 +1,63 @@
-@media screen and (max-width: 1023px) {
-    .traitsWrapper {
-        height: 80%;
-    }
-}
-
+// IPad Pro
+// Portrait 
 @media only screen 
-  and (max-width: 767px)
-  and (orientation: portrait) {
-    // .traitsWrapper__dev {
-    //     margin-left: 10%;
-    // }
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
 
-    // .traitsWrapper__create {
-    //     margin-left: 25%;
-    // }
+    .leftWrapper {
+        grid-row: 12 / 13;
+        grid-column: 3 / 11;
+    }
 
-    // .traitsWrapper__innovate {
-    //     margin-left: 45%;
-    // }
+    .aboutContent {
+        display: block;
+        margin: 5rem 10rem auto 0;
+    }
+
+    .aboutLinksWrap {
+        margin: 11% 40% 0 auto;
+    }
+
+    .rightWrapper {
+        grid-row: 12 / 13;
+        grid-column: 11 / -1;
+    }
   }
 
-@media screen and (max-width: 854px) {
-    .rightWrapper__pink {
-        margin-left: -1rem;
+@media screen and (max-width: 1023px) {
+    .rightWrapper {
+        grid-row: 11 / 12;
+        grid-column: full-start / full-end;
     }
 
+    .leftWrapper {
+        grid-row: 12 / 13;
+        grid-column: 3 / 18;
+    }
+
+    .aboutHeadingWrap {
+        margin: 7rem 0 0 -8%;
+    }
+
+    .aboutContent {
+        display: block;
+        margin: 5rem 0 auto 0;
+    }
+
+    .aboutLinksWrap {
+        width: 30rem;
+        margin: 20% 0 0 auto;
+        grid-column: 14 / -1;
+    }
+    
     .traitsWrapper {
         height: 80%;
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 854px) {
     .rightWrapper__pink {
         margin-left: 0;
         border: none;
@@ -42,7 +69,37 @@
         top: 2rem;
     }
 
+    .traitsWrapper {
+        height: 80%;
+    }
+
+    .traitsWrapper__dev {
+        margin-left: 20%;
+    }
+
+    .traitsWrapper__create {
+        margin-left: 40%;
+    }
+
+    .traitsWrapper__innovate {
+        margin-left: 60%;
+    }
+
     .aboutHeadingWrap {
-        margin: 1rem 0 0 -8%;
+        margin: 2rem 0 0 -8%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .traitsWrapper__dev {
+        margin-left: 15%;
+    }
+
+    .traitsWrapper__create {
+        margin-left: 35%;
+    }
+
+    .traitsWrapper__innovate {
+        margin-left: 55%;
     }
 }

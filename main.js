@@ -54,22 +54,22 @@ setInterval(changeColor,1000);// Change color every 1 second
     }
 })();
 
-// Projects container horizontal scrolling MOBILE
+// Projects container horizontal scrolling TABLET
 (function() {
-    function scrollHorizontallyMobile(e) {
+    function scrollHorizontallyTablet(e) {
         e = window.event || e;
         let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-        document.getElementById('horizontalScrollMobile').scrollLeft -= (delta * 40);
+        document.getElementById('horizontalScrollTablet').scrollLeft -= (delta * 40);
         e.preventDefault();
     }
-    if (document.getElementById('horizontalScrollMobile').addEventListener) {
+    if (document.getElementById('horizontalScrollTablet').addEventListener) {
         // IE9, Chrome, Safari, Opera
-        document.getElementById('horizontalScrollMobile').addEventListener('mousewheel', scrollHorizontallyMobile, false);
+        document.getElementById('horizontalScrollTablet').addEventListener('mousewheel', scrollHorizontallyTablet, false);
         // Firefox
-        document.getElementById('horizontalScrollMobile').addEventListener('DOMMouseScroll', scrollHorizontallyMobile, false);
+        document.getElementById('horizontalScrollTablet').addEventListener('DOMMouseScroll', scrollHorizontallyTablet, false);
     } else {
         // IE 6/7/8
-        document.getElementById('horizontalScrollMobile').attachEvent('onmousewheel', scrollHorizontallyMobile);
+        document.getElementById('horizontalScrollTablet').attachEvent('onmousewheel', scrollHorizontallyTablet);
     }
 })();
 
@@ -209,8 +209,8 @@ let sceneBackground = new ScrollMagic.Scene({
     reverse: false
 })
 .setClassToggle('.cardContainer', 'revealed')
+// sceneBackground.addIndicators()
 .addTo(controller);
-// sceneBackground.addIndicators();
 
 // Opacity
 let sceneFade = new ScrollMagic.Scene({
@@ -220,8 +220,8 @@ let sceneFade = new ScrollMagic.Scene({
     reverse: true
 })
 .setClassToggle('.skillsContainer', 'show')
-.addTo(controller);
 // sceneFade.addIndicators()
+.addTo(controller);
 
 
 // Lightbulb section scenes --------------------------------------------------
