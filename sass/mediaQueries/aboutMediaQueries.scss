@@ -1,3 +1,48 @@
-@media screen and (max-width: 854px) {
+@media screen and (max-width: 1023px) {
+    .traitsWrapper {
+        height: 80%;
+    }
+}
 
+@media only screen 
+  and (max-width: 767px)
+  and (orientation: portrait) {
+    // .traitsWrapper__dev {
+    //     margin-left: 10%;
+    // }
+
+    // .traitsWrapper__create {
+    //     margin-left: 25%;
+    // }
+
+    // .traitsWrapper__innovate {
+    //     margin-left: 45%;
+    // }
+  }
+
+@media screen and (max-width: 854px) {
+    .rightWrapper__pink {
+        margin-left: -1rem;
+    }
+
+    .traitsWrapper {
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .rightWrapper__pink {
+        margin-left: 0;
+        border: none;
+        background: var(--color-background-pink);
+    }
+
+    .rightWrapper__blue {
+        border: none;
+        top: 2rem;
+    }
+
+    .aboutHeadingWrap {
+        margin: 1rem 0 0 -8%;
+    }
 }

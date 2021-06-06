@@ -5,7 +5,6 @@
     font-size: 4rem;
     letter-spacing: .02em;
     color: var(--color-text-white);
-    color: #000;
 }
 
 .aboutHeading {
@@ -24,13 +23,17 @@
     &__pink {
         height: 100%;
         width: 100%;
-        background: var(--color-background-blue);
+        margin-left: 1rem;
+        border: solid 2px var(--color-background-pink);
     }
 
     &__blue {
-        height: 99%;
-        width: 97.65%;
-        background: #fdfdfd;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border: 2px solid var(--color-background-blue);
+        left: -4rem;
+        top: 4rem;
     }
 }
 
@@ -42,15 +45,15 @@
     width: 100%;
 
     &__dev {
-        margin-left: 10%;
+        margin-left: 15%;
     }
 
     &__create {
-        margin-left: 30%;
+        margin-left: 35%;
     }
 
     &__innovate {
-        margin-left: 50%;
+        margin-left: 55%;
     }
 }
 

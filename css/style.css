@@ -1093,8 +1093,7 @@ template {
   font-weight: 400;
   font-size: 4rem;
   letter-spacing: .02em;
-  color: var(--color-text-white);
-  color: #000; }
+  color: var(--color-text-white); }
 
 .aboutHeading {
   font-family: 'Roboto', sans-serif;
@@ -1109,11 +1108,15 @@ template {
   .rightWrapper__pink {
     height: 100%;
     width: 100%;
-    background: var(--color-background-blue); }
+    margin-left: 1rem;
+    border: solid 2px var(--color-background-pink); }
   .rightWrapper__blue {
-    height: 99%;
-    width: 97.65%;
-    background: #fdfdfd; }
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--color-background-blue);
+    left: -4rem;
+    top: 4rem; }
 
 .traitsWrapper {
   display: flex;
@@ -1122,11 +1125,11 @@ template {
   height: 100%;
   width: 100%; }
   .traitsWrapper__dev {
-    margin-left: 10%; }
+    margin-left: 15%; }
   .traitsWrapper__create {
-    margin-left: 30%; }
+    margin-left: 35%; }
   .traitsWrapper__innovate {
-    margin-left: 50%; }
+    margin-left: 55%; }
 
 .leftWrapper {
   grid-row: 7 / 8;
@@ -1323,8 +1326,8 @@ template {
   border: solid 1.75px #000; }
   .inputWrapperMsg__msg {
     padding: 1rem;
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
     resize: none; }
 
 .footerContainer {
@@ -1419,8 +1422,29 @@ template {
   .octopus {
     height: 30rem;
     width: 30rem; } }
+@media screen and (max-width: 1023px) {
+  .traitsWrapper {
+    height: 80%; } }
+@media screen and (max-width: 854px) {
+  .rightWrapper__pink {
+    margin-left: -1rem; }
+
+  .traitsWrapper {
+    height: 80%; } }
+@media screen and (max-width: 375px) {
+  .rightWrapper__pink {
+    margin-left: 0;
+    border: none;
+    background: var(--color-background-pink); }
+
+  .rightWrapper__blue {
+    border: none;
+    top: 2rem; }
+
+  .aboutHeadingWrap {
+    margin: 1rem 0 0 -8%; } }
 @media screen and (max-width: 1366px) {
-  .bulbContainer {
+  .bulbWrapper {
     display: none; } }
 @media screen and (min-width: 2100px) {
   .contactArrow {
@@ -1473,6 +1497,7 @@ template {
 
   .inputWrapperTop {
     flex-direction: column;
+    align-items: center;
     margin: 2.5rem auto 1.5rem auto; }
 
   .flexWrapperName {
@@ -1505,6 +1530,7 @@ template {
   .leftContent {
     margin-left: 0;
     width: inherit;
+    height: inherit;
     background: var(--color-background-blue); }
 
   .leftContent__innerBottom {
@@ -1524,6 +1550,7 @@ template {
   .inputWrapperTop {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 90%;
     max-width: inherit;
     margin: 1.5rem auto 1.5rem auto; }
@@ -1614,7 +1641,7 @@ template {
     margin-left: 2rem; } }
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 5vh) minmax(auto, 20vh) minmax(auto, 60rem) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 7rem);
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(20vh, 15rem) minmax(auto, 60rem) minmax(auto, 20vh) minmax(auto, 74rem) minmax(auto, 7rem);
     grid-template-columns: auto [full-start] repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) [full-end] auto; }
 
   .headerContainer {
@@ -1693,19 +1720,10 @@ template {
 
   .rightWrapper {
     grid-row: 12 / 13;
-    grid-column: 11 / -1; }
-
-  .traitsWrapper__dev {
-    margin-left: 5%; }
-
-  .traitsWrapper__create {
-    margin-left: 30%; }
-
-  .traitsWrapper__innovate {
-    margin-left: 55%; } }
+    grid-column: 11 / -1; } }
 @media screen and (max-width: 1023px) {
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 5vh) minmax(auto, 20vh) minmax(auto, 60rem) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 7rem);
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(20vh, 15rem) minmax(auto, 60rem) minmax(auto, 20vh) minmax(auto, 74rem) minmax(auto, 7rem);
     grid-template-columns: auto [full-start] repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) [full-end] auto; }
 
   .headerContainer {
@@ -1784,7 +1802,7 @@ template {
     grid-column: 3 / 18; }
 
   .aboutHeadingWrap {
-    margin: 5rem 0 0 -8%; }
+    margin: 7rem 0 0 -8%; }
 
   .aboutContent {
     display: block;
@@ -1799,7 +1817,7 @@ template {
     overflow-x: hidden; }
 
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 50rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(auto, 25vh) minmax(auto, 60rem) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 7rem);
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 50rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(25vh, 15rem) minmax(auto, 60rem) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 7rem);
     grid-template-columns: [full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end]; }
 
   .projectsWrapper,
@@ -1856,7 +1874,7 @@ template {
     width: 80%; } }
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 55rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 10vh) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 55rem) minmax(auto, 7rem);
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 55rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(25vh, 15rem) minmax(auto, 64rem) minmax(auto, 30vh) minmax(auto, 55rem) minmax(auto, 7rem);
     grid-template-columns: [full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end]; }
 
   .projectsWrapper,

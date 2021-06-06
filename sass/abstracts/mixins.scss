@@ -26,8 +26,9 @@
 
 @mixin tablet-media-query {
     .gridContainer { // Main grid 
-        // grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 10vh) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 7rem);
-        grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 5vh) minmax(auto, 20vh) minmax(auto, 60rem) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 7rem);
+        // grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 5vh) minmax(auto, 20vh) minmax(auto, 60rem) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 7rem);
+        // grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(auto, 20vh) minmax(auto, 60rem) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 7rem);
+        grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(20vh, 15rem) minmax(auto, 60rem) minmax(auto, 20vh) minmax(auto, 74rem) minmax(auto, 7rem);
         grid-template-columns: auto [full-start] repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) [full-end] auto;
     }
 
