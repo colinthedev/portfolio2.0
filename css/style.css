@@ -1615,7 +1615,7 @@ template {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
+    width: 80%;
     max-width: inherit;
     margin: 1.5rem auto 1.5rem auto; }
 
@@ -2021,7 +2021,8 @@ template {
 
   .headingWrapper {
     right: -14rem;
-    width: auto; } }
+    width: auto;
+    width: 28rem; } }
 @media only screen and (max-width: 280px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
   .headingWrapper {
     right: -12.5rem; }
