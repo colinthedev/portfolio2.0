@@ -26,12 +26,30 @@
     <body class="gridContainer">
         <!-- Navigation -->
         <header class="headerContainer">
+            <!-- Desktop navigation -->
             <div class="navigation">
                 <ul class="navigation__listWrapper">
-                    <li class="navigation__listWrapper-nav revealed"><a class="navFont nav__link" href="#section--1">Skills</a></li>
-                    <li class="navigation__listWrapper-nav revealed"><a class="navFont nav__link" href="#section--2">About</a></li>
-                    <li class="navigation__listWrapper-nav revealed"><a class="navFont nav__link" href="#section--3">Contact</a></li>
+                    <li class="revealed navigation__listWrapper-nav"><a class="navFont nav__link" href="#section--1">Skills</a></li>
+                    <li class="revealed navigation__listWrapper-nav"><a class="navFont nav__link" href="#section--2">About</a></li>
+                    <li class="revealed navigation__listWrapper-nav"><a class="navFont nav__link" href="#section--3">Contact</a></li>
                 </ul>
+            </div>
+            <!-- Mobile navigation -->
+            <div class="burger">
+                <div class="burgerLine burger__1"></div>
+                <div class="burgerLine burger__2"></div>
+                <div class="burgerLine burger__3"></div>
+            </div>
+            <!-- Mobile navigation active -->
+            <div class="navigation-mobile">
+                <ul class="listWrapper-mobile">
+                    <li class="list-Mobilenav"><a class="navFontMobile nav__link" href="#section--0">Projects</a></li>
+                    <li class="list-Mobilenav"><a class="navFontMobile nav__link" href="#section--1">Skills</a></li>
+                    <li class="list-Mobilenav"><a class="navFontMobile nav__link" href="#section--2">About</a></li>
+                    <li class="list-Mobilenav"><a class="navFontMobile nav__link" href="#section--3">Contact</a></li>
+                </ul>
+                <div class="lineBreakNavMenu"></div>
+                <span class="resumeFontMobileNav resume-mobile">Resume</span>
             </div>
         </header>
         <!-- Landing page -->
@@ -148,7 +166,7 @@
 
         <!-- Projects mobile -->
         <!-- Photosnap -->
-        <div class="projectsWrapper projectsWrapperMobile projectsWrapperMobileOne">
+        <div id="section--0" class="projectsWrapper projectsWrapperMobile projectsWrapperMobileOne">
             <img src="assets/projects/photosnap-desktop-p.jpg" alt="photosnap project" class="photosnap">
             <span class="hoverTitleFont projectsTitleMobile">Photosnap</span>
             <div class="flexWrapperRowMobile">

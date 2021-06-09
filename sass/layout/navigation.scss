@@ -1,3 +1,7 @@
+.navigation-mobile {
+    display: none;
+}
+
 .headerContainer { // Header container 
     display: flex;
     align-items: center;
@@ -37,7 +41,7 @@
     position: absolute;
     left: 0;
     right: 100%;
-    bottom: -1px;
+    bottom: -2px;
     background: #fdfdfd;
     height: 1.75px;
     width: 7rem;
@@ -51,3 +55,4 @@
 .navigation__listWrapper-nav:active {
     transform: scale(.95);
 }
+

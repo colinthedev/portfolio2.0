@@ -1,0 +1,101 @@
+
+@media screen and (max-width: 854px) {
+    
+    //Burger Button Default State
+    .burger {
+        cursor: pointer;
+        background-color: transparent;
+        height: .6rem;
+        margin: auto 2.4rem auto auto;
+        z-index: 100;
+
+        &__1 {
+            width: 3rem;
+        }
+
+        &__2 {
+            width: 2rem;
+        }
+
+        &__3 {
+            width: 3rem;
+        }
+    }
+
+    .burgerLine {
+        background-color: var(--color-background-white);
+        height: 2px;
+        margin: 4px 0;
+
+        transition: .5s ease-in-out;
+    }
+
+    //Burger Button Transition Animation
+    .burger__1.open {
+        background: black;
+        transform: rotate(-140deg) translateY(39px) translateX(35px);
+    }
+
+    .burger__2.open {
+        transform: translateX(200px);
+    }
+
+    .burger__3.open {
+        background: black;
+        transform: rotate(140deg) translateY(50px) translateX(-40px);
+    }
+
+    //Mobile navigation menu
+    .navigation {
+        display: none;
+    }
+
+    .headerContainer.active {
+        grid-column: full-start / full-end;
+        grid-row: 1 / 4;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--color-background-white);
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .navigation-mobile.active {
+        grid-row: 2 / 4;
+        grid-column: full-start / full-end;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin: -10rem 0 auto 0;
+        background: var(--color-background-white);
+        text-align: center;
+
+        z-index: 1000;
+        // transform: translateY(6.5rem);
+    }
+
+    .listWrapper-mobile {
+        display: flex;
+        height: 20rem;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    //Line Break
+    .lineBreakNavMenu {
+        display: block;
+        height: 1.5px;
+        width: 25rem;
+        margin: 2rem auto;
+        background: #000000;
+        opacity: .25;
+        z-index: -100;
+    }
+
+    .resume-mobile {
+        display: block;
+    }
+}

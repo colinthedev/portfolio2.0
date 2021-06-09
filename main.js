@@ -1,6 +1,7 @@
 'use strict';
 
 const navbarLinks = document.querySelectorAll('.navigation__listWrapper li a');
+// console.log(navbarLinks);
 
 navbarLinks.forEach(elem => elem.addEventListener('click', navbarLinkClick));
 
@@ -8,6 +9,24 @@ function navbarLinkClick(event) {
 
     smoothScroll(event); // Call smoothscroll func
 };
+
+// Burger Button Mobile
+const burgerBtn = document.querySelector('.burger'); //Container for burger lines
+let burger1open = document.querySelector('.burger__1'); //Burger line 1
+let burger2open = document.querySelector('.burger__2'); //Burger line 2
+let burger3open = document.querySelector('.burger__3'); //Burger line 3
+
+let headerContainer = document.querySelector('.headerContainer');
+let nav = document.querySelector('.navigation-mobile');
+
+burgerBtn.addEventListener('click', () => {
+    burger1open.classList.toggle('open'); //Burger line 1
+    burger2open.classList.toggle('open'); //Burger line 2
+    burger3open.classList.toggle('open'); //Burger line 3
+
+    headerContainer.classList.toggle('active');
+    nav.classList.toggle('active');
+});
 
 // Smooth scrolling
 function smoothScroll(event) {
@@ -341,3 +360,4 @@ let sceneArrow = new ScrollMagic.Scene({
 //     projectLine.classList.remove('active');
 //     projectRowWrap.classList.remove('active');
 // }
+
