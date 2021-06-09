@@ -1,21 +1,43 @@
 'use strict';
 
+const navbarLinks = document.querySelectorAll('.navigation__listWrapper li a');
+
+navbarLinks.forEach(elem => elem.addEventListener('click', navbarLinkClick));
+
+function navbarLinkClick(event) {
+
+    smoothScroll(event); // Call smoothscroll func
+};
+
 // Smooth scrolling
-  // 1. Add event listener to common parent element 
-  // 2. Determine what element originated the event
-  document.querySelector('.navigation__listWrapper').addEventListener('click', function(e) {
-    // console.log(e.target);
-    e.preventDefault();
-  
-    //Matching strategy
-    if(e.target.classList.contains('nav__link')) {
-      // console.log('LINK');
-  
-      const id = e.target.getAttribute('href');
-      document.querySelector(id).scrollIntoView({behavior:'smooth'});
-      // console.log(id);
+function smoothScroll(event) {
+    event.preventDefault();
+    // console.log(event.currentTarget);
+    const targetId = event.currentTarget.getAttribute('href')==='#' ? "ul" : event.currentTarget.getAttribute("href");
+    // console.log(targetId);
+    const targetPosition = document.querySelector(targetId).offsetTop;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 900;
+    let start = null;
+
+    window.requestAnimationFrame(step);
+
+    function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        // window.scrollTo(0, distance*(progress/duration) + startPosition);
+        window.scrollTo(0, easeInOutExpo(progress, startPosition, distance, duration));
+        if (progress < duration) window.requestAnimationFrame(step);
     };
-  });
+};
+// Scroll to animation function
+function easeInOutExpo(t, b, c, d) {
+	t /= d/2;
+	if (t < 1) return c/2 * Math.pow( 2, 10 * (t - 1) ) + b;
+	t--;
+	return c/2 * ( -Math.pow( 2, -10 * t) + 2 ) + b;
+};
 
 // Generates a random color for line landing page 
 function getRandomColor() {
@@ -252,7 +274,7 @@ let revealElements = document.getElementsByClassName("slide-left");
 for (let i=0; i<revealElements.length; i++) { // create a scene for each element
     new ScrollMagic.Scene({
                         triggerElement: revealElements[i],
-                        offset: 35,
+                        offset: -11,
                         reverse: false,
                         triggerHook: 0.9, // start a little later
                     })
@@ -264,7 +286,7 @@ for (let i=0; i<revealElements.length; i++) { // create a scene for each element
 // Content fade in
 new ScrollMagic.Scene({
     triggerElement: "#trigger1",
-    offset: -105, 
+    offset: -150, 
     reverse: false,
     triggerHook: 0.7 // start a little later
 })

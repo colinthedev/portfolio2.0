@@ -298,7 +298,8 @@ html {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  scroll-behavior: smooth; }
 
 #clearfix::after {
   content: "";
@@ -1166,7 +1167,7 @@ template {
   justify-content: space-around;
   height: 10rem;
   width: 20rem;
-  margin: 41% 50% 0 auto; }
+  margin: 41% 59% 0 auto; }
 
 .slide-left {
   opacity: 0;
