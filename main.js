@@ -257,12 +257,12 @@ let sceneBackground = new ScrollMagic.Scene({
 let sceneFade = new ScrollMagic.Scene({
     triggerElement: '.skillsContainer',
     offset: -200, // start this scene -180px from top of container
-    duration: 1100, // the scene last for a scroll distance of 800px
+    duration: 950, // the scene last for a scroll distance of 800px
     reverse: true
 })
 .setClassToggle('.skillsContainer', 'show')
-// sceneFade.addIndicators()
 .addTo(controller);
+sceneFade.addIndicators()
 
 
 // Lightbulb section scenes --------------------------------------------------
@@ -336,6 +336,15 @@ let sceneArrow = new ScrollMagic.Scene({
 .addTo(controller);
 // sceneArrow.addIndicators();
 
+// Chevron back to top
+let toTop = document.querySelector('.chevronUp');
+
+toTop.addEventListener('click', function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+})
+
+
 
 
 // function projectsActive() {
@@ -360,4 +369,5 @@ let sceneArrow = new ScrollMagic.Scene({
 //     projectLine.classList.remove('active');
 //     projectRowWrap.classList.remove('active');
 // }
+
 

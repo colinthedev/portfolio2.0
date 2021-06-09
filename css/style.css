@@ -1077,7 +1077,7 @@ template {
     -o-filter: blur(100px);
     -ms-filter: blur(100px);
     -moz-filter: blur(100px);
-    -webkit-filter: blur(80px);
+    -webkit-filter: blur(60px);
     z-index: -1; }
 
 .show-bulb {
@@ -1382,6 +1382,27 @@ template {
   letter-spacing: .02em;
   color: var(--color-text-white);
   margin-top: 1.5rem; }
+
+.chevronUp {
+  margin: 0 auto 1rem auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  color: #fdfdfd;
+  display: block;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+
+.chevronUp:hover {
+  opacity: .75; }
 
 .successGridContainer {
   display: grid;
