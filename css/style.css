@@ -684,7 +684,7 @@ template {
 .aboutLinks {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: 200;
+  font-weight: 100;
   font-size: 1.8rem;
   letter-spacing: .02em;
   color: var(--color-text-white); }
@@ -2037,14 +2037,14 @@ template {
 
   .burger__1.open {
     background: black;
-    transform: rotate(-140deg) translateY(39px) translateX(35px); }
+    transform: rotate(-140deg) translateY(34px) translateX(24px); }
 
   .burger__2.open {
     transform: translateX(200px); }
 
   .burger__3.open {
     background: black;
-    transform: rotate(140deg) translateY(50px) translateX(-40px); }
+    transform: rotate(140deg) translateY(40px) translateX(-35px); }
 
   .navigation {
     display: none; }
@@ -2074,7 +2074,7 @@ template {
 
   .listWrapper-mobile {
     display: flex;
-    height: 20rem;
+    height: 21rem;
     flex-direction: column;
     justify-content: space-between; }
 
