@@ -30,11 +30,6 @@ By the end of the finished product i had incorporated components from the other 
   - **Lightbulb** :bulb:
     - **Octopus** :octopus:
 
-## Final Considerations
-<br>
-This was my first time using [ScrollMagic](https://scrollmagic.io/)
->I found it easy to use and very useful.
-
 ## Built With 
 
 * HTML-5
