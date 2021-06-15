@@ -1,5 +1,35 @@
 'use strict';
 
+// Smooth scrolling
+function smoothScroll(event) {
+    event.preventDefault();
+    // console.log(event.currentTarget);
+    const targetId = event.currentTarget.getAttribute('href')==='#' ? "ul" : event.currentTarget.getAttribute("href");
+    // console.log(targetId);
+    const targetPosition = document.querySelector(targetId).offsetTop;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 800;
+    let start = null;
+
+    window.requestAnimationFrame(step);
+
+    function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        // window.scrollTo(0, distance*(progress/duration) + startPosition);
+        window.scrollTo(0, easeInOutExpo(progress, startPosition, distance, duration));
+        if (progress < duration) window.requestAnimationFrame(step);
+    };
+};
+// Scroll to animation function
+function easeInOutExpo(t, b, c, d) {
+	t /= d/2;
+	if (t < 1) return c/2 * Math.pow( 2, 10 * (t - 1) ) + b;
+	t--;
+	return c/2 * ( -Math.pow( 2, -10 * t) + 2 ) + b;
+};
+
 // Smooth scroll for mobile
 const navbarLinks = document.querySelectorAll('.navigation__listWrapper li a');
 // console.log(navbarLinks);
@@ -38,36 +68,6 @@ burgerBtn.addEventListener('click', () => {
     headerContainer.classList.toggle('active');
     nav.classList.toggle('active');
 });
-
-// Smooth scrolling
-function smoothScroll(event) {
-    event.preventDefault();
-    // console.log(event.currentTarget);
-    const targetId = event.currentTarget.getAttribute('href')==='#' ? "ul" : event.currentTarget.getAttribute("href");
-    // console.log(targetId);
-    const targetPosition = document.querySelector(targetId).offsetTop;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    const duration = 900;
-    let start = null;
-
-    window.requestAnimationFrame(step);
-
-    function step(timestamp) {
-        if (!start) start = timestamp;
-        const progress = timestamp - start;
-        // window.scrollTo(0, distance*(progress/duration) + startPosition);
-        window.scrollTo(0, easeInOutExpo(progress, startPosition, distance, duration));
-        if (progress < duration) window.requestAnimationFrame(step);
-    };
-};
-// Scroll to animation function
-function easeInOutExpo(t, b, c, d) {
-	t /= d/2;
-	if (t < 1) return c/2 * Math.pow( 2, 10 * (t - 1) ) + b;
-	t--;
-	return c/2 * ( -Math.pow( 2, -10 * t) + 2 ) + b;
-};
 
 // Generates a random color for line landing page 
 function getRandomColor() {
@@ -125,126 +125,38 @@ setInterval(changeColor,1000);// Change color every 1 second
     }
 })();
 
-
-
-/* function test() {
-    let projectLines = document.querySelectorAll('.testFunc');
-    let projectRowWraps = document.querySelectorAll('.testFunc');
-}
-
+// Projects hover
+let slide = ['Photosnap', 'Dine', 'Nike'] ;
+for (let i = 0; i < slide.length; i++ ) {
+    let lowercaseName = slide[i].toLowerCase();
+    let projectTitle = document.querySelector('.projectTitle' + slide[i]);
+    let projectLine = document.querySelector('.hoverLine' + slide[i]);
+// View live View code text wrapper
+    let projectRowWrap = document.querySelector('.flexWrapperRow' + slide[i]);
 // Background color + image
-let photosnapBackground = document.querySelector('.photosnapBackground');
-let photosnapImg = document.querySelector('.photosnap');
-let projectTitle = document.querySelector('.projectTitlePhotosnap');
-
-
-photosnapBackground.addEventListener('mouseenter', function() {
-    photosnapBackground.classList.add('active');
-    photosnapImg.classList.add('active');
-    projectTitle.textContent = 'Photosnap';
-    
-    test();
-}); */
-
-// //Photosnap Project #1 ---------------------------------------------------------
-
-// Content in project on hover 
-let projectTitle = document.querySelector('.projectTitlePhotosnap');
-let projectLine = document.querySelector('.hoverLinePhotosnap');
-let projectRowWrap = document.querySelector('.flexWrapperRowPhotosnap');
-
-// Background color + image
-let photosnapBackground = document.querySelector('.photosnapBackground');
-let photosnapImg = document.querySelector('.photosnap');
-
+    let background = document.querySelector('.' + lowercaseName + 'Background');
+    let img = document.querySelector('.' + lowercaseName);
 // Mouse in add background color title and links
-photosnapBackground.addEventListener('mouseenter', function() {
-    photosnapBackground.classList.add('active');
-    photosnapImg.classList.add('active');
-    projectTitle.textContent = 'Photosnap';
-
-    projectTitle.classList.add('active');
-    projectLine.classList.add('active');
-    projectRowWrap.classList.add('active');
-});
-
+    background.addEventListener('mouseenter', function() {
+        background.classList.add('active');
+        img.classList.add('active');
+        projectTitle.textContent = slide[i];
+        projectTitle.classList.add('active');
+        projectLine.classList.add('active');
+        projectRowWrap.classList.add('active');
+    });
 // Mouse out remove all
-photosnapBackground.addEventListener('mouseleave', function() {
-    photosnapBackground.classList.remove('active');
-    photosnapImg.classList.remove('active');
-
-    dineBackground.classList.remove('active');
-    dineImg.classList.remove('active');
-
-    projectTitle.textContent = '';
-    projectTitle.classList.remove('active');
-    projectLine.classList.remove('active');
-    projectRowWrap.classList.remove('active');
-});
-
-//Dine Project #2 ---------------------------------------------------------------
-
-// Content in project on hover 
-let projectTitleDine = document.querySelector('.projectTitleDine');
-let projectLineDine = document.querySelector('.hoverLineDine');
-let projectRowWrapDine = document.querySelector('.flexWrapperRowDine');
-
-let dineBackground = document.querySelector('.dineBackground');
-let dineImg = document.querySelector('.dine');
-
-// Mouse in add background color title and links
-dineBackground.addEventListener('mouseenter', function() {
-    dineBackground.classList.add('active');
-    dineImg.classList.add('active');
-    projectTitleDine.textContent = 'Dine';
-
-    projectTitleDine.classList.add('active');
-    projectLineDine.classList.add('active');
-    projectRowWrapDine.classList.add('active');
-});
-
-// Mouse out remove all
-dineBackground.addEventListener('mouseleave', function() {
-    dineBackground.classList.remove('active');
-    dineImg.classList.remove('active');
-
-    projectTitleDine.textContent = '';
-    projectTitleDine.classList.remove('active');
-    projectLineDine.classList.remove('active');
-    projectRowWrapDine.classList.remove('active');
-});
-
-//Nike Project #3 ---------------------------------------------------------------
-
-// Content in project on hover 
-let projectTitleNike = document.querySelector('.projectTitleNike');
-let projectLineNike = document.querySelector('.hoverLineNike');
-let projectRowWrapNike = document.querySelector('.flexWrapperRowNike');
-
-let nikeBackground = document.querySelector('.nikeBackground');
-let nikeImg = document.querySelector('.nike');
-
-// Mouse in add background color title and links
-nikeBackground.addEventListener('mouseenter', function() {
-    nikeBackground.classList.add('active');
-    nikeImg.classList.add('active');
-    projectTitleNike.textContent = 'Nike';
-
-    projectTitleNike.classList.add('active');
-    projectLineNike.classList.add('active');
-    projectRowWrapNike.classList.add('active');
-});
-
-// Mouse out remove all
-nikeBackground.addEventListener('mouseleave', function() {
-    nikeBackground.classList.remove('active');
-    nikeImg.classList.remove('active');
-
-    projectTitleNike.textContent = '';
-    projectTitleNike.classList.remove('active');
-    projectLineNike.classList.remove('active');
-    projectRowWrapNike.classList.remove('active');
-});
+    background.addEventListener('mouseleave', function() {
+        background.classList.remove('active');
+        img.classList.remove('active');
+        background.classList.remove('active');
+        img.classList.remove('active');
+        projectTitle.textContent = '';
+        projectTitle.classList.remove('active');
+        projectLine.classList.remove('active');
+        projectRowWrap.classList.remove('active');
+    });
+};
 
 // --Skills Section -------------------------------------------------------------
 
@@ -374,31 +286,5 @@ toTop.addEventListener('click', function() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 })
-
-
-
-
-// function projectsActive() {
-//     projectTitle.classList.add('active');
-//     projectLine.classList.add('active');
-//     projectRowWrap.classList.add('active');
-    
-//     for( i = 0; i < projectColWrap.length; i++)
-//     projectColWrap[i].classList.add('active');
-// };
-
-
-// function projectsInactive() {
-//     photosnapBackground.classList.remove('active');
-//     photosnapImg.classList.remove('active');
-
-//     dineBackground.classList.remove('active');
-//     dineImg.classList.remove('active');
-
-//     projectTitle.textContent = '';
-//     projectTitle.classList.remove('active');
-//     projectLine.classList.remove('active');
-//     projectRowWrap.classList.remove('active');
-// }
 
 
