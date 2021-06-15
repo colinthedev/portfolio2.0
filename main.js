@@ -1,14 +1,25 @@
 'use strict';
 
+// Smooth scroll for mobile
 const navbarLinks = document.querySelectorAll('.navigation__listWrapper li a');
 // console.log(navbarLinks);
-
 navbarLinks.forEach(elem => elem.addEventListener('click', navbarLinkClick));
 
 function navbarLinkClick(event) {
-
     smoothScroll(event); // Call smoothscroll func
 };
+
+// Projects - + slider
+const slider1 = document.getElementById('slider-1');
+const slider2 = document.getElementById('slider-2');
+
+slider1.addEventListener('click', function() {
+    document.getElementById('horizontalScroll').scrollLeft -= 500;
+})
+slider2.addEventListener('click', function() {
+    document.getElementById('horizontalScroll').scrollLeft += 500;
+})
+
 
 // Burger Button Mobile
 const burgerBtn = document.querySelector('.burger'); //Container for burger lines
@@ -115,7 +126,27 @@ setInterval(changeColor,1000);// Change color every 1 second
 })();
 
 
-//Photosnap Project #1 ---------------------------------------------------------
+
+/* function test() {
+    let projectLines = document.querySelectorAll('.testFunc');
+    let projectRowWraps = document.querySelectorAll('.testFunc');
+}
+
+// Background color + image
+let photosnapBackground = document.querySelector('.photosnapBackground');
+let photosnapImg = document.querySelector('.photosnap');
+let projectTitle = document.querySelector('.projectTitlePhotosnap');
+
+
+photosnapBackground.addEventListener('mouseenter', function() {
+    photosnapBackground.classList.add('active');
+    photosnapImg.classList.add('active');
+    projectTitle.textContent = 'Photosnap';
+    
+    test();
+}); */
+
+// //Photosnap Project #1 ---------------------------------------------------------
 
 // Content in project on hover 
 let projectTitle = document.querySelector('.projectTitlePhotosnap');
@@ -261,8 +292,8 @@ let sceneFade = new ScrollMagic.Scene({
     reverse: true
 })
 .setClassToggle('.skillsContainer', 'show')
+// sceneFade.addIndicators()
 .addTo(controller);
-sceneFade.addIndicators()
 
 
 // Lightbulb section scenes --------------------------------------------------

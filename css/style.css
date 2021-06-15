@@ -61,13 +61,18 @@
 .emailWrapperMobile {
   display: none; }
 
-.emailRe-direct {
+.emailRe-direct,
+.linked-in,
+.resumeLink {
   display: inline;
   position: relative;
   cursor: pointer;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: transform .25s ease-out; }
 
-.emailRe-direct:after {
+.emailRe-direct:after,
+.linked-in:after,
+.resumeLink:after {
   content: "";
   position: absolute;
   left: 0;
@@ -85,29 +90,14 @@
 .emailRe-direct:active:after {
   right: 0; }
 
-.linked-in {
-  display: inline;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  transition: transform .25s ease-out; }
-
-.linked-in:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 100%;
-  bottom: 2px;
-  background: #FDFDFD;
-  height: 1px;
-  transition-property: left to right;
-  transition-duration: .75s;
-  transition-timing-function: ease-in-out;
-  z-index: 500; }
-
 .linked-in:hover:after,
 .linked-in:focus:after,
 .linked-in:active:after {
+  right: 0; }
+
+.resumeLink:hover:after,
+.resumeLink:focus:after,
+.resumeLink:active:after {
   right: 0; }
 
 .projectsWrapper {
@@ -235,6 +225,34 @@
   justify-content: center;
   z-index: 500;
   margin-top: 35rem; }
+
+.sliderBtnsWrap {
+  grid-row: 3 / 4;
+  grid-column: 11 / -1;
+  display: grid;
+  grid-template-columns: [full-start] repeat(21, [col-start] minmax(4.4rem, 4.6rem) [col-end]) [full-end];
+  grid-template-rows: minmax(auto, 10vh); }
+
+.sliderBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 10rem;
+  grid-column: 16 / 19; }
+  .sliderBtns__btn {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    background: #fdfdfd;
+    border-radius: 50%;
+    transition: opacity 0.5s ease;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #000;
+    font-size: 2rem; }
+
+.sliderBtns__btn:hover {
+  opacity: 50%; }
 
 .btnWrapper {
   position: relative;
@@ -647,6 +665,13 @@ template {
   letter-spacing: .04em;
   color: var(--color-text-white); }
 
+.traitFont {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+  letter-spacing: .02em;
+  color: var(--color-text-white); }
+
 .aboutContent {
   font-family: 'Jost', sans-serif;
   font-style: normal;
@@ -861,7 +886,7 @@ template {
 .gridContainer {
   display: grid;
   background: var(--color-background-black);
-  grid-template-rows: minmax(auto, 10vh) minmax(auto, 80vh) minmax(auto, 10vh) minmax(auto, 20vh) minmax(auto, 62rem) minmax(auto, 100vh) minmax(auto, 74rem) minmax(auto, 50vh) minmax(auto, 74rem) minmax(auto, 7rem);
+  grid-template-rows: minmax(auto, 10vh) minmax(auto, 56rem) minmax(auto, 10vh) minmax(auto, 20vh) minmax(auto, 62rem) minmax(auto, 100vh) minmax(auto, 74rem) minmax(auto, 50vh) minmax(auto, 74rem) minmax(auto, 9rem);
   grid-template-columns: [full-start] repeat(28, [col-start] 1fr [col-end]) [full-end];
   max-width: 2000px;
   margin: auto; }
@@ -1116,20 +1141,6 @@ template {
 @media screen and (max-width: 1366px) {
   .bulbWrapper {
     display: none; } }
-.traitFont {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 4rem;
-  letter-spacing: .02em;
-  color: var(--color-text-white); }
-
-.aboutHeading {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 7.2rem;
-  letter-spacing: .04em;
-  color: var(--color-text-white); }
-
 .rightWrapper {
   grid-row: 7 / 8;
   grid-column: 14 / -1; }
@@ -1372,7 +1383,7 @@ template {
   height: 1.5px;
   opacity: 50%;
   width: 100%;
-  background: white; }
+  background: #fdfdfd; }
 
 .copyright {
   font-family: 'Roboto', sans-serif;
@@ -1384,7 +1395,7 @@ template {
   margin-top: 1.5rem; }
 
 .chevronUp {
-  margin: 0 auto 1rem auto;
+  margin-right: .5rem;
   font-family: 'Roboto', sans-serif;
   font-size: 3rem;
   color: #fdfdfd;
@@ -1392,7 +1403,6 @@ template {
   cursor: pointer;
   width: 3rem;
   height: 3rem;
-  line-height: 3rem;
   border-radius: 0.5rem;
   text-align: center;
   -webkit-transform: rotate(-90deg);
@@ -1679,7 +1689,7 @@ template {
     overflow-x: hidden; }
 
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) minmax(auto, 53rem) minmax(auto, 10vh) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 7rem);
+    grid-template-rows: minmax(auto, 10vh) minmax(auto, 53rem) minmax(auto, 10vh) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 9rem);
     grid-template-columns: [full-start] auto repeat(auto, [col-start] minmax(1fr, max-content) [col-end]) auto [full-end]; }
 
   .headerContainer {
@@ -1695,6 +1705,9 @@ template {
 
   .botRowContainer {
     margin-left: 2rem; }
+
+  .sliderBtnsWrap {
+    display: none; }
 
   .projectsWrapper {
     min-height: 350px;
@@ -1754,7 +1767,7 @@ template {
     grid-row: 15 / 16; } }
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 0vh) minmax(20vh, 15rem) minmax(auto, 60rem) minmax(auto, 20vh) minmax(auto, 74rem) minmax(auto, 7rem);
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 0vh) minmax(20vh, 15rem) minmax(auto, 60rem) minmax(auto, 20vh) minmax(auto, 74rem) minmax(auto, 9rem);
     grid-template-columns: auto [full-start] repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) [full-end] auto; }
 
   .headerContainer {
@@ -1830,7 +1843,7 @@ template {
     margin-top: 1.5rem; } }
 @media screen and (max-width: 1023px) {
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(25vh, 15rem) minmax(auto, 60rem) minmax(auto, 20vh) minmax(auto, 74rem) minmax(auto, 7rem);
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(20rem, 25rem) minmax(auto, 60rem) minmax(auto, 20vh) minmax(auto, 74rem) minmax(auto, 9rem);
     grid-template-columns: auto [full-start] repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) [full-end] auto; }
 
   .headerContainer {
@@ -2006,9 +2019,9 @@ template {
   .burger {
     cursor: pointer;
     background-color: transparent;
-    height: .6rem;
+    height: 5rem;
     margin: auto 2.4rem auto auto;
-    z-index: 100; }
+    z-index: 2000; }
     .burger__1 {
       width: 3rem; }
     .burger__2 {

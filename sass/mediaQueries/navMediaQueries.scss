@@ -5,9 +5,10 @@
     .burger {
         cursor: pointer;
         background-color: transparent;
-        height: .6rem;
+        // height: .6rem;
+        height: 5rem;
         margin: auto 2.4rem auto auto;
-        z-index: 100;
+        z-index: 2000;
 
         &__1 {
             width: 3rem;
@@ -33,7 +34,8 @@
     //Burger Button Transition Animation
     .burger__1.open {
         background: black;
-        transform: rotate(-140deg) translateY(39px) translateX(35px);
+        transform: rotate(-140deg) translateY(39px) translateX(35px);// Old
+        // transform: rotate(-140deg) translateY(1px) translateX(5px);
     }
 
     .burger__2.open {
@@ -42,7 +44,8 @@
 
     .burger__3.open {
         background: black;
-        transform: rotate(140deg) translateY(50px) translateX(-40px);
+        transform: rotate(140deg) translateY(50px) translateX(-40px); // Old
+        // transform: rotate(140deg) translateY(15px) translateX(-6px);
     }
 
     //Mobile navigation menu
