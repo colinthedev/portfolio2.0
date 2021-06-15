@@ -1,4 +1,3 @@
-
 .skillsContainer {
   display: flex;
   flex-direction: row;
@@ -10,14 +9,13 @@
   z-index: 09;
   
   opacity: 0;
-  // grid-template-columns: [full-start] repeat(9, [col-start] 1fr [col-end]) [full-end];
 }
-
-.show { // Skills container fade in 
+// Skills container fade in 
+.show { 
   opacity: 1;
 }
-
-.flamingoContainer { // Flamingo Wrap
+// Flamingo Wrap
+.flamingoContainer { 
   position: absolute;
   right: 2rem;
   bottom: -.25rem;
@@ -31,8 +29,8 @@
       z-index: 1;
   }
 }
-
-.cardContainer { // Left section of skills
+// Left section of skills
+.cardContainer { 
   position: relative;
   display: flex;
   flex-direction: column;
@@ -49,8 +47,8 @@
   top: .5rem;
   right: -45.5rem;
 }
-
-.cardRowWrapper { // Card component wrapper
+// Card component wrapper
+.cardRowWrapper { 
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -61,8 +59,8 @@
   perspective: 800px;
   z-index: 100;
 }
-
-.card__inner { // Card component circle
+// Card component circle
+.card__inner { 
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -79,8 +77,8 @@
         -o-transform-style: preserve-3d;
   position: relative;
 }
-
-.card__face { // Card component
+// Card component
+.card__face { 
   position: absolute;
   backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -89,8 +87,8 @@
           -o-backface-visibility: hidden;
   overflow: hidden;
 }
-
-.card__face-front { // Card front 
+// Card front 
+.card__face-front { 
   display: flex;
   backface-visibility: hidden;
   align-items: center;
@@ -112,8 +110,8 @@
   transform: rotateY(180deg);
   background: #090909;
 }
-
-.revealed { // Left section animation  
+// Left section animation  
+.revealed { 
   animation-name: wipe-in-bottom-right;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;

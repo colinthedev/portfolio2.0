@@ -15,6 +15,7 @@
     <!-- font-family: 'Jost', sans-serif; -->
 
     <link rel="success" href="success.html">
+    <link rel="resume" href="/Developer-resume/index.html">
     
     <title>colinthedev</title>
 
@@ -35,11 +36,11 @@
                 </ul>
             </div>
             <!-- Mobile navigation -->
-            <div class="burger">
+            <button class="burger">
                 <div class="burgerLine burger__1"></div>
                 <div class="burgerLine burger__2"></div>
                 <div class="burgerLine burger__3"></div>
-            </div>
+            </button>
             <!-- Mobile navigation active -->
             <div class="navigation-mobile">
                 <ul class="listWrapper-mobile">
@@ -49,7 +50,9 @@
                     <li class="list-Mobilenav"><a class="navFontMobile nav__link" href="#section--3">Contact</a></li>
                 </ul>
                 <div class="lineBreakNavMenu"></div>
-                <span class="resumeFontMobileNav resume-mobile">Resume</span>
+                <a class="active" target="_blank" rel="noopener noreferrer" href="/Developer-resume/index.html">
+                    <span class="resumeFontMobileNav resume-mobile">Resume</span>
+                </a>
             </div>
         </header>
         <!-- Landing page -->
@@ -80,10 +83,10 @@
         <div id="horizontalScroll" class="horizontalScroll projectsContainer">
             <!-- Photosnap -->
             <div class="projectsWrapper photosnapBackground">
-                <span class="hoverTitleFont projectTitlePhotosnap"></span>
-                <div class="hoverLine hoverLinePhotosnap"></div>
+                <span class="testFunc hoverTitleFont projectTitlePhotosnap"></span>
+                <div class="testFunc hoverLine hoverLinePhotosnap"></div>
                 <img src="assets/projects/photosnap-desktop-p.jpg" alt="photosnap project" class="photosnap">
-                <div class="flexWrapperRow flexWrapperRowPhotosnap">
+                <div class="testFunc flexWrapperRow flexWrapperRowPhotosnap">
                     <a target="_blank" rel="noopener noreferrer" href="https://colinthedev.github.io/Photography_Challenge/">
                         <span class="hoverIconFont">View Live</span>
                     </a>
@@ -94,10 +97,10 @@
             </div>
             <!-- Dine -->
             <div class="projectsWrapper dineBackground">
-                <span class="hoverTitleFont projectTitleDine"></span>
-                <div class="hoverLine hoverLineDine"></div>
+                <span class="testFunc hoverTitleFont projectTitleDine"></span>
+                <div class="testFunc hoverLine hoverLineDine"></div>
                 <img src="assets/projects/dine-desktop-p.png" alt="dine project" class="dine">
-                <div class="flexWrapperRow flexWrapperRowDine">
+                <div class="testFunc flexWrapperRow flexWrapperRowDine">
                     <a target="_blank" rel="noopener noreferrer" href="https://colinthedev.github.io/sleek-rest-website/">
                         <span class="hoverIconFont">View Live</span>
                     </a>
@@ -163,7 +166,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Projects mobile -->
         <!-- Photosnap -->
         <div id="section--0" class="projectsWrapper projectsWrapperMobile projectsWrapperMobileOne">
@@ -204,7 +206,12 @@
                 </a>
             </div>
         </div> 
-
+        <div class="sliderBtnsWrap">
+            <div class="sliderBtns">
+                <button id="slider-1" class="sliderBtns__btn">-</button>
+                <button id="slider-2" class="sliderBtns__btn">+</button>
+            </div>
+        </div>
         <div class="botRowContainer">
             <a class="active" href="mailto:colinthedev@gmail.com">
                 <span class="contactFont emailRe-direct">colinthedev@gmail.com</span>
@@ -320,7 +327,9 @@
                     <a class="active" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/colin-p-946842201/">
                         <span class="linked-in aboutLinks">View my linked-in</span>
                     </a>
-                    <span class="aboutLinks">View my resume</span>
+                    <a class="active" target="_blank" rel="noopener noreferrer" href="/Developer-resume/index.html">
+                        <span class="resumeLink aboutLinks">View my resume</span>
+                    </a>
                 </div>
             </div>
         <!-- Contact section -->
@@ -340,7 +349,7 @@
                     <span class="contactFontSml">(585) 831-1692</span>
                 </div>
             </div>
-            <form action="/success.html" method="POST" data-netlify="true" id="form" class="formWrapper">
+            <form action="/success.html" method="GET" data-netlify="true" id="form" class="formWrapper">
                 <div class="inputWrapperTop">
                     <div class="flexWrapperName">
                         <label for="name"></label>

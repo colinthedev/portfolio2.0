@@ -5,8 +5,8 @@
     grid-row: 9 / 10;
     grid-column: 3 / -1;
 }
-
-.leftContent { // Left side of contact section
+// Left side of contact section
+.leftContent { 
     display: flex;
     height: 100%;
     width: 45rem;
@@ -21,8 +21,8 @@
         margin-bottom: 2.5rem;
     }
 }
-
-.slide-right { // Contact text slide in 
+// Contact text slide in 
+.slide-right { 
     width: 100%;
     overflow: hidden;
     transform: translateX(-120%);
@@ -42,14 +42,14 @@
 .contactArrowTablet {
     display: none;
 }
-
-.contactArrow { // Arrow
+// Arrow
+.contactArrow { 
     display: block;
     position: absolute;
     left: 8%;
 }
-
-.showArrow { // Arrow animation
+// Arrow animation
+.showArrow { 
     animation-name:arrow;
     animation-duration:1.5s;
     animation-timing-function:ease-out;
@@ -88,8 +88,8 @@
         transform: translateX(-15px);
     }
 }
-
-.formWrapper { // Form 
+// Form 
+.formWrapper { 
     display: flex;
     align-items: center;
     flex-direction: column;

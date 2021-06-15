@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <style type="text/css" media="print">
+        .noprint {
+            display: none
+        }
+        
+        .print {
+            display: block !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <header class="el-header noprint">
+            <div class="icon-btns">
+                <i class="icon-list" @click="changeLeftMenu"></i>
+                <i class="icon-skip_previous" v-bind:class="{'disabled': currentPage == 1}" @click="changeCurrentPage('first')"></i>
+                <i class="icon-play_arrow prev-icon" v-bind:class="{'disabled': currentPage == 1}" @click="changeCurrentPage('prev')"></i>
+                <i class="icon-play_arrow" v-bind:class="{'disabled': currentPage == pageNum}" @click="changeCurrentPage('next')"></i>
+                <i class="icon-skip_next" v-bind:class="{'disabled': currentPage == pageNum}" @click="changeCurrentPage('last')"></i>
+                <select v-model="currentPage">
+                    <option v-for="page in pageNum" v-bind:value="page">page {{ page }}</option>
+                </select>
+                <i class="icon-zoom_in" v-bind:class="{'disabled': zoomNum == 2}" @click="modifyZoom('in')"></i>
+                <select v-model="zoomNum">
+                    <option value="0.5">50%</option>
+                    <option value="0.6">60%</option>
+                    <option value="0.7">70%</option>
+                    <option value="0.8">80%</option>
+                    <option value="0.9">90%</option>
+                    <option value="1.0" selected>100%</option>
+                    <option value="1.1">110%</option>
+                    <option value="1.2">120%</option>
+                    <option value="1.3">130%</option>
+                    <option value="1.4">140%</option>
+                    <option value="1.5">150%</option>
+                    <option value="1.6">160%</option>
+                    <option value="1.7">170%</option>
+                    <option value="1.8">180%</option>
+                    <option value="1.9">190%</option>
+                    <option value="2.0">200%</option>
+                </select>
+                <i class="icon-zoom_out" v-bind:class="{'disabled': zoomNum == 0.5}" @click="modifyZoom('out')"></i>
+                <i class="icon-format_align_left" @click="textAlign = 'left'"></i>
+                <i class="icon-format_align_center" @click="textAlign = 'center'"></i>
+                <i class="icon-format_align_right" @click="textAlign = 'right'"></i>
+                <i class="icon-print" @click="window.print()"></i>
+            </div>
+        </header>
+
+        <aside class="noprint" width="240px" v-show="ifMenuShow">
+            <nav class="tabNav">
+                <ul>
+                    <li v-bind:class="{ 'curr': currentNav == 0 }" @click="currentNav = 0">Page</li>
+                    <li v-bind:class="{ 'curr': currentNav == 1 }" @click="currentNav = 1">Bookmark</li>
+                </ul>
+
+                <div class="clear"></div>
+            </nav>
+
+            <div class="tab-conent scrollbar" v-bind:style="{ height: asideHeight + 'px' }">
+
+            <section v-show="currentNav == 0">
+                <ul class="page-menu">
+                    <li v-for="page in pageNum" v-bind:class="{ 'curr': currentPage == page }" @click="changePage(page)"><i class="icon-file-text2"></i> page {{ page }}</li>
+                </ul>
+            </section>
+
+            <section v-show="currentNav == 1">
+                <ul class="page-menu">
+                    <li v-for="page in pageNum" v-bind:class="{ 'curr': currentPage == page }" @click="changePage(page)"><i class="icon-turned_in_not"></i> Bookmark {{ page }}</li>
+                </ul>
+            </section>
+        </div>
+
+        </aside>
+        <div class="main scrollbar noprint"  v-bind:style="{ height: mainHeight + 'px' }" v-bind:class="{ 'mainLeftM': ifMenuShow, 'aleft': textAlign === 'left','acenter': textAlign === 'center','aright': textAlign === 'right'}">
+            <div class="conent" v-html="pageContent" v-bind:style="zoomStyle"></div>
+
+            <div class="clear"></div>
+        </div>
+
+        <!--专门只为打印的内容-->
+        <div class="conent print" style="display:none" v-html="pageContent"></div>
+    </div>
+</body>
+<!-- 先引入 Vue -->
+<script src="js/vue.min.js"></script>
+<script>
+
+var app = new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                // visible: false,
+                isCollapse: false,
+                currentNav: 0,
+                activeName2: 'first',
+                pageNum: 1, 
+                currentPage: 1,
+                pageContent: '',
+                asideHeight: 300,
+                mainHeight: 300,
+                ifMenuShow: true,
+                zoomNum: '1.0',
+                textAlign: 'left',
+                zoomStyle: {},
+                pageDatas: ['<div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1056.000000" width="816.000000" src ="bgimg/bg00001.jpg"/></nobr></div><p><span style="font-family:Arial;font-size:12.000000px;font-weight:bold;color:#000000;"><span style="position:absolute;top:258.890381px;left:258.894684px"><nobr>Udemy </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:276.684906px;left:258.894684px"><nobr>Instructor - Jonas Schmedtmann </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:294.258301px;left:258.894684px"><nobr>Advanced CSS and Sass: Flex-box, Grid, Animations and more </nobr></span></span></p><p><span style="font-family:Arial;font-size:14.000000px;font-weight:bold;color:#000000;"><span style="position:absolute;top:105.630455px;left:255.288788px"><nobr>Profile </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:178.456055px;left:7.565755px"><nobr>Phone - (585) 831-1692 </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:135.600021px;left:255.288788px"><nobr>A front end developer comfortable working with a design and building a website from </nobr></span><span style="position:absolute;top:153.112793px;left:255.288788px"><nobr>scratch. Proficient problem solving and analytical skills, communicates in a clear </nobr></span><span style="position:absolute;top:170.625412px;left:255.288788px"><nobr>effective manner. Strives for the best at whatever task is at hand. </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:302.538239px;left:8.899110px"><nobr>HTML-5 </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:328.471680px;left:8.899110px"><nobr>CSS-3 </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:354.404938px;left:8.899110px"><nobr>SCSS </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:380.338226px;left:8.899110px"><nobr>Git </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:406.271576px;left:8.899110px"><nobr>Javascript / ES6 </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:505.795898px;left:12.464833px"><nobr>Detail oriented </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:531.729248px;left:12.464833px"><nobr>Analytical </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:557.662537px;left:12.464833px"><nobr>Collaborative </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:583.595947px;left:12.464833px"><nobr>Time management </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:609.529236px;left:12.464833px"><nobr>Creative </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:635.462585px;left:12.464833px"><nobr>Resourceful </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:661.395935px;left:12.464833px"><nobr>Adaptable </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:207.878906px;left:7.565755px"><nobr>Address - Aurora, CO </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:764.703796px;left:12.464833px"><nobr>Github </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:856.727417px;left:12.464833px"><nobr>Website </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:148.482910px;left:7.565746px"><nobr>Email - <a href="mailto:colinthedev@gmail.com">colinthedev@gmail.com </a></nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:958.680969px;left:12.464833px"><nobr>LinkedIn </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:713.829590px;left:258.894684px"><nobr>Mcgurk Electric inc. Rochester, NY </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-weight:bold;color:#000000;"><span style="position:absolute;top:729.829590px;left:306.894684px"><nobr>Electrician, March 25, 2019 – November 13, 2020 </nobr></span></span></p><p><span style="font-family:Arial;font-size:14.000000px;font-weight:bold;color:#000000;"><span style="position:absolute;top:597.650635px;left:258.894684px"><nobr>Employment </nobr></span></span></p><p><span style="font-family:Arial;font-size:13.200000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:766.484131px;left:257.352142px"><nobr>• </nobr></span></span></p><p><span style="font-family:Arial;font-size:13.200000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:782.484131px;left:257.352142px"><nobr>• </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:767.808411px;left:273.352142px"><nobr>Troubleshooting electrical faults for commercial and residential accounts. </nobr></span><span style="position:absolute;top:783.808411px;left:273.352142px"><nobr>Communicating with customers on layout/design/troubleshooting </nobr></span></span></p><p><span style="font-family:Arial;font-size:13.200000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:798.484131px;left:257.352142px"><nobr>• </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:799.808411px;left:273.352142px"><nobr>Adding dedicated circuits, lighting systems, time clocks, contactors, photo </nobr></span><span style="position:absolute;top:815.808411px;left:273.352142px"><nobr>cells, distribution panels, disconnect switches, pressure switches. </nobr></span></span></p><p><span style="font-family:Arial;font-size:13.200000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:830.484131px;left:257.352142px"><nobr>• </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:831.808411px;left:273.352142px"><nobr>Bucket truck service calls i.e; troubleshooting and replacing ballasts, bulbs, </nobr></span><span style="position:absolute;top:847.808411px;left:273.352142px"><nobr>fixtures. </nobr></span></span></p><p><span style="font-family:Verdana;font-size:14.000000px;font-style:normal;font-weight:normal;color:#FEAE00;"><span style="position:absolute;top:98.302895px;left:4.666677px"><nobr>Contact </nobr></span></span></p><p><span style="font-family:Verdana;font-size:14.000000px;font-style:normal;font-weight:normal;color:#FEAE00;"><span style="position:absolute;top:251.900635px;left:5.333344px"><nobr>Hard Skills </nobr></span></span></p><p><span style="font-family:Verdana;font-size:14.000000px;font-style:normal;font-weight:normal;color:#FEAE00;"><span style="position:absolute;top:452.210205px;left:4.000011px"><nobr>Soft Skills </nobr></span></span></p><p><span style="font-family:Arial;font-size:14.000000px;font-weight:bold;color:#000000;"><span style="position:absolute;top:211.291916px;left:258.894684px"><nobr>Certifications </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:642.356812px;left:258.894684px"><nobr>Transitioning from a career in the electrical field spanning the past 10 years </nobr></span><span style="position:absolute;top:658.356812px;left:258.894684px"><nobr>until November, 2020. Since then I have been working full-time as a freelance </nobr></span><span style="position:absolute;top:674.356812px;left:258.894684px"><nobr>web developer and self teaching development. </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:926.375977px;left:258.894684px"><nobr>2008 - 2012 </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:942.375977px;left:258.894684px"><nobr>Honeoye Falls, NY </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-weight:bold;color:#000000;"><span style="position:absolute;top:958.375977px;left:258.894684px"><nobr>Regents diploma - Honeoye Falls Lima central school district. </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:329.151367px;left:334.087738px"><nobr>28 Hours </nobr></span></span></p><p><span style="font-family:Arial;font-size:12.000000px;font-weight:bold;color:#000000;"><span style="position:absolute;top:373.256012px;left:261.774689px"><nobr>Udemy </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:391.050690px;left:261.774689px"><nobr>Instructor - Jonas Schmedtmann </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:407.987701px;left:261.774689px"><nobr>The Complete Javascript Course 2021 </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:446.869751px;left:386.071442px"><nobr>68.5 Hours </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-weight:bold;color:#000000;"><span style="position:absolute;top:496.274963px;left:261.774689px"><nobr>FreeCodeCamp </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:515.709717px;left:261.774689px"><nobr>Javascript Algorithms and Data Structures </nobr></span></span></p><p><span style="font-family:Arial;font-size:11.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:555.692383px;left:493.043182px"><nobr>300 Hours </nobr></span></span></p><p><span style="font-family:Arial;font-size:14.000000px;font-weight:bold;color:#000000;"><span style="position:absolute;top:884.642456px;left:261.774689px"><nobr>Education </nobr></span></span></p><p><span style="font-family:Verdana;font-size:14.000000px;font-style:normal;font-weight:normal;color:#FEAE00;"><span style="position:absolute;top:707.527527px;left:5.333344px"><nobr>Social Media </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:802.192871px;left:12.464833px"><nobr>github.com/colinthedev </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:1002.957703px;left:12.464833px"><nobr>linkedin.com/in/colinthedev/ </nobr></span></span></p><p><span style="font-family:Arial;font-size:10.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:895.571472px;left:12.464844px"><nobr><a href="http://colinthedev.com" target="_blank">colinthedev.com </a></nobr></span></span></p><p><span style="font-family:Arial;font-size:38.000000px;font-style:normal;font-weight:normal;color:#FFFFFF;"><span style="position:absolute;top:30.497477px;left:242.448135px"><nobr>COLIN PETERS </nobr></span></span></p>']
+            }
+        },
+        mounted: function() {
+            this.$nextTick(function() {
+                this.pageNum = this.pageDatas.length;
+                this.pageContent = this.pageDatas[0];
+
+                this.setLeftMenuHeight();
+            })
+        },
+        watch: {
+            'currentPage': function(newVal, oldValue) {
+                // console.log('newVal ' + newVal, 'oldValue ' + oldValue);
+                if (newVal) {
+                    this.pageContent = this.pageDatas[this.currentPage - 1];
+                }
+            },
+            'zoomNum': function(newVal, oldValue) {
+                if (newVal) {
+                    this.zoomStyle = {
+                        'transform': 'scale(' + newVal + ')',
+                        '-webkit-transform': 'scale(' + newVal + ')',
+                        '-ms-transform': 'scale(' + newVal + ')',
+                        '-moz-transform': 'scale(' + newVal + ')',
+                        '-o-transform': 'scale(' + newVal + ')'
+                    }
+                }
+            }
+        },
+        methods: {
+            
+            changeCurrentPage: function(methods) {
+                switch (methods) {
+                    case 'first':
+                        this.currentPage = 1;
+                        break;
+                    case 'prev':
+                        if (this.currentPage > 1) {
+                            this.currentPage -= 1;
+                        }
+                        break;
+                    case 'next':
+                        if (this.currentPage < this.pageNum) {
+                            this.currentPage += 1;
+                        }
+                        break;
+                    case 'last':
+                        this.currentPage = this.pageNum;
+                        break;
+                }
+            },
+
+            gotoPage: function(page) {
+                console.log(page);
+                this.currentPage = page;
+            },
+            modifyZoom: function(type) {
+                switch (type) {
+                    case 'in':
+                        if (this.zoomNum < 2) {
+                            // this.zoomNum = (this.zoomNum + 0.1).toFixed(1);
+                            this.zoomNum = (parseFloat(this.zoomNum) + 0.1).toFixed(1);
+                        }
+                        break;
+                    case 'out':
+                        if (this.zoomNum > 0.5) {
+                            this.zoomNum = (parseFloat(this.zoomNum) - 0.1).toFixed(1);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+                console.log(this.zoomNum);
+            },
+            setLeftMenuHeight: function() {
+                // this.asideHeight = document.body.scrollHeight - 60;
+                this.mainHeight = document.documentElement.clientHeight - 60 - 20;
+                // 60为头部导航高度， 46为menu高度， 40为上下padding
+                this.asideHeight = this.mainHeight - 20 - 46;
+            },
+            changePage: function(page) {
+                this.currentPage = page;
+                // this.pageContent = this.pageDatas[page - 1];
+            },
+            changeLeftMenu: function() {
+                this.ifMenuShow = !this.ifMenuShow;
+            }
+        }
+    });
+
+function gotoPage(page) {
+    console.log(page);
+    app.gotoPage(page);
+}
+
+</script>
+
+</html>

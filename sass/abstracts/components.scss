@@ -5,8 +5,8 @@
 .active:active {
     transform: scale(.95);
 }
-
-.lineContainer { // Landing page RGB random color line
+// Landing page RGB random color line
+.lineContainer { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,20 +21,20 @@
     }
 }
 
-.githubLink { // Github
+.githubLink { // Github icon
     cursor: pointer;
 }
 
-.linked-inLink { // Linked-in
+.linked-inLink { // Linked-in icon
     cursor: pointer;
     min-height: 32px;    
 }
 
-.linked-inLink, // Links trans
+.linked-inLink, // Icon transition
 .githubLink {
     transition: transform .25s ease-out;
 }
-
+// Landing page icons
 .githubLink:hover,
 .linked-inLink:hover,
 .githubLink:focus,
@@ -42,7 +42,7 @@
     transform: rotate(15deg);
     filter: brightness(150%);
 }
-
+// Icons animation
 .githubLink:active,
 .linked-inLink:active {
     transform: scale(.95);
@@ -52,15 +52,20 @@
 .emailWrapperMobile {
     display: none;
 }
-
-.emailRe-direct { // Email
+// Initial
+.emailRe-direct,
+.linked-in,
+.resumeLink {
     display: inline;
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    transition: transform .25s ease-out;
 }
-
-.emailRe-direct:after { // Email animation
+// Animation
+.emailRe-direct:after,
+.linked-in:after,
+.resumeLink:after { 
     content: "";
     position: absolute;
     left: 0;
@@ -73,42 +78,26 @@
     transition-timing-function: ease-in-out;
     z-index: 100;
 }
-
+// Email
 .emailRe-direct:hover:after,
 .emailRe-direct:focus:after,
 .emailRe-direct:active:after {
     right: 0;
 }
-
-.linked-in { // Linked in about section
-    display: inline;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    transition: transform .25s ease-out;
-}
-
-.linked-in:after { // Linked in animation
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 100%;
-    bottom: 2px;
-    background: #FDFDFD;
-    height: 1px;
-    transition-property: left to right;
-    transition-duration: .75s;
-    transition-timing-function: ease-in-out;
-    z-index: 500;
-}
-
+// Linked in
 .linked-in:hover:after,
 .linked-in:focus:after,
 .linked-in:active:after {
     right: 0;
 }
-
-.projectsWrapper { // Landing page right col projects wrap
+// Resume
+.resumeLink:hover:after,
+.resumeLink:focus:after,
+.resumeLink:active:after {
+    right: 0;
+}
+// Landing page right col projects wrap
+.projectsWrapper { 
     min-height: 450px;
     min-width: 585px;
     transition: all ease-in-out .75s;
@@ -127,10 +116,10 @@
 .projectsWrapper > img {
     margin-right: 4rem;
 }
-
+// projects
 .dine,
 .photosnap,
-.nike { // projects
+.nike { 
     filter: saturate(135%);
     max-height: 450px;
     max-width: 585px;
@@ -233,6 +222,40 @@
 
 .flexWrapperRowNike.active {
     @include projectsWrapperRow();
+}
+
+// Slider buttons for projects
+.sliderBtnsWrap {
+    grid-row: 3 / 4;
+    grid-column: 11 / -1;
+    display: grid;
+    grid-template-columns: [full-start] repeat(21, [col-start] minmax(4.40rem, 4.60rem) [col-end]) [full-end];
+    grid-template-rows: minmax(auto, 10vh);
+}
+
+.sliderBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 10rem;
+    grid-column: 16 / 19;
+
+    &__btn {
+        cursor: pointer;
+        height: 25px;
+        width: 25px;
+        background: #fdfdfd;
+        border-radius: 50%;
+        transition: opacity 0.5s ease;
+        font-family: 'Roboto', sans-serif; 
+        font-weight: 400;
+        color: #000;
+        font-size: 2rem;
+    }    
+}
+
+.sliderBtns__btn:hover {
+    opacity: 50%;
 }
 
 // Contact section submit button

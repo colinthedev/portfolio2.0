@@ -1,5 +1,5 @@
 
-//Headings
+// Landing section
 .indexXlrgHeading {
     font-family: 'Jost', sans-serif;
     font-style: normal;
@@ -17,7 +17,7 @@
     letter-spacing: .01em;
     color: var(--color-text-white);
 }
-
+// Skills section
 .skillsLrgHeading {
     font-family: 'Jost', sans-serif;
     font-style: normal;
@@ -32,13 +32,21 @@
     font-size: 1.5rem;
     color: var(--color-text-white);
 }
-
+// About section
 .aboutHeading {
     font-family: 'Roboto', sans-serif; 
     font-style: normal;
     font-weight: 500;
     font-size: 7.2rem;
     letter-spacing: .04em;
+    color: var(--color-text-white);
+}
+
+.traitFont {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400;
+    font-size: 4rem;
+    letter-spacing: .02em;
     color: var(--color-text-white);
 }
 
@@ -60,7 +68,7 @@
     letter-spacing: .02em;
     color: var(--color-text-white);
 }
-
+// Contact section
 .contactHeading {
     font-family: 'Roboto', sans-serif; 
     font-weight: 700;
@@ -97,7 +105,7 @@
     color: var(--color-text-grey);
 }
 
-.contactFont {
+.contactFont { // Email
     font-family: 'Jost', sans-serif;
     font-style: normal;
     font-weight: 200;
