@@ -19,27 +19,16 @@ Deployed using Netlify.
 I used **figma** to create the design and **photoshop** for some photo edits. 
 <br>
 <br>
-There were **4** other portfolio designs before this one that i had made using figma. With every other design something just didnt seem quite right with it...Until this one!
+There were **4** other portfolio designs before this one that i had made using figma.
 <br>
 <br>
-Although this ended up as the *5th* design in the process of making this portfolio, i found that by the end of the finished product i had incorporated components from the other 4 designs into the final one.
+By the end of the finished product i had incorporated components from the other 4 designs into the final one.
 
 ### Created by me using figma:
 
 - **Flamingo** :flamingo:
   - **Lightbulb** :bulb:
     - **Octopus** :octopus:
-
-## Final Considerations
-
-This project was great practice putting some of my javascript knowledge through the ringer! :boxing_glove: 
-<br>
-<br>
-*Their are some areas which can be refactored and look forward to returning to do so in the future.*
-<br>
-<br>
-This was also my first time using [ScrollMagic](https://scrollmagic.io/)
->I found it easy to use and very useful.
 
 ## Built With 
 
