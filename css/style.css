@@ -675,7 +675,7 @@ template {
 .aboutContent {
   font-family: 'Jost', sans-serif;
   font-style: normal;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 1.9rem;
   letter-spacing: .05em;
   line-height: 26px;
@@ -684,7 +684,7 @@ template {
 .aboutLinks {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 200;
   font-size: 1.8rem;
   letter-spacing: .02em;
   color: var(--color-text-white); }
@@ -698,7 +698,7 @@ template {
 
 .contactFontSml {
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 1.65rem;
   letter-spacing: .06em;
   color: #fdfdfd; }
@@ -713,7 +713,7 @@ template {
 .indexDescriptionFont {
   font-family: 'Jost', sans-serif;
   font-style: normal;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 1.8rem;
   letter-spacing: .08em;
   line-height: 26px;
@@ -722,7 +722,7 @@ template {
 .contactFont {
   font-family: 'Jost', sans-serif;
   font-style: normal;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 1.8rem;
   letter-spacing: .04em;
   color: var(--color-text-grey); }
@@ -739,7 +739,7 @@ template {
 .hoverIconFont {
   font-family: 'Jost', sans-serif;
   font-style: normal;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 1.8rem;
   letter-spacing: .04em;
   color: var(--color-text-white); }
