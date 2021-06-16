@@ -1,5 +1,5 @@
 'use strict';
-// Smooth scrolling
+/* // Smooth scrolling
     function smoothScroll(event) {
         event.preventDefault();
         // console.log(event.currentTarget);
@@ -36,7 +36,7 @@
 
     function navbarLinkClick(event) {
         smoothScroll(event); // Call smoothscroll func
-    };
+    }; */
 
 // Projects - + slider
     const slider1 = document.getElementById('slider-1');
