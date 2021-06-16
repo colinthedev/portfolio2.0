@@ -124,7 +124,6 @@
 .nike {
   filter: saturate(135%);
   max-height: 450px;
-  min-height: 450px;
   max-width: 585px;
   display: block; }
 
@@ -2038,7 +2037,7 @@ template {
   .burger {
     cursor: pointer;
     background-color: transparent;
-    height: 0rem;
+    height: .6rem;
     margin: auto 2.4rem auto auto;
     z-index: 2000; }
     .burger__1 {

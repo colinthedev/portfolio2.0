@@ -29,14 +29,14 @@
         return c/2 * ( -Math.pow( 2, -10 * t) + 2 ) + b;
     };
 
-/* // Smooth scroll for mobile
+// Smooth scroll for mobile
     const navbarLinks = document.querySelectorAll('.navigation__listWrapper li a');
     // console.log(navbarLinks);
     navbarLinks.forEach(elem => elem.addEventListener('click', navbarLinkClick));
 
     function navbarLinkClick(event) {
         smoothScroll(event); // Call smoothscroll func
-    }; */
+    };
 
 // Projects - + slider
     const slider1 = document.getElementById('slider-1');
@@ -273,7 +273,7 @@ for (let i = 0; i < slide.length; i++ ) {
     })
     .setClassToggle('.contactArrow', 'showArrow')
     .addTo(controller);
-    // sceneArrow.addIndicators();
+    // sceneArrow.addIndicators()
 
 // Chevron back to top
     let toTop = document.querySelector('.chevronUp');
@@ -282,5 +282,61 @@ for (let i = 0; i < slide.length; i++ ) {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     });
+
+// Media querys --------------------------------------------------------------
+    // Skills section
+        function skillsAnimation() {
+            let skillsSection = document.querySelector('.skillsContainer');
+            
+            skillsSection.style.opacity = '1';
+            skillsSection.style.transition = 'none';
+            skillsSection.style.webkittransition = 'none';
+        };
+    // About section 
+        function aboutAnimation() {
+            for (let i = 0; i < slide.length; i++ ) { // Slide text
+                let aboutSectionTop = document.querySelectorAll('.slide-left');
+
+                aboutSectionTop[i].style.transform = 'none';
+                aboutSectionTop[i].style.webkittransform = 'none';
+                aboutSectionTop[i].style.transition = 'none';
+                aboutSectionTop[i].style.webkittransition = 'none';
+                aboutSectionTop[i].style.opacity = '1';
+            };
+
+            let aboutSectionBot = document.getElementById('reveal1'); // Fade text
+
+            aboutSectionBot.style.transform = 'none';
+            aboutSectionBot.style.webkittransform = 'none';
+            aboutSectionBot.style.transition = 'none';
+            aboutSectionBot.style.webkittransition = 'none';
+            aboutSectionBot.style.opacity = '1';
+        };
+    // Contact section
+        function contactAnimation() {
+            let contactSection = document.querySelector('.slide-right');
+            
+            contactSection.style.transform = 'none'; // Slide text
+        };
+
+    // Media query
+        let x = window.matchMedia("(max-width: 856px)");
+    // Disable enable ScrollMagic controller
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+            controller.enabled(false); // ScrollMagic
+            skillsAnimation() // Skills section
+            aboutAnimation(); // About section 
+            contactAnimation(); // Contact section
+            } else {
+            controller.enabled(true);
+            }
+            controller.update(true);
+        };
+        
+        myFunction(x); // Call listener function at run time
+        //   x.addListener(myFunction) // Attach listener function on state changes 
+
+
 
 
