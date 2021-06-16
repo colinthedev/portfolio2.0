@@ -687,7 +687,8 @@ template {
   font-weight: 200;
   font-size: 1.8rem;
   letter-spacing: .02em;
-  color: var(--color-text-white); }
+  color: var(--color-text-white);
+  opacity: .80; }
 
 .contactHeading {
   font-family: 'Roboto', sans-serif;
