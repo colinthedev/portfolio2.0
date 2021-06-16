@@ -113,6 +113,9 @@
   margin-left: 4rem;
   margin-right: 4rem; }
 
+.projectsWrapper:nth-child(3) {
+  margin-right: 4rem; }
+
 .projectsWrapper > img {
   margin-right: 4rem; }
 
@@ -121,6 +124,7 @@
 .nike {
   filter: saturate(135%);
   max-height: 450px;
+  min-height: 450px;
   max-width: 585px;
   display: block; }
 
@@ -679,7 +683,7 @@ template {
   font-size: 1.9rem;
   letter-spacing: .05em;
   line-height: 26px;
-  color: var(--color-text-grey); }
+  color: var(--color-text-white); }
 
 .aboutLinks {
   font-family: 'Roboto', sans-serif;
@@ -687,8 +691,7 @@ template {
   font-weight: 200;
   font-size: 1.8rem;
   letter-spacing: .02em;
-  color: var(--color-text-white);
-  opacity: .80; }
+  color: var(--color-text-grey); }
 
 .contactHeading {
   font-family: 'Roboto', sans-serif;
@@ -962,9 +965,11 @@ template {
 .flamingoContainer {
   position: absolute;
   right: 2rem;
-  bottom: -.25rem; }
+  bottom: -.25rem;
+  pointer-events: none; }
   .flamingoContainer__flamingo-mobile {
-    display: none; }
+    display: none;
+    pointer-events: none; }
   .flamingoContainer__flamingo {
     display: block;
     z-index: 1; }
@@ -983,7 +988,8 @@ template {
 .headingWrapper {
   position: absolute;
   top: .5rem;
-  right: -45.5rem; }
+  right: -45.5rem;
+  pointer-events: none; }
 
 .cardRowWrapper {
   display: flex;
@@ -1028,6 +1034,8 @@ template {
   align-items: center;
   justify-content: center;
   transform: rotateY(0deg); }
+  .card__face-front--mobile {
+    display: none; }
   .card__face-front--img {
     display: block !important;
     z-index: 100; }
@@ -1070,7 +1078,8 @@ template {
 
 .bulbContainer {
   grid-row: 6 / 7;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  pointer-events: none; }
 
 .bulbWrapper {
   position: relative;
@@ -1144,7 +1153,8 @@ template {
     display: none; } }
 .rightWrapper {
   grid-row: 7 / 8;
-  grid-column: 14 / -1; }
+  grid-column: 14 / -1;
+  pointer-events: none; }
   .rightWrapper__pink {
     height: 100%;
     width: 100%;
@@ -1179,7 +1189,8 @@ template {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 8.15rem 0 0 -8%; }
+  margin: 8.15rem 0 0 -8%;
+  pointer-events: none; }
   .aboutHeadingWrap__line {
     display: block;
     height: 2px;
@@ -1190,7 +1201,8 @@ template {
 
 .aboutContent {
   display: block;
-  margin: 5rem 15rem auto 0; }
+  margin: 5rem 15rem auto 0;
+  pointer-events: none; }
 
 .aboutLinksWrap {
   display: flex;
@@ -1255,6 +1267,8 @@ template {
   width: 45rem;
   flex-direction: column;
   justify-content: space-between; }
+  .leftContent__innerTop {
+    pointer-events: none; }
   .leftContent__innerBottom {
     display: flex;
     flex-direction: column;
@@ -1923,6 +1937,9 @@ template {
   .projectsContainerTablet {
     display: none; }
 
+  .projectsWrapper > img {
+    pointer-events: none; }
+
   .leftColContainer {
     grid-column: 2 / 18;
     margin-left: 1rem; }
@@ -1954,7 +1971,8 @@ template {
 
   .projectsWrapper > img {
     height: 450px;
-    width: 87.5%; } }
+    width: 87.5%;
+    pointer-events: none; } }
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   .gridContainer {
     grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 55rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 20vh) minmax(25vh, 15rem) minmax(auto, 64rem) minmax(auto, 20vh) minmax(auto, 55rem) minmax(auto, 7rem);
@@ -2020,7 +2038,7 @@ template {
   .burger {
     cursor: pointer;
     background-color: transparent;
-    height: 5rem;
+    height: 0rem;
     margin: auto 2.4rem auto auto;
     z-index: 2000; }
     .burger__1 {
@@ -2112,12 +2130,20 @@ template {
     right: -16.5rem;
     width: 40rem; }
 
+  .card__face-front > object {
+    display: none; }
+
+  .card__face-front--mobile {
+    display: block; }
+
   .cardContainer {
-    width: 52.5%; }
+    width: 52.5%;
+    pointer-events: none; }
 
   .cardRowWrapper {
     height: 40rem;
-    width: 20rem; }
+    width: 20rem;
+    pointer-events: none; }
 
   .card__inner {
     height: 7.5rem;

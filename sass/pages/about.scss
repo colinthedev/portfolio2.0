@@ -3,6 +3,8 @@
     grid-row: 7 / 8;
     grid-column: 14 / -1;
 
+    pointer-events: none;
+
     &__pink {
         height: 100%;
         width: 100%;
@@ -51,6 +53,8 @@
     align-items: center;
     margin: 8.15rem 0 0 -8%;
 
+    pointer-events: none;
+
     &__line {
         display: block;
         height: 2px;
@@ -66,6 +70,8 @@
 .aboutContent { // Summary
     display: block;
     margin: 5rem 15rem auto 0;
+
+    pointer-events: none;
 }
 // Links
 .aboutLinksWrap {

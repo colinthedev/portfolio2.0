@@ -113,6 +113,10 @@
     margin-right: 4rem; 
 }
 
+.projectsWrapper:nth-child(3) {
+    margin-right: 4rem;
+}
+
 .projectsWrapper > img {
     margin-right: 4rem;
 }
@@ -122,6 +126,7 @@
 .nike { 
     filter: saturate(135%);
     max-height: 450px;
+    min-height: 450px;
     max-width: 585px;
     display: block;
 }

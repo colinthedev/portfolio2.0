@@ -29,14 +29,14 @@
         return c/2 * ( -Math.pow( 2, -10 * t) + 2 ) + b;
     };
 
-// Smooth scroll for mobile
+/* // Smooth scroll for mobile
     const navbarLinks = document.querySelectorAll('.navigation__listWrapper li a');
     // console.log(navbarLinks);
     navbarLinks.forEach(elem => elem.addEventListener('click', navbarLinkClick));
 
     function navbarLinkClick(event) {
         smoothScroll(event); // Call smoothscroll func
-    };
+    }; */
 
 // Projects - + slider
     const slider1 = document.getElementById('slider-1');

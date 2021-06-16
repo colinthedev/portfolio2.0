@@ -12,6 +12,11 @@
     width: 45rem;
     flex-direction: column;
     justify-content: space-between;
+
+    &__innerTop {
+        pointer-events: none;
+    }
+        
     
     &__innerBottom {
         display: flex;

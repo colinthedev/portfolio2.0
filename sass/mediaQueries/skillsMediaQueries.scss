@@ -40,13 +40,25 @@
         width: 40rem;
     }
 
+    .card__face-front > object {
+        display: none;
+    }
+
+    .card__face-front--mobile {
+        display: block;
+    }
+
     .cardContainer {
         width: 52.5%;
+        
+        pointer-events: none;
     }
 
     .cardRowWrapper {
         height: 40rem;
         width: 20rem;
+
+        pointer-events: none;
     }
 
     .card__inner {
