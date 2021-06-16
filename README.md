@@ -2,7 +2,7 @@
 
 # Personal Portfolio :partying_face:
 
-**Version 2.0** <br>
+**Version 2.0** <br> [![Netlify Status](https://api.netlify.com/api/v1/badges/60d8f115-0b88-4827-bfed-fa95136ac3bc/deploy-status)](https://app.netlify.com/sites/colinpetersthedev/deploys)
 
 ## About :point_down:
 

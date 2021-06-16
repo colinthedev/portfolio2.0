@@ -155,7 +155,7 @@ for (let i = 0; i < slide.length; i++ ) {
     });
 };
 
-// --Skills Section -------------------------------------------------------------
+// Skills Section -------------------------------------------------------------
 
 // Skills section change font "My current skillset"
     let newString = document.getElementById('colorFont').innerHTML = 'My current skillset'.replace('My', '<span style="color: #fff;">My</span>');
@@ -319,7 +319,7 @@ for (let i = 0; i < slide.length; i++ ) {
             contactSection.style.transform = 'none'; // Slide text
         };
 
-    // Media query
+    // Media query function
         let x = window.matchMedia("(max-width: 856px)");
     // Disable enable ScrollMagic controller
         function myFunction(x) {
