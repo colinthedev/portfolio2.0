@@ -1,42 +1,45 @@
 'use strict';
-/* // Smooth scrolling
-    function smoothScroll(event) {
-        event.preventDefault();
-        // console.log(event.currentTarget);
-        const targetId = event.currentTarget.getAttribute('href')==='#' ? "ul" : event.currentTarget.getAttribute("href");
-        // console.log(targetId);
-        const targetPosition = document.querySelector(targetId).offsetTop;
-        const startPosition = window.pageYOffset;
-        const distance = targetPosition - startPosition;
-        const duration = 800;
-        let start = null;
-
-        window.requestAnimationFrame(step);
-
-        function step(timestamp) {
-            if (!start) start = timestamp;
-            const progress = timestamp - start;
-            // window.scrollTo(0, distance*(progress/duration) + startPosition);
-            window.scrollTo(0, easeInOutExpo(progress, startPosition, distance, duration));
-            if (progress < duration) window.requestAnimationFrame(step);
-        };
+// Fix for nav not working on desktops -> firefox 
+    if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+        // Smooth scrolling
+            function smoothScroll(event) {
+                event.preventDefault();
+                // console.log(event.currentTarget);
+                const targetId = event.currentTarget.getAttribute('href')==='#' ? "ul" : event.currentTarget.getAttribute("href");
+                // console.log(targetId);
+                const targetPosition = document.querySelector(targetId).offsetTop;
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                const duration = 800;
+                let start = null;
+        
+                window.requestAnimationFrame(step);
+        
+                function step(timestamp) {
+                    if (!start) start = timestamp;
+                    const progress = timestamp - start;
+                    // window.scrollTo(0, distance*(progress/duration) + startPosition);
+                    window.scrollTo(0, easeInOutExpo(progress, startPosition, distance, duration));
+                    if (progress < duration) window.requestAnimationFrame(step);
+                };
+            };
+        // Scroll to animation function
+            function easeInOutExpo(t, b, c, d) {
+                t /= d/2;
+                if (t < 1) return c/2 * Math.pow( 2, 10 * (t - 1) ) + b;
+                t--;
+                return c/2 * ( -Math.pow( 2, -10 * t) + 2 ) + b;
+            };
+        
+        // Smooth scroll for mobile
+            const navbarLinks = document.querySelectorAll('.navigation__listWrapper li a');
+            // console.log(navbarLinks);
+            navbarLinks.forEach(elem => elem.addEventListener('click', navbarLinkClick));
+        
+            function navbarLinkClick(event) {
+                smoothScroll(event); // Call smoothscroll func
+            };
     };
-// Scroll to animation function
-    function easeInOutExpo(t, b, c, d) {
-        t /= d/2;
-        if (t < 1) return c/2 * Math.pow( 2, 10 * (t - 1) ) + b;
-        t--;
-        return c/2 * ( -Math.pow( 2, -10 * t) + 2 ) + b;
-    };
-
-// Smooth scroll for mobile
-    const navbarLinks = document.querySelectorAll('.navigation__listWrapper li a');
-    // console.log(navbarLinks);
-    navbarLinks.forEach(elem => elem.addEventListener('click', navbarLinkClick));
-
-    function navbarLinkClick(event) {
-        smoothScroll(event); // Call smoothscroll func
-    }; */
 
 // Projects - + slider
     const slider1 = document.getElementById('slider-1');
