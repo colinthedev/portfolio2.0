@@ -892,7 +892,7 @@ template {
   grid-template-columns: [full-start] repeat(28, [col-start] 1fr [col-end]) [full-end];
   max-width: 2000px;
   margin: auto;
-  overflow-y: hidden; }
+  overflow-y: hidden !important; }
 
 .leftColContainer {
   display: flex;

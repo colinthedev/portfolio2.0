@@ -9,7 +9,6 @@
   z-index: 09;
   
   opacity: 0;
-  // overflow-y: hidden; // test scrolling bug mobile
 }
 // Skills container fade in 
 .show { 
@@ -22,7 +21,6 @@
   bottom: 0rem;
 
   pointer-events: none;
-  // overflow-y: hidden; // test scrolling bug mobile
 
   &__flamingo-mobile {
     display: none;
@@ -46,7 +44,7 @@
   width: 60%;
   z-index: 10;
 }
-
+// Heading wrap
 .headingWrapper {
   position: absolute;
   top: .5rem;
@@ -64,11 +62,7 @@
   height: 35rem;
   perspective: 800px;
   z-index: 100;
-  // overflow-y: hidden; // test scrolling bug mobile
 }
-// .cardRowWrapper > * {
-//   overflow-y: hidden; // test scrolling bug mobile
-// }
 // Card component circle
 .card__inner { 
   cursor: pointer;
@@ -86,7 +80,6 @@
       -ms-transform-style: preserve-3d;
         -o-transform-style: preserve-3d;
   position: relative;
-  // overflow-y: hidden; // test scrolling bug mobile
 }
 // Card component
 .card__face { 
@@ -106,7 +99,6 @@
   align-items: center;
   justify-content: center;
   transform: rotateY(0deg);
-  // overflow-y: hidden; // test scrolling bug mobile
 
   &--mobile {
     display: none;
