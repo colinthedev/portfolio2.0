@@ -31,14 +31,18 @@
 
     &__dev {
         margin-left: 15%;
+        overflow-y: hidden;
     }
 
     &__create {
         margin-left: 35%;
+        overflow-y: hidden;
     }
 
     &__innovate {
         margin-left: 55%;
+        overflow-y: hidden;
+        overflow-x: hidden;
     }
 }
 // Left section

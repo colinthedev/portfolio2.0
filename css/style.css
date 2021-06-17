@@ -955,7 +955,8 @@ template {
   background: var(--color-background-white);
   transition: opacity ease-in-out 1s;
   z-index: 09;
-  opacity: 0; }
+  opacity: 0;
+  overflow-y: hidden; }
 
 .show {
   opacity: 1; }
@@ -1173,11 +1174,15 @@ template {
   height: 100%;
   width: 100%; }
   .traitsWrapper__dev {
-    margin-left: 15%; }
+    margin-left: 15%;
+    overflow-y: hidden; }
   .traitsWrapper__create {
-    margin-left: 35%; }
+    margin-left: 35%;
+    overflow-y: hidden; }
   .traitsWrapper__innovate {
-    margin-left: 55%; }
+    margin-left: 55%;
+    overflow-y: hidden;
+    overflow-x: hidden; }
 
 .leftWrapper {
   grid-row: 7 / 8;
@@ -1549,22 +1554,28 @@ template {
     margin-left: 20%; }
 
   .traitsWrapper__create {
-    margin-left: 40%; }
+    margin-left: 35%; }
 
   .traitsWrapper__innovate {
-    margin-left: 60%; }
+    margin-left: 50%; }
 
   .aboutHeadingWrap {
     margin: 2rem 0 0 -8%; } }
+@media only screen and (max-width: 854px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .traitsWrapper__create {
+    margin-left: 40%; }
+
+  .traitsWrapper__innovate {
+    margin-left: 60%; } }
 @media screen and (max-width: 320px) {
   .traitsWrapper__dev {
     margin-left: 15%; }
 
   .traitsWrapper__create {
-    margin-left: 35%; }
+    margin-left: 29%; }
 
   .traitsWrapper__innovate {
-    margin-left: 55%; } }
+    margin-left: 44%; } }
 @media screen and (min-width: 2100px) {
   .contactArrow {
     position: relative; }

@@ -9,6 +9,7 @@
   z-index: 09;
   
   opacity: 0;
+  overflow-y: hidden; // test scrolling bug mobile
 }
 // Skills container fade in 
 .show { 

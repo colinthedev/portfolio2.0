@@ -78,11 +78,11 @@
     }
 
     .traitsWrapper__create {
-        margin-left: 40%;
+        margin-left: 35%;
     }
 
     .traitsWrapper__innovate {
-        margin-left: 60%;
+        margin-left: 50%;
     }
 
     .aboutHeadingWrap {
@@ -90,16 +90,30 @@
     }
 }
 
+@media only screen 
+    and (max-width: 854px)
+    and (orientation: landscape) 
+    and (-webkit-min-device-pixel-ratio: 1.5) {
+    
+        .traitsWrapper__create {
+            margin-left: 40%;
+        }
+    
+        .traitsWrapper__innovate {
+            margin-left: 60%;
+        }
+    }
+
 @media screen and (max-width: 320px) {
     .traitsWrapper__dev {
         margin-left: 15%;
     }
 
     .traitsWrapper__create {
-        margin-left: 35%;
+        margin-left: 29%;
     }
 
     .traitsWrapper__innovate {
-        margin-left: 55%;
+        margin-left: 44%;
     }
 }
