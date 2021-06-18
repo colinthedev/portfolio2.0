@@ -890,7 +890,7 @@ template {
   background: var(--color-background-black);
   grid-template-rows: minmax(auto, 10vh) minmax(auto, 56rem) minmax(auto, 10vh) minmax(auto, 20vh) minmax(auto, 62rem) minmax(auto, 100vh) minmax(auto, 74rem) minmax(auto, 50vh) minmax(auto, 74rem) minmax(auto, 9rem);
   grid-template-columns: [full-start] repeat(28, [col-start] 1fr [col-end]) [full-end];
-  max-width: 2000px;
+  max-width: 3100px;
   margin: auto;
   overflow-y: hidden !important; }
 
@@ -899,7 +899,8 @@ template {
   flex-direction: column;
   justify-content: center;
   grid-row: 2 / 3;
-  grid-column: 2 / 11; }
+  grid-column: 2 / 11;
+  max-width: 700px; }
 
 .linksContainer {
   display: flex;
@@ -1096,7 +1097,7 @@ template {
   .bulbWrapper__bulb {
     position: absolute;
     top: 0;
-    left: 45%;
+    left: 46%;
     display: inline-block;
     z-index: 100; }
   .bulbWrapper__blur {
@@ -1150,6 +1151,9 @@ template {
 @media screen and (max-width: 1366px) {
   .bulbWrapper {
     display: none; } }
+@media screen and (min-width: 3000px) {
+  .bulbWrapper__bulb {
+    left: 47%; } }
 .rightWrapper {
   grid-row: 7 / 8;
   grid-column: 14 / -1;
@@ -1205,7 +1209,8 @@ template {
 .aboutContent {
   display: block;
   margin: 5rem 15rem auto 0;
-  pointer-events: none; }
+  pointer-events: none;
+  max-width: 700px; }
 
 .aboutLinksWrap {
   display: flex;
@@ -1576,6 +1581,9 @@ template {
 
   .traitsWrapper__innovate {
     margin-left: 44%; } }
+@media screen and (min-width: 3000px) {
+  .contactArrow {
+    left: 0%; } }
 @media screen and (min-width: 2100px) {
   .contactArrow {
     position: relative; }
