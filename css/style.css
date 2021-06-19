@@ -140,11 +140,17 @@
   margin-right: 3rem; }
 
 .photosnapBackground.active {
-  background: rgba(245, 4, 4, 0.85);
-  background: linear-gradient(rgba(245, 4, 4, 0.85), #ff0202);
-  background: -webkit-linear-gradient(rgba(245, 4, 4, 0.85), #ff0202);
-  background: -moz-linear-gradient(rgba(245, 4, 4, 0.85), #ff0202);
-  transition: all ease-in-out .75s; }
+  background: rgba(245, 4, 4, 0.851);
+  background: to right, #090909 0%, rgba(245, 4, 4, 0.851) 95%;
+  background: linear-gradient(to right, #090909 0%, rgba(245, 4, 4, 0.851) 95%);
+  background: -webkit-linear-gradient(to right, #090909 0%, rgba(245, 4, 4, 0.851) 95%);
+  background: -moz-linear-gradient(to right, #090909 0%, rgba(245, 4, 4, 0.851) 95%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all ease-in-out .80s; }
+
+.photosnapBackground.active:hover {
+  background-position: right bottom; }
 
 .projectTitlePhotosnap.active {
   position: absolute;
@@ -160,7 +166,8 @@
   z-index: 500;
   position: absolute;
   top: 24.15rem;
-  right: -2rem; }
+  right: -2rem;
+  opacity: 1; }
 
 .flexWrapperRowPhotosnap.active {
   display: flex;
@@ -171,10 +178,16 @@
 
 .dineBackground.active {
   background: #1688f1;
-  background: linear-gradient(rgba(22, 135, 241, 0.85), #0084ff);
-  background: -webkit-linear-gradient(rgba(22, 135, 241, 0.85), #0084ff);
-  background: -moz-linear-gradient(rgba(22, 135, 241, 0.85), #0084ff);
-  transition: all ease-in-out .75s; }
+  background: to right, #090909 0%, #1688f1 95%;
+  background: linear-gradient(to right, #090909 0%, #1688f1 95%);
+  background: -webkit-linear-gradient(to right, #090909 0%, #1688f1 95%);
+  background: -moz-linear-gradient(to right, #090909 0%, #1688f1 95%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all ease-in-out .80s; }
+
+.dineBackground.active:hover {
+  background-position: right bottom; }
 
 .projectTitleDine.active {
   position: absolute;
@@ -201,10 +214,16 @@
 
 .nikeBackground.active {
   background: #f20d89;
-  background: linear-gradient(rgba(242, 13, 135, 0.85), #ff0189);
-  background: -webkit-linear-gradient(rgba(242, 13, 135, 0.85), #ff0189);
-  background: -moz-linear-gradient(rgba(242, 13, 135, 0.85), #ff0189);
-  transition: all ease-in-out .75s; }
+  background: to right, #090909 0%, #f20d89 95%;
+  background: linear-gradient(to right, #090909 0%, #f20d89 95%);
+  background: -webkit-linear-gradient(to right, #090909 0%, #f20d89 95%);
+  background: -moz-linear-gradient(to right, #090909 0%, #f20d89 95%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all ease-in-out .80s; }
+
+.nikeBackground.active:hover {
+  background-position: right bottom; }
 
 .projectTitleNike.active {
   position: absolute;
@@ -240,8 +259,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 10rem;
-  grid-column: 16 / 19; }
+  align-items: center;
+  width: 28rem;
+  grid-column: 13 / 20;
+  margin-left: 3.5rem; }
   .sliderBtns__btn {
     cursor: pointer;
     height: 25px;
@@ -696,21 +717,21 @@ template {
   font-weight: 700;
   font-size: 7.2rem;
   letter-spacing: .04em;
-  color: #fdfdfd; }
+  color: var(--color-text-white); }
 
 .contactFontSml {
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
   font-size: 1.65rem;
   letter-spacing: .06em;
-  color: #fdfdfd; }
+  color: var(--color-text-white); }
 
 .formFont {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   letter-spacing: .02em;
-  color: #080808; }
+  color: var(--color-text-black); }
 
 .indexDescriptionFont {
   font-family: 'Jost', sans-serif;
@@ -749,13 +770,22 @@ template {
 .hoverIconFont:hover {
   text-decoration: underline solid 1.5px #fdfdfd; }
 
+.sliderFont {
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5rem;
+  letter-spacing: .04em;
+  color: var(--color-text-white); }
+
 .navFont {
   font-family: 'Jost', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 2rem;
   letter-spacing: .04em;
-  color: var(--color-text-white); }
+  color: var(--color-text-white);
+  text-decoration: underline solid 1.25px var(--color-text-white); }
 
 .navFont:hover {
   color: #000; }
@@ -1716,6 +1746,9 @@ template {
 
   .btnWrapper {
     margin: 1.5rem auto 1.5rem auto; } }
+@media screen and (max-width: 1800px) {
+  .sliderBtns {
+    margin-left: 2rem; } }
 @media screen and (max-width: 1366px) {
   body {
     overflow-x: hidden; }
@@ -1765,7 +1798,7 @@ template {
     overscroll-behavior: contain; }
 
   .projectsContainerTablet > .projectsWrapper img {
-    touch-action: pan-down; }
+    touch-action: pan-x; }
 
   .projectsContainerTablet::-webkit-scrollbar {
     display: none; }
@@ -1834,7 +1867,7 @@ template {
   .projectsWrapper > img {
     height: 450px;
     width: 585px;
-    touch-action: pan-down;
+    touch-action: pan-y;
     margin: 0; }
 
   .projectsContainer {
@@ -1912,7 +1945,7 @@ template {
   .projectsWrapper > img {
     height: 450px;
     width: 585px;
-    touch-action: pan-down;
+    touch-action: pan-y;
     margin: 0; }
 
   .projectsWrapper:hover {
