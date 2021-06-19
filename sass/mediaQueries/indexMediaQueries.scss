@@ -390,8 +390,8 @@
     }
 
     .projectsWrapper > img {
-        height: 450px;
-        width: 87.5%;
+        height: 400px;
+        width: 90%;
 
         pointer-events: none;
     }
@@ -426,9 +426,10 @@
 
     .projectsWrapper,
     .projectsWrapper > img {
-        width: 90%;
+        width: 96%;
         max-height: 475px;
         max-width: 475px; // TEST
+        height: 320px;
     }
 
     .projectsWrapperMobile {
@@ -439,7 +440,7 @@
         flex-direction: column;
         background: #111111;
         width: 90%;
-        height: 57rem;
+        height: 45rem;
         margin: auto;
     }
 
@@ -457,11 +458,37 @@
 }
 
 @media only screen 
+  and (max-width: 600px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .projectsWrapperMobile {
+        height: 50rem;
+    }
+
+    .projectsWrapper > img {
+        height: 300px;
+    }
+  }
+
+@media only screen 
+    and (max-width: 375px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 1.5) {
+        .projectsWrapper > img {
+            height: 285px;
+        }
+    }
+
+@media only screen 
     and (max-width: 320px)
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 1.5) {
+        .gridContainer {
+            grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 45rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 20vh) minmax(25vh, 15rem) minmax(auto, 64rem) minmax(auto, 20vh) minmax(auto, 55rem) minmax(auto, 7rem);
+        }
+        
         .projectsWrapperMobile {
-            height: 42rem;
+            height: 40rem;
         }
 
         .projectsWrapper {
@@ -475,7 +502,7 @@
         }
 
         .projectsWrapper > img {
-            height: 300px;
+            height: 250px;
         }
 }
 
@@ -483,6 +510,10 @@
     and (max-width: 280px)
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 1.5) {
+        .projectsWrapper > img {
+            height: 230px;
+        }
+
         .leftColContainer {
             grid-column: 2 / -1;
             margin-left: .5rem;
