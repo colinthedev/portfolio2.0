@@ -90,8 +90,13 @@
     font-family: 'Roboto', sans-serif; 
     font-weight: 400;
     font-size: 1.8rem;
+<<<<<<< HEAD
     letter-spacing: .02em;
     color:  var(--color-text-black);
+=======
+    letter-spacing: .03em;
+    color:  #080808;
+>>>>>>> e7da77899ef0b2ca18a281f9ca4655a24d219dc0
 }
 
 //Index Font
@@ -243,6 +248,7 @@
 
     .formFont {
         font-size: 1rem;
+        letter-spacing: .04em;
     }
 }
 
