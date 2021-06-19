@@ -42,8 +42,9 @@
     };
 
 // Projects - + slider
-    const slider1 = document.getElementById('slider-1');
-    const slider2 = document.getElementById('slider-2');
+
+const slider1 = document.getElementById('slider-1');
+const slider2 = document.getElementById('slider-2');
 
     slider1.addEventListener('click', function() {
         document.getElementById('horizontalScroll').scrollLeft -= 500;

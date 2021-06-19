@@ -1,3 +1,9 @@
+@media screen and (max-width: 1800px) {
+    .sliderBtns {
+        margin-left: 2rem;
+    }
+}
+
 // 1140px
 @media screen and (max-width: 1366px) {
     body {
@@ -64,7 +70,7 @@
     }
 
     .projectsContainerTablet > .projectsWrapper img {
-        touch-action: pan-down;
+        touch-action: pan-x;
     }
 
     .projectsContainerTablet::-webkit-scrollbar { 
@@ -169,7 +175,7 @@
     .projectsWrapper > img {
         height: 450px;
         width: 585px;
-        touch-action: pan-down;
+        touch-action: pan-y;
         margin: 0;
     }
 
@@ -282,7 +288,7 @@
     .projectsWrapper > img {
         height: 450px;
         width: 585px;
-        touch-action: pan-down;
+        touch-action: pan-y;
         margin: 0;
     }
 
