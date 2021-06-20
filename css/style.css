@@ -141,10 +141,10 @@
 
 .photosnapBackground.active {
   background: rgba(245, 4, 4, 0.851);
-  background: to right, #090909 0%, rgba(245, 4, 4, 0.851) 95%;
-  background: linear-gradient(to right, #090909 0%, rgba(245, 4, 4, 0.851) 95%);
-  background: -webkit-linear-gradient(to right, #090909 0%, rgba(245, 4, 4, 0.851) 95%);
-  background: -moz-linear-gradient(to right, #090909 0%, rgba(245, 4, 4, 0.851) 95%);
+  background: to right, #090909 0%, rgba(245, 4, 4, 0.851) 100%;
+  background: linear-gradient(to right, #090909 0%, rgba(245, 4, 4, 0.851) 100%);
+  background: -webkit-linear-gradient(to right, #090909 0%, rgba(245, 4, 4, 0.851) 100%);
+  background: -moz-linear-gradient(to right, #090909 0%, rgba(245, 4, 4, 0.851) 100%);
   background-size: 200% 100%;
   background-position: left bottom;
   transition: all ease-in-out .80s; }
@@ -178,10 +178,10 @@
 
 .dineBackground.active {
   background: #1688f1;
-  background: to right, #090909 0%, #1688f1 95%;
-  background: linear-gradient(to right, #090909 0%, #1688f1 95%);
-  background: -webkit-linear-gradient(to right, #090909 0%, #1688f1 95%);
-  background: -moz-linear-gradient(to right, #090909 0%, #1688f1 95%);
+  background: to right, #090909 0%, #1688f1 100%;
+  background: linear-gradient(to right, #090909 0%, #1688f1 100%);
+  background: -webkit-linear-gradient(to right, #090909 0%, #1688f1 100%);
+  background: -moz-linear-gradient(to right, #090909 0%, #1688f1 100%);
   background-size: 200% 100%;
   background-position: left bottom;
   transition: all ease-in-out .80s; }
@@ -214,10 +214,10 @@
 
 .nikeBackground.active {
   background: #f20d89;
-  background: to right, #090909 0%, #f20d89 95%;
-  background: linear-gradient(to right, #090909 0%, #f20d89 95%);
-  background: -webkit-linear-gradient(to right, #090909 0%, #f20d89 95%);
-  background: -moz-linear-gradient(to right, #090909 0%, #f20d89 95%);
+  background: to right, #090909 0%, #f20d89 100%;
+  background: linear-gradient(to right, #090909 0%, #f20d89 100%);
+  background: -webkit-linear-gradient(to right, #090909 0%, #f20d89 100%);
+  background: -moz-linear-gradient(to right, #090909 0%, #f20d89 100%);
   background-size: 200% 100%;
   background-position: left bottom;
   transition: all ease-in-out .80s; }
@@ -951,6 +951,27 @@ template {
 .projectsWrapperMobileThree {
   display: none; }
 
+.projectsWrapperMobile {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+
+.projectsWrapperMobile.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none; }
+
 .projectsContainer {
   display: flex;
   flex-direction: row;
@@ -1409,7 +1430,7 @@ template {
   bottom: .25px;
   background: #090909;
   height: 1px;
-  width: 100%;
+  width: 99%;
   z-index: 100; }
 
 .flexWrapperName > input:active,
