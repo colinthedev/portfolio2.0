@@ -181,8 +181,9 @@ for (let i = 0; i < slide.length; i++ ) {
         });
     });
 
-//  Scroll Magic Controller       
-    let controller = new ScrollMagic.Controller(); // controller for scenes
+//  Scroll Magic Controller's      
+    let controller = new ScrollMagic.Controller(); // controller for desktop scenes
+    let controllerMobile = new ScrollMagic.Controller();// controller for mobile scenes
 
 // Skills section scenes --------------------------------------------------
     // Swipe animation    
@@ -233,7 +234,7 @@ for (let i = 0; i < slide.length; i++ ) {
 // About section scenes -----------------------------------------------------
     // Text slide left
     let revealElements = document.getElementsByClassName("slide-left");
-    for (let i=0; i<revealElements.length; i++) { // create a scene for each element
+    for (let i = 0; i < revealElements.length; i++) { // create a scene for each element
         new ScrollMagic.Scene({
                             triggerElement: revealElements[i],
                             offset: -11,
@@ -278,6 +279,23 @@ for (let i = 0; i < slide.length; i++ ) {
     .setClassToggle('.contactArrow', 'showArrow')
     .addTo(controller);
     // sceneArrow.addIndicators()
+
+
+// Projects mobile scenes --------------------------------------------------------
+    // Fade in
+    let revealProjects = document.getElementsByClassName("projectsWrapperMobile");
+    for (let i = 0; i < revealProjects.length; i++) { // create a scene for each element
+        new ScrollMagic.Scene({
+                            triggerElement: revealProjects[i],
+                            offset: 200,
+                            reverse: false,
+                            triggerHook: 0.9, // start a little later
+                        })
+                        .setClassToggle(revealProjects[i], 'visible') // add class toggle
+                        .addTo(controllerMobile);
+                        // .addIndicators({name: "digit " + (i+1) })
+    }
+
 
 // Chevron back to top
     let toTop = document.querySelector('.chevronUp');
