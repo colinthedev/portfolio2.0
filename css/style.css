@@ -1152,7 +1152,7 @@ template {
   .bulbWrapper__bulb {
     position: absolute;
     top: 0;
-    left: 46%;
+    left: 45%;
     display: inline-block;
     z-index: 100; }
   .bulbWrapper__blur {
