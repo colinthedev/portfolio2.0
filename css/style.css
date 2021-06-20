@@ -702,7 +702,8 @@ template {
   font-size: 1.9rem;
   letter-spacing: .05em;
   line-height: 26px;
-  color: var(--color-text-white); }
+  color: var(--color-text-white);
+  opacity: .9; }
 
 .aboutLinks {
   font-family: 'Roboto', sans-serif;
@@ -1216,14 +1217,22 @@ template {
     height: 100%;
     width: 100%;
     margin-left: 1rem;
-    border: solid 2px var(--color-background-pink); }
+    border: solid 2px var(--color-background-pink);
+    border-style: solid;
+    border-width: 7px;
+    border-image: linear-gradient(90deg, #f20d89, #1688f1) 1;
+    opacity: .95; }
   .rightWrapper__blue {
     position: relative;
     height: 100%;
     width: 100%;
-    border: 2px solid var(--color-background-blue);
     left: -4rem;
-    top: 4rem; }
+    top: 4rem;
+    border: 2px solid var(--color-background-blue);
+    border-style: solid;
+    border-width: 7px;
+    border-image: linear-gradient(90deg, #1688f1, #f20d89) 1;
+    opacity: .95; }
 
 .traitsWrapper {
   display: flex;
