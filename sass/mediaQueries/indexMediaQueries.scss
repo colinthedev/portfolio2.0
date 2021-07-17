@@ -13,8 +13,8 @@
     .gridContainer { // Main grid 
         grid-template-rows: minmax(auto, 10vh) minmax(auto, 53rem) minmax(auto, 10vh) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 9rem);
         grid-template-columns: [full-start] auto repeat(auto, [col-start] minmax(1fr, max-content)[col-end]) auto [full-end];
-        background: var(--color-background-radial-blk-mobile);
-        background-repeat: no-repeat;  
+        // background: var(--color-background-radial-blk-mobile);
+        // background-repeat: no-repeat;  
     }
 
     .headerContainer {

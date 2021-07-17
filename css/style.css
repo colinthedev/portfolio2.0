@@ -3,7 +3,6 @@
   --color-background-black: #090909;
   --color-background-radial-blk: repeating-radial-gradient(79.6% 79.6% at 0% 20.4%, #080808 0%, #080808e3 100%);
   --color-background-radial-blk: radial-gradient(76% 76% at 2% 10%, #080808e3 28%, #1b1b1be3 87%, #181818 100%, #090909 100%), #090909;
-  --color-background-radial-blk-mobile: radial-gradient(76% 76% at 25% 65%, #080808e3 28%, #1b1b1be3 87%, #181818 100%, #090909 100%), #090909;
   --color-background-pink: #F20D89;
   --color-background-blue: #1688f1;
   --color-text-white: #FDFDFD;
@@ -1817,9 +1816,7 @@ template {
 
   .gridContainer {
     grid-template-rows: minmax(auto, 10vh) minmax(auto, 53rem) minmax(auto, 10vh) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 9rem);
-    grid-template-columns: [full-start] auto repeat(auto, [col-start] minmax(1fr, max-content) [col-end]) auto [full-end];
-    background: var(--color-background-radial-blk-mobile);
-    background-repeat: no-repeat; }
+    grid-template-columns: [full-start] auto repeat(auto, [col-start] minmax(1fr, max-content) [col-end]) auto [full-end]; }
 
   .headerContainer {
     grid-column: 2 / 8;
