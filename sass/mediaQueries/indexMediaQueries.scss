@@ -13,6 +13,8 @@
     .gridContainer { // Main grid 
         grid-template-rows: minmax(auto, 10vh) minmax(auto, 53rem) minmax(auto, 10vh) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 9rem);
         grid-template-columns: [full-start] auto repeat(auto, [col-start] minmax(1fr, max-content)[col-end]) auto [full-end];
+        background: var(--color-background-radial-blk-mobile);
+        background-repeat: no-repeat;  
     }
 
     .headerContainer {
@@ -315,9 +317,10 @@
         width: 90%;
         height: 60rem;
         margin: auto;
-        box-shadow: 
-        0 31px 41px 0 rgba(72, 72, 72, 0.18), 
-        0 2px 16px 0 rgba(73, 73, 73, 0.08);
+        // box-shadow: 
+        // 0 31px 41px 0 rgba(72, 72, 72, 0.18), 
+        // 0 2px 16px 0 rgba(73, 73, 73, 0.08);
+        box-shadow: 3.5px 3.5px 10px #1b1b1b;
     }
 
     .projectsWrapperMobileOne {

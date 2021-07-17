@@ -1,7 +1,7 @@
 .contactContainer {
     display: flex;
     flex-direction: row;
-    background: var(--color-background-black);
+    // background: var(--color-background-black);
     grid-row: 9 / 10;
     grid-column: 3 / -1;
 }
@@ -99,6 +99,7 @@
     align-items: center;
     flex-direction: column;
     background: var(--color-background-white);
+    box-shadow: inset 0.5px 0.5px 10px #0e0e0e;
     height: 100%;
     width: 60%;
     margin-left: auto;

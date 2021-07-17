@@ -1,6 +1,13 @@
+
+// .gridContainer:nth-child(2){
+//     background: var(--color-background-black);
+// }
+
 .gridContainer { // Main grid 2nd row 80vh
     display: grid;
     background: var(--color-background-black);
+    background: var(--color-background-radial-blk);
+    background-repeat: no-repeat;  
     grid-template-rows: minmax(auto, 10vh) minmax(auto, 56rem) minmax(auto, 10vh) minmax(auto, 20vh) minmax(auto, 62rem) minmax(auto, 100vh) minmax(auto, 74rem) minmax(auto, 50vh) minmax(auto, 74rem) minmax(auto, 9rem);
     grid-template-columns: [full-start] repeat(28, [col-start] 1fr [col-end]) [full-end];
     max-width: 3100px;
@@ -47,11 +54,11 @@
             -ms-transform: scale(0.9);
              -o-transform: scale(0.9);
                     transform: scale(0.9);
-    -webkit-transition: all 1s ease-in-out;
-         -moz-transition: all 1s ease-in-out;
-            -ms-transition: all 1s ease-in-out;
-             -o-transition: all 1s ease-in-out;
-                    transition: all 1s ease-in-out;
+    -webkit-transition: all .65s ease-in-out;
+         -moz-transition: all .65s ease-in-out;
+            -ms-transition: all .65s ease-in-out;
+             -o-transition: all .65s ease-in-out;
+                    transition: all .65s ease-in-out;
 }
 
 .projectsWrapperMobile.visible {
