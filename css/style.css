@@ -923,7 +923,6 @@ template {
 
 .gridContainer {
   display: grid;
-  background: var(--color-background-black);
   background: var(--color-background-radial-blk);
   background-repeat: no-repeat;
   grid-template-rows: minmax(auto, 10vh) minmax(auto, 56rem) minmax(auto, 10vh) minmax(auto, 20vh) minmax(auto, 62rem) minmax(auto, 100vh) minmax(auto, 74rem) minmax(auto, 50vh) minmax(auto, 74rem) minmax(auto, 9rem);
