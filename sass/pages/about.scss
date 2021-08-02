@@ -5,29 +5,18 @@
 
     pointer-events: none;
 
-    &__pink {
+    &__outter {
         height: 100%;
         width: 100%;
         margin-left: 1rem;
-        border: solid 2px var(--color-background-pink);
-        border-style: solid;
-        border-width: 7px;
-        border-image: linear-gradient(90deg, #f20d89, #1688f1) 1;
-        opacity: .95;
-        box-shadow: inset 1px 1px 10px #0e0e0e;
     }
 
-    &__blue {
+    &__inner {
         position: relative;
         height: 100%;
         width: 100%;
         left: -4rem;
         top: 4rem;
-        border: 2px solid var(--color-background-blue);
-        border-style: solid;
-        border-width: 7px;
-        border-image: linear-gradient(90deg, #1688f1, #f20d89) 1;
-        opacity: .95;
     }
 }
 
@@ -38,20 +27,31 @@
     height: 100%;
     width: 100%;
 
+    &__little-dipper {
+        position: absolute;
+        top: -5rem;
+        right: -7rem;
+        height: 43rem;
+        z-index: 1;
+    }
+
     &__dev {
         margin-left: 15%;
         overflow-y: hidden;
+        z-index: 10;
     }
 
     &__create {
         margin-left: 35%;
         overflow-y: hidden;
+        z-index: 10;
     }
 
     &__innovate {
         margin-left: 55%;
         overflow-y: hidden;
         overflow-x: hidden;
+        z-index: 10;
     }
 }
 // Left section
@@ -71,21 +71,32 @@
     &__line {
         display: block;
         height: 2px;
-        width: 8%;
-        background: #FDFDFD;
+        width: 10%;
+        background: var(--color-background-green);
+    }
+
+    &__bard-small {
+        position: relative;
+        left: -5.25rem;
+        top: -5rem;
+        z-index: 10;
     }
 
     &__heading {
         display: block;
+        margin-left: -4rem;
+        z-index: 10;
     }
 }
 
 .aboutContent { // Summary
+    position: relative;
     display: block;
-    margin: 5rem 15rem auto 0;
+    margin: 5rem 10rem auto 3rem;
 
     pointer-events: none;
-    max-width: 700px; // 4k
+    max-width: 750px; // 4k
+    z-index: 10;
 }
 // Links
 .aboutLinksWrap {
@@ -94,7 +105,7 @@
     justify-content: space-around;
     height: 10rem;
     width: 20rem;
-    margin: 41% 59% 0 auto;
+    margin: 41% 54% 0 auto;
 }
 // Animation right section
 .slide-left {

@@ -2,6 +2,7 @@
 .bulbContainer {
     grid-row: 6 / 7;
     grid-column: full-start / full-end;
+    padding: 15rem 0 75rem 0;
 
     pointer-events: none;
 }
@@ -36,7 +37,7 @@
         height: 35rem;
         width: 45rem;
         border-radius: 50%;
-        background: var(--color-background-pink);
+        background: var(--color-background-green);
         filter:blur(80px); // Safari
             -o-filter:blur(100px);
                 -ms-filter:blur(100px);
@@ -74,6 +75,10 @@
 }
 
 @media screen and (max-width: 1366px) {
+    .bulbContainer {
+        padding: 0;
+    }
+
     .bulbWrapper {
         display: none;
     }

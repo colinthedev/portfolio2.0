@@ -13,7 +13,7 @@
     .gridContainer { // Main grid 
         grid-template-rows: minmax(auto, 10vh) minmax(auto, 53rem) minmax(auto, 10vh) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 30vh) minmax(auto, 74rem) minmax(auto, 9rem);
         grid-template-columns: [full-start] auto repeat(auto, [col-start] minmax(1fr, max-content)[col-end]) auto [full-end];
-        background: var(--color-background-radial-blk-mobile);
+        background: var(--color-background-radial-blue);
         background-repeat: no-repeat;  
     }
 
@@ -131,7 +131,7 @@
     .gridContainer { // Main grid 
         grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 0vh) minmax(20vh, 15rem) minmax(auto, 60rem) minmax(auto, 20vh) minmax(auto, 74rem) minmax(auto, 9rem);
         grid-template-columns: auto [full-start] repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) [full-end] auto;
-        background: var(--color-background-black);
+        background: var(--color-background-drkblue);
     }
 
     // Landing page
@@ -181,8 +181,8 @@
         touch-action: pan-y;
         margin: 0;
         box-shadow: 
-        2px 4px 8px 2px #c7c7c70d, 
-        2px 6px 20px 2px #bebebe0d;
+        rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     }
 
     // Projects desktop off
@@ -211,13 +211,13 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background: #131313;
+        background: linear-gradient(180deg, #0E0D1B 0%, #0C0A17 49.48%, #0E0B1B 100%);
         width: 90%;
         height: 60rem;
         margin: auto;
         box-shadow: 
-        0 31px 41px 0 rgba(72, 72, 72, 0.18), 
-        0 2px 16px 0 rgba(73, 73, 73, 0.08);
+        rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     }
 
     .projectsWrapperMobileOne {
@@ -300,8 +300,8 @@
         touch-action: pan-y;
         margin: 0;
         box-shadow: 
-        2px 4px 8px 2px #c7c7c70d, 
-        2px 6px 20px 2px #bebebe0d;
+        rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     }
 
     .projectsWrapper:hover {
@@ -314,14 +314,13 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background: #111111;
+        background: linear-gradient(180deg, #0E0D1B 0%, #0C0A17 49.48%, #0E0B1B 100%);
         width: 90%;
         height: 60rem;
         margin: auto;
-        // box-shadow: 
-        // 0 31px 41px 0 rgba(72, 72, 72, 0.18), 
-        // 0 2px 16px 0 rgba(73, 73, 73, 0.08);
-        box-shadow: 3.5px 3.5px 10px #1b1b1b;
+        box-shadow: 
+        rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     }
 
     .projectsWrapperMobileOne {
@@ -353,7 +352,7 @@
     .gridContainer { // Main grid 
         grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 65rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(25vh, 15rem) minmax(auto, 60rem) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 7rem);
         grid-template-columns:[full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end];
-        background: var(--color-background-black);
+        background: var(--color-background-drkblue);
     }
 
     .projectsContainerTablet {
@@ -419,7 +418,7 @@
   and (max-width: 767px)
   and (orientation: portrait) {
     .gridContainer { // Main grid 
-        grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 50rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 20vh) minmax(25vh, 15rem) minmax(auto, 64rem) minmax(auto, 20vh) minmax(auto, 55rem) minmax(auto, 7rem);
+        grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 50rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(25vh, 15rem) minmax(auto, 74rem) minmax(auto, 20vh) minmax(auto, 55rem) minmax(auto, 7rem);
         grid-template-columns:[full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end];
     }
 
@@ -455,7 +454,6 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background: #111111;
         width: 90%;
         height: 45rem;
         margin: auto;
@@ -501,7 +499,7 @@
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 1.5) {
         .gridContainer {
-            grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 45rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 20vh) minmax(25vh, 15rem) minmax(auto, 64rem) minmax(auto, 20vh) minmax(auto, 55rem) minmax(auto, 7rem);
+            grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 45rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 30vh) minmax(25vh, 15rem) minmax(auto, 84rem) minmax(auto, 20vh) minmax(auto, 55rem) minmax(auto, 7rem);
         }
         
         .projectsWrapperMobile {

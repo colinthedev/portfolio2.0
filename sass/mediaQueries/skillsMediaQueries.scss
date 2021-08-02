@@ -13,6 +13,7 @@
 @media screen and (max-width: 1023px) {
     .skillsContainer {
         grid-row: 9 / 10;
+        margin: -1rem 0 -1rem 0;
     }
 
     .cardRowWrapper {
@@ -94,18 +95,10 @@
         width: 17rem;
     }
 
-    .flamingoContainer { // Flamingo Wrap
+    .imgContainer { // Monster Wrap
         right: 1rem;
         bottom: -.15rem;
         
-        &__flamingo { // Flamingo desktop
-            display: none;
-        }
-
-        &__flamingo-mobile { // Flamingo mobile
-            display: block;
-            z-index: 1;
-        }
     }
 
     .headingWrapper { // portrait
@@ -132,7 +125,7 @@
             width: 6.75rem;
         }
 
-        .flamingoContainer {
+        .imgContainer {
             right: -1.5rem;
         }
 }

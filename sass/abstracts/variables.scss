@@ -2,19 +2,25 @@
     //BACKGROUNDS
         --color-background-white: #FDFDFD;
         --color-background-black: #090909;
-        --color-background-radial-blk: radial-gradient(56% 66% at 2% 10%, #080808e3 28%, #1b1b1be3 87%, #181818 100%, #090909 100%), #090909;
+        --color-background-drkblue: #0E0D1B;
         --color-background-radial-blk-mobile: radial-gradient(76% 76% at 25% 65%, #080808e3 28%, #1b1b1be3 87%, #181818 100%, #090909 100%), #090909;
-        --color-background-pink: #F20D89;
+        --color-background-radial-blue: radial-gradient(56% 66% at 2% 10%, #0a0a0e 28%, #13111d 87%, #131323 100%, #0e0d1b 100%), #0e0d1b;
+        --color-background-skills: linear-gradient(181.12deg, #0E0D1B 27.4%, #0e0d1b 27%, #0E0D1B 75.71%);
+        --color-background-green: #DDEA53;
         --color-background-blue: #1688f1;
+
+        // Old layout
+        // --color-background-radial-blk: radial-gradient(56% 66% at 2% 10%, #080808e3 28%, #1b1b1be3 87%, #181818 100%, #090909 100%), #090909;
+        // --color-background-pink: #F20D89;
   
     //TEXT
         --color-text-white: #FDFDFD;
         --color-text-grey: #CDCDCD;
-        --color-text-black: #090909;
+        --color-text-black: #0E0D1B;
     
     //BUTTONS
-        --color-background-btnblack: #000000;
-        --color-background-btnwhite: #FFFFFF;
-        --color-text-btnwhite: #FFFFFF;
-        --color-text-btnblack: #000000;
+        --color-background-darkblue: #0E0D1B;
+        --color-background-btnwhite: #FDFDFD;
+        --color-text-btnwhite: #FDFDFD;
+        --color-text-btnblack: #0E0D1B;
     }
