@@ -151,3 +151,135 @@
              -o-transform: none;
                     transform: none;
 }
+
+
+
+.bounce {
+    animation-name: bounce;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+    animation-iteration-count: infinite;
+        -webkit-animation-name: bounce;
+            -webkit-animation-duration: 3s;
+                -webkit-animation-direction: alternate;
+                    -webkit-animation-timing-function: cubic-bezier(
+                    .5, 0.05, 1, .5);
+                        -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes bounce{
+    0% { transform: translate3d(0, 0, 0);}
+    100% { transform: translate3d(0, 20px, 0);}
+}
+
+@-webkit-keyframes bounce {
+    0% { transform: translate3d(0, 0, 0);}
+    100% { transform: translate3d(0, 20px, 0);}
+}
+  
+/////////////
+
+.bounceAway {
+    animation-name: bounceAway;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5, .75, .75, .5);
+    animation-iteration-count: infinite;
+        -webkit-animation-name: bounceAway;
+            -webkit-animation-duration: 3s;
+                -webkit-animation-direction: alternate;
+                    -webkit-animation-timing-function: cubic-bezier(
+                    .5, .75, .75, .5);
+                        -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes bounceAway {
+    0% {  transform: translate3d(0, 60px, 0);}
+    50% { transform: translate3d(0, 45px, 0);}
+    100% { transform: translate3d(0, -10px, 0);}
+}
+
+@-webkit-keyframes bounceAway {
+    0% { transform: translate3d(0, 60px, 0);}
+    50% { transform: translate3d(0, 45px, 0);}
+    100% { transform: translate3d(0, -10px, 0);}
+}
+
+//////
+//SVG
+
+.svgAnimate {
+    opacity: 0;
+}
+
+.pathThree {
+    opacity: 1;
+    stroke-dasharray: 612;
+    stroke-dashoffset: 612;
+    animation: whole 5s linear normal 1;
+    animation-fill-mode: forwards
+}
+
+@keyframes whole {
+    from {
+        stroke-dashoffset: 612;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+//////
+//Star
+.star4 {
+    transform: translateX(0px), translateY(0px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .path {
+//     stroke-dasharray: 242;
+//     stroke-dashoffset: 242;
+//     animation: dash 5s linear normal 1;
+//     animation-fill-mode: forwards
+// }
+
+// @keyframes dash {
+//     from {
+//         stroke-dashoffset: 242;
+//     }
+//     to {
+//         stroke-dashoffset: 0;
+//     }
+// }
+
+// .pathTwo {
+//     stroke-dasharray: 370;
+//     stroke-dashoffset: 370;
+//     animation: box 5s linear normal 1;
+//     animation-fill-mode: forwards
+// }
+
+// @keyframes box {
+//     from {
+//         stroke-dashoffset: 370;
+//     }
+//     to {
+//         stroke-dashoffset: 0;
+//     }
+// }

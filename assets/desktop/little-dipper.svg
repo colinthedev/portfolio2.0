@@ -22,17 +22,14 @@
 <circle cx="237" cy="315" r="1" fill="#FDFDFD" fill-opacity="0.85"/>
 <circle cx="328" cy="78" r="1" fill="#FDFDFD" fill-opacity="0.85"/>
 <circle cx="378" cy="269" r="1" fill="#FDFDFD" fill-opacity="0.85"/>
+<circle cx="74" cy="250" r="1" fill="#FDFDFD" fill-opacity="0.85"/>
 <circle cx="367" cy="181" r="1" fill="#DDEA53"/>
 <circle cx="237" cy="202" r="1" fill="#DDEA53"/>
 <circle cx="164" cy="284" r="1" fill="#DDEA53"/>
-<circle cx="103" cy="235" r="1" fill="#DDEA53"/>
-<circle cx="172" cy="159" r="1" fill="#DDEA53"/>
-<circle cx="475" cy="202" r="1" fill="#DDEA53"/>
-<path d="M476 202.5C453.871 193.124 440.662 189.206 417 185C380.088 178.439 358.277 181.009 321 185C287.302 188.608 236 202.5 236 202.5" stroke="#DDEA53" stroke-width="3"/>
-<path d="M237 202L164 284" stroke="#DDEA53" stroke-width="3"/>
-<path d="M165 285L101 234" stroke="#DDEA53" stroke-width="3"/>
-<path d="M103 234L173 158" stroke="#DDEA53" stroke-width="3"/>
-<path d="M171 158L236 202" stroke="#DDEA53" stroke-width="3"/>
+<circle cx="103" cy="234" r="1" fill="#DDEA53"/>
+<circle cx="174" cy="159" r="1" fill="#DDEA53"/>
+<circle cx="473" cy="202" r="1" fill="#DDEA53"/>
+<path d="M236.5 201L174 158L103 234L164 283.5L238 200.5C238 200.5 282.133 189.207 311 185.5C332.746 182.707 345.075 181.639 367 181.5C392.444 181.339 407.36 179.65 432 186C449.31 190.461 458.888 194.292 474.5 203" stroke="#DDEA53" stroke-width="3"/>
 <defs>
 <filter id="filter0_d" x="276.048" y="225.047" width="25.1538" height="25.1538" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>

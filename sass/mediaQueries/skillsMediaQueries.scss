@@ -96,9 +96,8 @@
     }
 
     .imgContainer { // Monster Wrap
-        right: 1rem;
+        right: 15rem;
         bottom: -.15rem;
-        
     }
 
     .headingWrapper { // portrait
@@ -106,6 +105,15 @@
         width: auto;
         width: 28rem;
     }
+}
+
+@media only screen 
+    and (max-width: 360px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 1.5) {
+        .imgContainer { // Monster Wrap
+            right: 12rem;
+        }
 }
 
 @media only screen 

@@ -1026,9 +1026,10 @@ template {
 
 .imgContainer {
   position: absolute;
-  right: 2rem;
+  right: 53rem;
   bottom: 0rem;
-  pointer-events: none; }
+  pointer-events: none;
+  transform: rotate(90deg); }
   .imgContainer__bard-big {
     display: block;
     z-index: 1; }
@@ -1343,6 +1344,72 @@ template {
   -ms-transform: none;
   -o-transform: none;
   transform: none; }
+
+.bounce {
+  animation-name: bounce;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  -webkit-animation-iteration-count: infinite; }
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(0, 20px, 0); } }
+@-webkit-keyframes bounce {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(0, 20px, 0); } }
+.bounceAway {
+  animation-name: bounceAway;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.75, 0.75, 0.5);
+  animation-iteration-count: infinite;
+  -webkit-animation-name: bounceAway;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.75, 0.75, 0.5);
+  -webkit-animation-iteration-count: infinite; }
+
+@keyframes bounceAway {
+  0% {
+    transform: translate3d(0, 60px, 0); }
+  50% {
+    transform: translate3d(0, 45px, 0); }
+  100% {
+    transform: translate3d(0, -10px, 0); } }
+@-webkit-keyframes bounceAway {
+  0% {
+    transform: translate3d(0, 60px, 0); }
+  50% {
+    transform: translate3d(0, 45px, 0); }
+  100% {
+    transform: translate3d(0, -10px, 0); } }
+.svgAnimate {
+  opacity: 0; }
+
+.pathThree {
+  opacity: 1;
+  stroke-dasharray: 612;
+  stroke-dashoffset: 612;
+  animation: whole 5s linear normal 1;
+  animation-fill-mode: forwards; }
+
+@keyframes whole {
+  from {
+    stroke-dashoffset: 612; }
+  to {
+    stroke-dashoffset: 0; } }
+.star4 {
+  transform: translateX(0px), translateY(0px); }
 
 .contactContainer {
   display: flex;
@@ -2342,13 +2409,16 @@ template {
     width: 17rem; }
 
   .imgContainer {
-    right: 1rem;
+    right: 15rem;
     bottom: -.15rem; }
 
   .headingWrapper {
     right: -14rem;
     width: auto;
     width: 28rem; } }
+@media only screen and (max-width: 360px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .imgContainer {
+    right: 12rem; } }
 @media only screen and (max-width: 280px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
   .headingWrapper {
     right: -12.5rem; }

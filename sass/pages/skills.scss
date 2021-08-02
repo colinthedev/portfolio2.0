@@ -18,10 +18,10 @@
 // Monster Wrap
 .imgContainer { 
   position: absolute;
-  right: 2rem;
+  right: 53rem;
   bottom: 0rem;
-
   pointer-events: none;
+  transform: rotate(90deg);
   
   &__bard-big { // Monster
     display: block;
