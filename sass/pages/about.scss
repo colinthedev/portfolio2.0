@@ -152,8 +152,7 @@
                     transform: none;
 }
 
-
-
+// About bounce (bard-small)
 .bounce {
     animation-name: bounce;
     animation-duration: 3s;
@@ -177,38 +176,8 @@
     0% { transform: translate3d(0, 0, 0);}
     100% { transform: translate3d(0, 20px, 0);}
 }
-  
-/////////////
 
-.bounceAway {
-    animation-name: bounceAway;
-    animation-duration: 3s;
-    animation-direction: alternate;
-    animation-timing-function: cubic-bezier(.5, .75, .75, .5);
-    animation-iteration-count: infinite;
-        -webkit-animation-name: bounceAway;
-            -webkit-animation-duration: 3s;
-                -webkit-animation-direction: alternate;
-                    -webkit-animation-timing-function: cubic-bezier(
-                    .5, .75, .75, .5);
-                        -webkit-animation-iteration-count: infinite;
-}
-
-@keyframes bounceAway {
-    0% {  transform: translate3d(0, 60px, 0);}
-    50% { transform: translate3d(0, 45px, 0);}
-    100% { transform: translate3d(0, -10px, 0);}
-}
-
-@-webkit-keyframes bounceAway {
-    0% { transform: translate3d(0, 60px, 0);}
-    50% { transform: translate3d(0, 45px, 0);}
-    100% { transform: translate3d(0, -10px, 0);}
-}
-
-//////
 //SVG
-
 .svgAnimate {
     opacity: 0;
 }
@@ -230,7 +199,6 @@
     }
 }
 
-//////
 //Star
 .star4 {
     transform: translateX(0px), translateY(0px);

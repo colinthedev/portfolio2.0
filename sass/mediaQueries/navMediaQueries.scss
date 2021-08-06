@@ -3,9 +3,11 @@
     //Burger Button Default State
     .burger {
         cursor: pointer;
-        background-color: transparent;
-        height: 2.1rem;
-        margin: auto 2.4rem auto auto;
+        height: 2.5rem;
+        margin: 2rem 2rem auto auto;
+        position: fixed;
+        top: 0;
+        right: 0;
         z-index: 2000;
 
         &__1 {
@@ -22,8 +24,8 @@
     }
 
     .burgerLine {
-        background-color: var(--color-background-white);
-        height: 2px;
+        background-color: var(--color-background-green);
+        height: 3.25px;
         margin: 4px 0;
 
         transition: .5s ease-in-out;
@@ -32,18 +34,16 @@
     //Burger Button Transition Animation
     .burger__1.open {
         background: var(--color-background-drkblue);
-        transform: rotate(-140deg) translateY(34px) translateX(24px);
-        // transform: rotate(-140deg) translateY(1px) translateX(5px);
+        transform: rotate(360deg);
     }
 
     .burger__2.open {
-        transform: translateX(200px);
+        transform: translateX(10px);
     }
 
     .burger__3.open {
         background: var(--color-background-drkblue);
-        transform: rotate(140deg) translateY(40px) translateX(-35px);
-        // transform: rotate(140deg) translateY(15px) translateX(-6px);
+        transform: rotate(-360deg);
     }
 
     //Mobile navigation menu
@@ -51,26 +51,37 @@
         display: none;
     }
 
+    .headerContainer {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 6rem;
+        background: #090910;
+        box-shadow: 0px 1px 5px var(--color-background-green);
+        opacity: .85;
+        z-index: 1000;
+    }
+
     .headerContainer.active {
-        grid-column: full-start / full-end;
-        grid-row: 1 / 4;
+        width: 100%;
         margin: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         background: var(--color-background-white);
         text-align: center;
+        opacity: 1;
         z-index: 1000;
     }
 
     .navigation-mobile.active {
-        grid-row: 2 / 4;
-        grid-column: full-start / full-end;
+        width: 100%;
+        padding: 3rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        margin: -10rem 0 auto 0;
         background: var(--color-background-white);
         text-align: center;
 
@@ -83,6 +94,8 @@
         height: 21rem;
         flex-direction: column;
         justify-content: space-between;
+        margin-top: auto;
+        width: 90%;
     }
 
     //Line Break
