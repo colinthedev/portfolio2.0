@@ -26,7 +26,7 @@ By the end of the finished product i had incorporated components from the other 
 
 ### Created by me using figma:
 
-- **Flamingo** :flamingo:
+- **Svg about sec.** :alien:
   - **Lightbulb** :bulb:
     - **Octopus** :octopus:
 
@@ -41,6 +41,9 @@ By the end of the finished product i had incorporated components from the other 
 * [ScrollMagic](https://scrollmagic.io/) <br>
    >Scroll Magic is a scroll interaction library that allows you to react to the user's current scroll position.
 
+* [GSAP](https://greensock.com/gsap/) <br>
+  >Green Sock is a animation library with a vast selection of plugins
+
 ## Key Features
 
 A few key features implemented include:
@@ -52,7 +55,8 @@ A few key features implemented include:
 
 ## Sections Included
 
-- Skills
-  - About
-    - Contact
+- Projects
+  - Skills
+    - About
+      - Contact
 
