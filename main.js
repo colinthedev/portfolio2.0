@@ -43,7 +43,6 @@ if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
 };
 
 // Projects - + slider
-
 const slider1 = document.getElementById('slider-1');
 const slider2 = document.getElementById('slider-2');
 
@@ -54,29 +53,40 @@ slider2.addEventListener('click', function () {
     document.getElementById('horizontalScroll').scrollLeft += 500;
 });
 
-// Burger Button Mobile
+// Nav menu mobile
 const burgerBtn = document.querySelector('.burger'); //Container for burger lines
-let burger1open = document.querySelector('.burger__1'); //Burger line 1
-let burger2open = document.querySelector('.burger__2'); //Burger line 2
-let burger3open = document.querySelector('.burger__3'); //Burger line 3
+const burger1open = document.querySelector('.burger__1'); //Burger line 1
+const burger2open = document.querySelector('.burger__2'); //Burger line 2
+const burger3open = document.querySelector('.burger__3'); //Burger line 3
 
-let headerContainer = document.querySelector('.headerContainer');
-let nav = document.querySelector('.navigation-mobile');
+const headerContainer = document.querySelector('.headerContainer');
+const nav = document.querySelector('.navigation-mobile');
+const links = document.querySelectorAll('.list-Mobilenav')
 
-burgerBtn.addEventListener('click', () => {
+const animate = document.querySelector('.navigation-mobile')
+
+// Open / Close menu function 
+const toggleMenu = function () {
     burger1open.classList.toggle('open'); //Burger line 1
     burger2open.classList.toggle('open'); //Burger line 2
     burger3open.classList.toggle('open'); //Burger line 3
 
-    headerContainer.classList.toggle('active');
+    headerContainer.classList.toggle('active')
     nav.classList.toggle('active');
-});
+    animate.classList.add('animate')
+}
+
+// Call toggleMenu func to open
+burgerBtn.addEventListener('click', toggleMenu);
+
+// Call toggleMenu func clicking links closes menu
+links.forEach(btn => btn.addEventListener('click', toggleMenu));
 
 // Generates a random color for line landing page 
 function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color; // random color 1-16
@@ -166,7 +176,7 @@ for (let i = 0; i < slide.length; i++) {
 let newString = document.getElementById('colorFont').innerHTML = 'My current skillset'.replace('My', '<span style="color: #fff;">My</span>');
 
 // Skills section card component
-let cardContainer = document.querySelector('.cardRowWrapper');
+const cardContainer = document.querySelector('.cardRowWrapper');
 let cards = document.querySelectorAll('.card__inner');
 
 cards.forEach(el => {
@@ -183,11 +193,9 @@ cards.forEach(el => {
 });
 
 // Chevron back to top
-let toTop = document.querySelector('.chevronUp');
+const toTop = document.querySelector('.chevronUp');
 
 toTop.addEventListener('click', function () {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
-
-

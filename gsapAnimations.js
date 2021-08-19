@@ -48,3 +48,6 @@
         .from('.star5', {...showStarsDefaults})
         .to('.star4', {duration: 3, opacity: 1, x: -2000, y: -1000,}, '+=.5')
         .from('.star', {opacity: 1, x: 0, y: 0}, '+=.5')
+
+
+        
