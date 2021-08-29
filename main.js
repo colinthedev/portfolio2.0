@@ -61,9 +61,10 @@ const burger3open = document.querySelector('.burger__3'); //Burger line 3
 
 const headerContainer = document.querySelector('.headerContainer');
 const nav = document.querySelector('.navigation-mobile');
-const links = document.querySelectorAll('.list-Mobilenav')
+const links = document.querySelectorAll('.list-Mobilenav');
+const logo = document.querySelector('.logo');
 
-const animate = document.querySelector('.navigation-mobile')
+const animate = document.querySelector('.navigation-mobile');
 
 // Open / Close menu function 
 const toggleMenu = function () {
@@ -71,16 +72,19 @@ const toggleMenu = function () {
     burger2open.classList.toggle('open'); //Burger line 2
     burger3open.classList.toggle('open'); //Burger line 3
 
-    headerContainer.classList.toggle('active')
+    headerContainer.classList.toggle('active');
     nav.classList.toggle('active');
-    animate.classList.add('animate')
+    animate.classList.add('animate');
+    logo.classList.toggle('hidden');
 }
 
 // Call toggleMenu func to open
-burgerBtn.addEventListener('click', toggleMenu);
+burgerBtn.addEventListener('click', toggleMenu,);
 
 // Call toggleMenu func clicking links closes menu
 links.forEach(btn => btn.addEventListener('click', toggleMenu));
+
+
 
 // Generates a random color for line landing page 
 function getRandomColor() {
@@ -138,7 +142,7 @@ setInterval(changeColor, 1000);// Change color every 1 second
 })();
 
 // Projects hover
-let slide = ['Photosnap', 'Dine', 'Nike'];
+let slide = ['Photosnap', 'Dine', 'Nike', 'Weather'];
 for (let i = 0; i < slide.length; i++) {
     let lowercaseName = slide[i].toLowerCase();
     let projectTitle = document.querySelector('.projectTitle' + slide[i]);

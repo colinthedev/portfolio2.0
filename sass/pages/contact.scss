@@ -25,23 +25,6 @@
         margin-bottom: 2.5rem;
     }
 }
-// Contact text slide in 
-.slide-right { 
-    width: 100%;
-    overflow: hidden;
-    transform: translateX(-120%);
-  }
-
-
-.textReveal {
-    animation: 1s slide-right 1s forwards;
-}
-
-@keyframes slide-right {
-    to {
-        transform: translateX(0%);
-    }
-}
 
 .contactArrowTablet {
     display: none;

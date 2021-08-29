@@ -1,5 +1,13 @@
 @media screen and (max-width: 854px) {
-    
+    .logo {
+        display: block;
+        margin: auto auto auto 2rem;
+    }
+
+    .logo.hidden {
+        display: none;
+    }
+
     //Burger Button Default State
     .burger {
         cursor: pointer;

@@ -125,7 +125,8 @@
 
 .dine,
 .photosnap,
-.nike {
+.nike,
+.weather {
   filter: saturate(135%);
   max-height: 450px;
   max-width: 585px;
@@ -133,7 +134,8 @@
 
 .photosnap.active,
 .dine.active,
-.nike.active {
+.nike.active,
+.weather.active {
   display: none; }
 
 .hoverLine,
@@ -246,6 +248,42 @@
   right: -2rem; }
 
 .flexWrapperRowNike.active {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 500;
+  margin-top: 35rem; }
+
+.weatherBackground.active {
+  background: #f20d89;
+  background: to right, #6c2dbd 0%, #35209b 100%;
+  background: linear-gradient(to right, #6c2dbd 0%, #35209b 100%);
+  background: -webkit-linear-gradient(to right, #6c2dbd 0%, #35209b 100%);
+  background: -moz-linear-gradient(to right, #6c2dbd 0%, #35209b 100%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: all ease-in-out .80s; }
+
+.weatherBackground.active:hover {
+  background-position: right bottom; }
+
+.projectTitleWeather.active {
+  position: absolute;
+  top: 20rem;
+  z-index: 500;
+  right: 12rem; }
+
+.hoverLineWeather.active {
+  display: block;
+  height: .15rem;
+  width: 25rem;
+  background-color: #ffffff;
+  z-index: 500;
+  position: absolute;
+  top: 24.15rem;
+  right: -2rem; }
+
+.flexWrapperRowWeather.active {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -886,6 +924,9 @@ template {
   grid-row: 1 / 2;
   grid-column: 2 / 8; }
 
+.logo {
+  display: none; }
+
 .navigation__listWrapper {
   position: relative;
   display: flex;
@@ -954,7 +995,8 @@ template {
 
 .projectsWrapperMobileOne,
 .projectsWrapperMobileTwo,
-.projectsWrapperMobileThree {
+.projectsWrapperMobileThree,
+.projectsWrapperMobileFour {
   display: none; }
 
 .projectsWrapperMobile {
@@ -1436,17 +1478,6 @@ template {
     height: 6.5rem;
     margin-bottom: 2.5rem; }
 
-.slide-right {
-  width: 100%;
-  overflow: hidden;
-  transform: translateX(-120%); }
-
-.textReveal {
-  animation: 1s slide-right 1s forwards; }
-
-@keyframes slide-right {
-  to {
-    transform: translateX(0%); } }
 .contactArrowTablet {
   display: none; }
 
@@ -1678,7 +1709,7 @@ template {
     width: 30rem; } }
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
   .leftWrapper {
-    grid-row: 12 / 13;
+    grid-row: 13 / 14;
     grid-column: 3 / 11; }
 
   .aboutContent {
@@ -1689,15 +1720,15 @@ template {
     margin: 11% 55% 0 auto; }
 
   .rightWrapper {
-    grid-row: 12 / 13;
+    grid-row: 13 / 14;
     grid-column: 11 / -1; } }
 @media screen and (max-width: 1023px) {
   .rightWrapper {
-    grid-row: 11 / 12;
+    grid-row: 12 / 13;
     grid-column: full-start / full-end; }
 
   .leftWrapper {
-    grid-row: 12 / 13;
+    grid-row: 13 / 14;
     grid-column: 3 / 18;
     margin: 8rem 0 0 0; }
 
@@ -1791,13 +1822,10 @@ template {
     left: 0%; } }
 @media screen and (min-width: 2100px) {
   .contactArrow {
-    position: relative; }
-
-  .slide-right {
-    transform: translateX(-400%); } }
+    position: relative; } }
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
   .contactContainer {
-    grid-row: 14 / 15; } }
+    grid-row: 15 / 16; } }
 @media screen and (max-width: 1366px) {
   .contactContainer {
     grid-column: 1 / -1; }
@@ -1828,7 +1856,7 @@ template {
     margin-top: .5rem; } }
 @media screen and (max-width: 1023px) {
   .contactContainer {
-    grid-row: 14 / 15; } }
+    grid-row: 15 / 16; } }
 @media screen and (max-width: 854px) {
   .inputWrapperTop__email {
     margin-left: 4rem;
@@ -1999,17 +2027,18 @@ template {
 
   .projectsWrapperMobileOne,
   .projectsWrapperMobileTwo,
-  .projectsWrapperMobileThree {
+  .projectsWrapperMobileThree,
+  .projectsWrapperMobileFour {
     display: none; }
 
   .projectsContainer {
     display: none; }
 
   .footerContainer {
-    grid-row: 15 / 16; } }
+    grid-row: 16 / 17; } }
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 0vh) minmax(20vh, 15rem) minmax(auto, 60rem) minmax(auto, 20vh) minmax(auto, 74rem) minmax(auto, 9rem);
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(4, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 0vh) minmax(20vh, 15rem) minmax(auto, 60rem) minmax(auto, 20vh) minmax(auto, 74rem) minmax(auto, 9rem);
     grid-template-columns: auto [full-start] repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) [full-end] auto;
     background: var(--color-background-drkblue); }
 
@@ -2088,7 +2117,7 @@ template {
     margin-top: 1.5rem; } }
 @media screen and (max-width: 1023px) {
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(20rem, 25rem) minmax(auto, 60rem) minmax(auto, 20vh) minmax(auto, 74rem) minmax(auto, 9rem);
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 14rem)) minmax(auto, 5rem) repeat(4, minmax(auto, 70rem)) minmax(auto, 15vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(20rem, 25rem) minmax(auto, 60rem) minmax(auto, 20vh) minmax(auto, 74rem) minmax(auto, 9rem);
     grid-template-columns: auto [full-start] repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) [full-end] auto; }
 
   .headerContainer {
@@ -2153,6 +2182,9 @@ template {
   .projectsWrapperMobileThree {
     grid-row: 7 / 8; }
 
+  .projectsWrapperMobileFour {
+    grid-row: 8 / 9; }
+
   .flexWrapperRowMobile,
   .projectsTitleMobile {
     margin-left: auto;
@@ -2163,7 +2195,7 @@ template {
     overflow-x: hidden; }
 
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 65rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(25vh, 15rem) minmax(auto, 60rem) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 7rem);
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(4, minmax(auto, 65rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(25vh, 15rem) minmax(auto, 60rem) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 7rem);
     grid-template-columns: [full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end];
     background: var(--color-background-drkblue); }
 
@@ -2196,7 +2228,7 @@ template {
     margin-bottom: 3rem; } }
 @media only screen and (max-width: 854px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 65rem)) minmax(auto, 35vh) minmax(auto, 62rem) minmax(auto, 35vh) minmax(auto, 20rem) minmax(auto, 60rem) minmax(auto, 30vh) minmax(auto, 45rem) minmax(auto, 7rem);
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(4, minmax(auto, 65rem)) minmax(auto, 35vh) minmax(auto, 62rem) minmax(auto, 35vh) minmax(auto, 20rem) minmax(auto, 60rem) minmax(auto, 30vh) minmax(auto, 45rem) minmax(auto, 7rem);
     grid-template-columns: [full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end]; }
 
   .leftColContainer {
@@ -2208,7 +2240,7 @@ template {
     pointer-events: none; } }
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 50rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(25vh, 15rem) minmax(auto, 74rem) minmax(auto, 20vh) minmax(auto, 55rem) minmax(auto, 7rem);
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(4, minmax(auto, 50rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(25vh, 15rem) minmax(auto, 74rem) minmax(auto, 20vh) minmax(auto, 55rem) minmax(auto, 7rem);
     grid-template-columns: [full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end]; }
 
   .hoverTitleFont {
@@ -2260,7 +2292,7 @@ template {
     height: 285px; } }
 @media only screen and (max-width: 320px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
   .gridContainer {
-    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(3, minmax(auto, 45rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 30vh) minmax(25vh, 15rem) minmax(auto, 84rem) minmax(auto, 20vh) minmax(auto, 55rem) minmax(auto, 7rem); }
+    grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(4, minmax(auto, 45rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 30vh) minmax(25vh, 15rem) minmax(auto, 84rem) minmax(auto, 20vh) minmax(auto, 55rem) minmax(auto, 7rem); }
 
   .projectsWrapperMobile {
     height: 40rem; }
@@ -2283,6 +2315,13 @@ template {
     grid-column: 2 / -1;
     margin-left: .5rem; } }
 @media screen and (max-width: 854px) {
+  .logo {
+    display: block;
+    margin: auto auto auto 2rem; }
+
+  .logo.hidden {
+    display: none; }
+
   .burger {
     cursor: pointer;
     height: 2.5rem;
@@ -2372,10 +2411,10 @@ template {
     display: block; } }
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
   .skillsContainer {
-    grid-row: 9 / 10; } }
+    grid-row: 10 / 11; } }
 @media screen and (max-width: 1023px) {
   .skillsContainer {
-    grid-row: 9 / 10;
+    grid-row: 10 / 11;
     margin: -1rem 0 -1rem 0; }
 
   .cardRowWrapper {
@@ -2445,10 +2484,16 @@ template {
     width: 15rem; }
 
   .card__inner {
-    height: 6.75rem;
-    width: 6.75rem; }
+    height: 7.35rem;
+    width: 7.35rem; }
 
   .imgContainer {
-    right: -1.5rem; } }
+    right: 10.5rem; }
+
+  .traitsWrapper__create {
+    margin-left: 25%; }
+
+  .traitsWrapper__innovate {
+    margin-left: 38%; } }
 
 /*# sourceMappingURL=style.css.map */

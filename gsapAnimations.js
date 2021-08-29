@@ -49,5 +49,13 @@
         .to('.star4', {duration: 3, opacity: 1, x: -2000, y: -1000,}, '+=.5')
         .from('.star', {opacity: 1, x: 0, y: 0}, '+=.5')
 
-
+// Contact section
+    let contactTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.contactContainer',
+            start: 'top center'
+        },
+    })
         
+    contactTl
+        .from('.contactHeading', {duration: 1.5, opacity: 0, y: 100,})

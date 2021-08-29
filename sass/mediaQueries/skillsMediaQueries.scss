@@ -6,13 +6,13 @@
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1.5) {
     .skillsContainer {
-        grid-row: 9 / 10;
+        grid-row: 10 / 11;
     }
 }
 
 @media screen and (max-width: 1023px) {
     .skillsContainer {
-        grid-row: 9 / 10;
+        grid-row: 10 / 11;
         margin: -1rem 0 -1rem 0;
     }
 
@@ -129,11 +129,19 @@
         }
 
         .card__inner {
-            height: 6.75rem;
-            width: 6.75rem;
+            height: 7.35rem;
+            width: 7.35rem;
         }
 
         .imgContainer {
-            right: -1.5rem;
+            right: 10.5rem;
+        }
+
+        .traitsWrapper__create {
+            margin-left: 25%;
+        }
+
+        .traitsWrapper__innovate {
+            margin-left: 38%;
         }
 }

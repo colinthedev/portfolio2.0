@@ -123,7 +123,8 @@
 // projects
 .dine,
 .photosnap,
-.nike { 
+.nike,
+.weather { 
     filter: saturate(135%);
     max-height: 450px;
     max-width: 585px;
@@ -132,7 +133,8 @@
 
 .photosnap.active,
 .dine.active,
-.nike.active {
+.nike.active,
+.weather.active {
     display: none;
 }
 
@@ -247,6 +249,40 @@
 }
 
 .flexWrapperRowNike.active {
+    @include projectsWrapperRow();
+}
+
+// WeatherApp
+
+.weatherBackground.active {
+    background: rgb(242, 13, 137);
+    background: (to right, rgb(108, 45, 189) 0%, rgb(53, 32, 155) 100%);
+
+    background: linear-gradient(to right, rgb(108, 45, 189) 0%, rgb(53, 32, 155) 100%);
+    
+    background: -webkit-linear-gradient(to right, rgb(108, 45, 189) 0%, rgb(53, 32, 155) 100%);
+
+    background: -moz-linear-gradient(to right, rgb(108, 45, 189) 0%, rgb(53, 32, 155) 100%);
+
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: all ease-in-out .80s;
+}
+
+.weatherBackground.active:hover {
+    background-position: right bottom;
+}
+
+.projectTitleWeather.active {
+    @include projectsHoverTitle();
+    right: 12rem;
+}
+
+.hoverLineWeather.active {
+    @include projectsHoverLine();
+}
+
+.flexWrapperRowWeather.active {
     @include projectsWrapperRow();
 }
 

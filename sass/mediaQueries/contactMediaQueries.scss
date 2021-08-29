@@ -10,10 +10,6 @@
     .contactArrow {
         position: relative;
     }
-
-    .slide-right {
-        transform: translateX(-400%);
-    }
 }
 
 // IPad Pro
@@ -24,7 +20,7 @@
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 1.5) {
     .contactContainer {
-        grid-row: 14 / 15;
+        grid-row: 15 / 16;
     }
 }
 
@@ -72,7 +68,7 @@
 
 @media screen and (max-width: 1023px) {
     .contactContainer {
-        grid-row: 14 / 15;
+        grid-row: 15 / 16;
     }
 }
 
