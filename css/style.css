@@ -2207,7 +2207,7 @@ template {
 
   .leftColContainer {
     grid-column: 2 / 18;
-    margin-left: 2rem; }
+    margin-left: 1rem; }
 
   .linksContainer {
     align-items: center;
