@@ -356,7 +356,7 @@
 
     .gridContainer { // Main grid 
         grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(4, minmax(auto, 65rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(25vh, 15rem) minmax(auto, 60rem) minmax(auto, 25vh) minmax(auto, 74rem) minmax(auto, 7rem);
-        grid-template-columns:[full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end];
+        grid-template-columns: auto [full-start] repeat(18, [col-start] minmax(1rem, 1fr) [col-end]) [full-end] auto;
         background: var(--color-background-drkblue);
     }
 
@@ -370,7 +370,7 @@
 
     .leftColContainer {
         grid-column: 2 / 18;
-        margin-left: 1rem;
+        margin-left: 2rem;
     }
 
     .linksContainer {
@@ -403,7 +403,7 @@
   and (-webkit-min-device-pixel-ratio: 1.5) {
     .gridContainer { // Main grid 
         grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(4, minmax(auto, 65rem)) minmax(auto, 35vh) minmax(auto, 62rem) minmax(auto, 35vh) minmax(auto, 20rem) minmax(auto, 60rem) minmax(auto, 30vh) minmax(auto, 45rem) minmax(auto, 7rem);
-        grid-template-columns:[full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end];
+        grid-template-columns: auto [full-start] repeat(18, [col-start] minmax(1rem, 1fr) [col-end]) [full-end] auto;
     }
 
     .leftColContainer {
@@ -423,8 +423,9 @@
   and (max-width: 767px)
   and (orientation: portrait) {
     .gridContainer { // Main grid 
-        grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(4, minmax(auto, 50rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(25vh, 15rem) minmax(auto, 74rem) minmax(auto, 20vh) minmax(auto, 55rem) minmax(auto, 7rem);
-        grid-template-columns:[full-start] auto repeat(18, [col-start] minmax(min-content, 1fr) [col-end]) auto [full-end];
+        grid-template-rows: minmax(auto, 16vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(4, minmax(auto, 50rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 25vh) minmax(25vh, 15rem) minmax(auto, 74rem) minmax(auto, 20vh) minmax(auto, 55rem) minmax(auto, 7rem);
+        grid-template-columns: auto [full-start] repeat(18, [col-start] minmax(1rem, 1fr) [col-end]) [full-end] auto;
+        width: 100vw;
     }
 
     // Projects mobile
@@ -504,7 +505,7 @@
     and (orientation: portrait)
     and (-webkit-min-device-pixel-ratio: 1.5) {
         .gridContainer {
-            grid-template-rows: minmax(auto, 10vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(4, minmax(auto, 45rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 30vh) minmax(25vh, 15rem) minmax(auto, 84rem) minmax(auto, 20vh) minmax(auto, 55rem) minmax(auto, 7rem);
+            grid-template-rows: minmax(auto, 20vh) repeat(2, minmax(auto, 17rem)) minmax(auto, 5rem) repeat(4, minmax(auto, 45rem)) minmax(auto, 10vh) minmax(auto, 62rem) minmax(auto, 30vh) minmax(25vh, 15rem) minmax(auto, 84rem) minmax(auto, 20vh) minmax(auto, 55rem) minmax(auto, 7rem);
         }
         
         .projectsWrapperMobile {

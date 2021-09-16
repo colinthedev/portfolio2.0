@@ -9,17 +9,17 @@
 @import "sass/base/reset.scss";
 @import "sass/base/typography.scss";
 
-//NAVIGATION
-@import "sass/layout/navigation.scss";
+//LAYOUT
+@import "sass/layout/about.scss";
+@import "sass/layout/contact.scss";
+@import "sass/layout/index.scss";
+@import "sass/layout/skills.scss";
 
-//PAGES
-@import "sass/pages/index.scss";
-@import "sass/pages/skills.scss";
-@import "sass/pages/lightbulb.scss";
-@import "sass/pages/about.scss";
-@import "sass/pages/contact.scss";
-@import "sass/pages/footer.scss";
-@import "sass/pages/success.scss";
+//MODULES
+@import "sass/modules/footer.scss";
+@import "sass/modules/lightbulb.scss";
+@import "sass/modules/navigation.scss";
+@import "sass/modules/success.scss";
 
 //MEDIAQUERIES
 @import "sass/mediaQueries/aboutMediaQueries.scss";

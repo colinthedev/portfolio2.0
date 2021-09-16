@@ -84,8 +84,6 @@ burgerBtn.addEventListener('click', toggleMenu,);
 // Call toggleMenu func clicking links closes menu
 links.forEach(btn => btn.addEventListener('click', toggleMenu));
 
-
-
 // Generates a random color for line landing page 
 function getRandomColor() {
     const letters = '0123456789ABCDEF';
@@ -177,11 +175,11 @@ for (let i = 0; i < slide.length; i++) {
 // Skills Section -------------------------------------------------------------
 
 // Skills section change font "My current skillset"
-let newString = document.getElementById('colorFont').innerHTML = 'My current skillset'.replace('My', '<span style="color: #fff;">My</span>');
+const newString = document.getElementById('colorFont').innerHTML = 'My current skillset'.replace('My', '<span style="color: #fff;">My</span>');
 
 // Skills section card component
 const cardContainer = document.querySelector('.cardRowWrapper');
-let cards = document.querySelectorAll('.card__inner');
+const cards = document.querySelectorAll('.card__inner');
 
 cards.forEach(el => {
     el.addEventListener('mouseenter', function () {
